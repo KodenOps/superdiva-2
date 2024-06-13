@@ -1,7 +1,7 @@
 'use client';
 import TopProduct from '@/pages/TopProduct';
 import Hero from '../pages/Hero';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Promosection from '@/pages/Promosection';
 import Categories from '@/pages/Categories';
 import Footer from '@/components/Footer';
@@ -10,7 +10,10 @@ import ProductPreview from '@/pages/ProductPreview';
 export default function Home() {
 	const [previewItem, setpreviewItem] = useState(false);
 	const [EachItem, setEachItem] = useState([]);
-	
+	// make the page scroll up upon loading the preview page
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [EachItem]);
 	return (
 		<main className=''>
 			{!previewItem ? (
