@@ -4,7 +4,12 @@ import Promo from '@/data/Promo';
 import Link from 'next/link';
 import ProductPreview from './ProductPreview';
 
-const Promosection = ({ previewItems, setpreviewItems }) => {
+const Promosection = ({
+	previewItems,
+	setpreviewItems,
+	EachItem,
+	setEachItem,
+}) => {
 	return (
 		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles
@@ -15,14 +20,13 @@ const Promosection = ({ previewItems, setpreviewItems }) => {
 			<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
 				{Promo.map((hotDB) => {
 					return (
-						<Link
-							href='/ProductPreview'
-							key={hotDB.id}
-							prefetch={false}>
+						<div key={hotDB.id}>
 							<div
 								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 								onClick={() => {
-									setpreviewItems(hotDB);
+									setpreviewItems(!previewItems);
+									setEachItem(hotDB);
+									console.log(EachItem);
 								}}>
 								<img
 									src={hotDB.image}
@@ -43,7 +47,7 @@ const Promosection = ({ previewItems, setpreviewItems }) => {
 									</div>
 								</div>
 							</div>
-						</Link>
+						</div>
 					);
 				})}
 			</div>

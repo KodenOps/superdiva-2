@@ -18,7 +18,7 @@ const Footer = () => {
 								DIVA
 							</span>
 						</h3>
-						<p className='lg:text-[14px] md:text-[16px] text-sm my-[10px] lg:text-left text-center md:w-[90%] w-full leading-8'>
+						<p className='lg:text-[14px] md:text-[16px] font-normal text-sm text-thin my-[10px] lg:text-left text-center md:w-[90%] w-full leading-8'>
 							Discover a curated collection of stylish and trendy apparel
 							designed to empower and celebrate women. From chic outfits to
 							timeless classics, our selection ensures you find the perfect
@@ -48,10 +48,10 @@ const Footer = () => {
 				</div>
 				{/* end of the first column */}
 				<div className='md:w-[15%] lg:mt-0 mt-[50px]  w-full flex flex-col gap-[20px] justify-start items-center'>
-					<p className='font-bold text-xl text-[var(--secondary-color)]'>
+					<p className='font-normal md:text-xl text-md  text-[var(--secondary-color)]'>
 						Shop Diva
 					</p>
-					<ul className='flex flex-col items-center justify-center text-center gap-[10px]'>
+					<ul className='flex flex-col items-center text-[14px] font-light justify-center text-center gap-[10px]'>
 						<li>Shoes</li>
 						<li>Jackets</li>
 						<li>Caps</li>
@@ -61,10 +61,10 @@ const Footer = () => {
 				</div>
 				{/* End of second column */}
 				<div className='md:w-[15%] w-full lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
-					<p className='font-bold text-xl text-[var(--secondary-color)]'>
+					<p className='font-normal md:text-xl text-md  text-[var(--secondary-color)]'>
 						Quick Links
 					</p>
-					<ul className='flex flex-col items-center justify-center text-center gap-[10px]'>
+					<ul className='flex flex-col items-center text-[14px] font-light justify-center text-center gap-[10px]'>
 						<li>Home</li>
 						<li>About</li>
 						<li>Categories</li>
@@ -74,7 +74,7 @@ const Footer = () => {
 				</div>
 				{/* End of second column */}
 				<div className='md:w-[35%] w-full lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
-					<p className='font-bold text-xl text-[var(--secondary-color)]'>
+					<p className='font-normal md:text-xl text-md text-[var(--secondary-color)] '>
 						Be An Affiliate
 					</p>
 					<form
@@ -95,7 +95,7 @@ const Footer = () => {
 				</div>
 				{/* End of second column */}
 			</div>
-			<p className='text-center text-[var(--white)] py-[20px]'>
+			<p className='text-center text-[var(--white)] py-[20px] md:text-md text-sm font-mono'>
 				&copy; {new Date().getFullYear()} SuperDiva / All Right Researved{' '}
 			</p>
 		</footer>
