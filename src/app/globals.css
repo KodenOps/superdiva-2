@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #3c1642;
+	--secondary-color: #f2994a;
+	--black: #00072d;
+	--white: #fefefe;
+}
+html {
+	scroll-behavior: smooth;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+body {
+	font-family: "Poppins";
+	user-select: none;
+}
+.homenav li:hover {
+	color: var(--secondary-color);
+	transition: color 1s ease;
+}
+.homenav li {
+	transition: color 1s ease;
+	cursor: pointer;
+	color: var(--black);
+}
+li.active {
+	font-weight: 600;
+	cursor: default;
+}
+li.active:hover {
+	color: var(--black);
+}
+img {
+	pointer-events: none;
+}
