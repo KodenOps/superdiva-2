@@ -19,11 +19,12 @@ const Footer = () => {
 							</span>
 						</h3>
 						<p className='lg:text-[14px] md:text-[16px] text-sm my-[10px] lg:text-left text-center md:w-[90%] w-full leading-8'>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Mollitia, laudantium culpa? Dicta inventore accusamus iusto,
-							ducimus reprehenderit expedita, harum, laborum aut ratione nihil
-							recusandae qui alias illo dolores quod odit. Recusandae quam
-							maxime repellendus quod officiis, eos qui harum quo!
+							Discover a curated collection of stylish and trendy apparel
+							designed to empower and celebrate women. From chic outfits to
+							timeless classics, our selection ensures you find the perfect
+							ensemble for any occasion. Elevate your wardrobe with pieces that
+							reflect your unique style and confidence. Shop now and embrace the
+							beauty of fashion!
 						</p>
 						<div className='socialIcons flex items-center gap-[40px] lg:justify-start justify-center mt-[20px]'>
 							<FaFacebook
@@ -95,7 +96,7 @@ const Footer = () => {
 				{/* End of second column */}
 			</div>
 			<p className='text-center text-[var(--white)] py-[20px]'>
-				&copy; 2023 SuperDiva / All Right Researved{' '}
+				&copy; {new Date().getFullYear()} SuperDiva / All Right Researved{' '}
 			</p>
 		</footer>
 	);
