@@ -25,7 +25,7 @@ const ProductPreview = ({
 			</div>
 		</div>
 	) : (
-		""
+		''
 	);
 };
 
