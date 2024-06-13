@@ -25,7 +25,7 @@ const ProductPreview = ({
 			</div>
 		</div>
 	) : (
-		alert('System Error: Kindly go back and try again')
+		""
 	);
 };
 
