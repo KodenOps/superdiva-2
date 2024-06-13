@@ -63,7 +63,7 @@ const Navbar = () => {
 					<div
 						className='sidenav_bg container  w-screen h-screen transition bg-black bg-opacity-[70%]'
 						onClick={() => setsideBarIsOn(!sideBarIsOn)}></div>
-					<nav className='sidenav_main absolute top-[8vh] right-[0px] z-50  h-[92vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
+					<nav className='sidenav_main absolute top-[10vh] right-[0px] z-50  h-[90vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
 						<ul className='list-none flex flex-col items-center justify-center gap-[25px] mb-[40px] h-[70%]'>
 							<li
 								className=''
