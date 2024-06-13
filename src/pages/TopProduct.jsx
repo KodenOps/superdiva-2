@@ -16,7 +16,7 @@ const TopProduct = () => {
 					return (
 						<div
 							key={hotDB.id}
-							className='md:w-[200px] w-[120px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'>
+							className='md:w-[200px] w-[180px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'>
 							<img
 								src={hotDB.image}
 								alt=''
