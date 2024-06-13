@@ -10,7 +10,7 @@ const ProductPreview = ({
 	EachItem,
 	setEachItem,
 }) => {
-	return Object.keys(EachItem).length > 0 ? (
+	return EachItem ? (
 		<div className='min-h-[100vh] '>
 			<Navbar />
 			<div className='min-h-screen'>
