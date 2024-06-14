@@ -34,7 +34,7 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 					<li>Explore</li>
 				</ul>
 				{/* cart and other iconified links */}
-				<div className='homenav_icons lg:flex items-center justify-center gap-[30px] hidden '>
+				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
 					{/* cart icon */}
 					<div className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
@@ -46,7 +46,7 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 						<span>{favItem.length}</span>
 					</div>
 					{/* user icon */}
-					<div className='flex items-center justify-center'>
+					<div className='md:flex items-center justify-center hidden'>
 						<AiOutlineUser size={30} />
 					</div>
 				</div>
