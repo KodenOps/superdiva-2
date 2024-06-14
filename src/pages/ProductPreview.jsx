@@ -12,22 +12,23 @@ const ProductPreview = ({
 	EachItem,
 	setEachItem,
 }) => {
+	if (!EachItem || !EachItem.rating) {
+		// If EachItem is undefined or EachItem.rating is undefined/null, return null or handle the case accordingly
+		return null; // or return an error message or fallback UI
+	}
+
 	const ratingFunc = (count) => {
-		if (EachItem) {
-			return (
-				<Rating
-					value={count}
-					counts={EachItem.rating.count}
-				/>
-			);
-		} else {
-			return null; // Return null if EachItem is falsy
-		}
+		return (
+			<Rating
+				value={count}
+				counts={EachItem.rating.count}
+			/>
+		);
 	};
 
 	let stars = Math.round(EachItem.rating.rate);
 
-	return EachItem ? (
+	return (
 		<div className='min-h-[100vh] w-full overflow-x-hidden'>
 			<Navbar />
 			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
@@ -114,7 +115,7 @@ const ProductPreview = ({
 				</div>
 			</div>
 		</div>
-	) : null; // Return null if EachItem is falsy
+	);
 };
 
 export default ProductPreview;
