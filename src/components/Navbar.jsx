@@ -11,7 +11,7 @@ import Link from 'next/link';
 const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 	const [sideBarIsOn, setsideBarIsOn] = useState(false);
 	return (
-		<div className='mainNav relative overflow-hidden h-[10vh] '>
+		cartItem && favItem ? (<div className='mainNav relative overflow-hidden h-[10vh] '>
 			<nav className='lg:p-[40px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
 				<div className='logo'>
 					<h3 className='text-[var(--primary-color)]  md:text-[24px] text-lg font-extrabold tracking-widest'>
@@ -125,7 +125,7 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				</div>
 			)}
 			{/* end of main div */}
-		</div>
+		</div>):""
 	);
 };
 
