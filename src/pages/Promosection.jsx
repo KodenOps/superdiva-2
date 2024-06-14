@@ -26,7 +26,6 @@ const Promosection = ({
 								onClick={() => {
 									setpreviewItems(!previewItems);
 									setEachItem(hotDB);
-									console.log(EachItem);
 								}}>
 								<img
 									src={hotDB.image}

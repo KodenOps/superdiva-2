@@ -4,7 +4,7 @@ import React from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
-import { FaCartPlus } from 'react-icons/fa';
+import { FaCartPlus, FaHeart } from 'react-icons/fa';
 
 const ProductPreview = ({
 	previewItems,
@@ -101,11 +101,19 @@ const ProductPreview = ({
 								${EachItem.price}
 							</p>
 						</div>
-						<button
-							className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
-							onClick={(e) => console.log('Added to cart')}>
-							<FaCartPlus size={20} /> Add To Cart
-						</button>
+						<div className='ctabtn flex items-center justify-around gap-2 h-full w-full'>
+							<button
+								className='py-[14px] px-[16px] border-2 border-[var(--primary-color)] md:w-[50px] h-full rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
+								onClick={(e) => console.log('Added to cart')}>
+								<FaHeart size={20} />
+							</button>
+							<button
+								className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
+								onClick={(e) => console.log('Added to cart')}>
+								<FaCartPlus size={20} />
+								Add To Cart
+							</button>
+						</div>
 					</div>
 					<button
 						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
