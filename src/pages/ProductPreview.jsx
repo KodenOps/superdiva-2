@@ -14,43 +14,53 @@ const ProductPreview = ({
 	const ratingFunc = (count) => {
 		switch (count) {
 			case 1:
-				return (
+				return EachItem ? (
 					<Rating
 						value={1}
 						counts={EachItem.rating.count}
 					/>
+				) : (
+					''
 				);
 				break;
 			case 2:
-				return (
+				return EachItem ? (
 					<Rating
 						value={2}
 						counts={EachItem.rating.count}
 					/>
+				) : (
+					''
 				);
 				break;
 			case 3:
-				return (
+				return EachItem ? (
 					<Rating
 						value={3}
 						counts={EachItem.rating.count}
 					/>
+				) : (
+					''
 				);
 				break;
 			case 4:
-				return (
+				return EachItem ? (
 					<Rating
 						value={4}
 						counts={EachItem.rating.count}
 					/>
+				) : (
+					''
 				);
 				break;
 			case 5:
-				return (
+				return EachItem ? (
 					<Rating
 						value={5}
 						counts={EachItem.rating.count}
 					/>
+				) : (
+					''
 				);
 				break;
 
