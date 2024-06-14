@@ -5,6 +5,7 @@ import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
 import { FaCartPlus } from 'react-icons/fa';
+
 const ProductPreview = ({
 	previewItems,
 	setpreviewItems,
@@ -12,87 +13,44 @@ const ProductPreview = ({
 	setEachItem,
 }) => {
 	const ratingFunc = (count) => {
-		switch (count) {
-			case 1:
-				return EachItem ? (
-					<Rating
-						value={1}
-						counts={EachItem.rating.count}
-					/>
-				) : (
-					''
-				);
-				break;
-			case 2:
-				return EachItem ? (
-					<Rating
-						value={2}
-						counts={EachItem.rating.count}
-					/>
-				) : (
-					''
-				);
-				break;
-			case 3:
-				return EachItem ? (
-					<Rating
-						value={3}
-						counts={EachItem.rating.count}
-					/>
-				) : (
-					''
-				);
-				break;
-			case 4:
-				return EachItem ? (
-					<Rating
-						value={4}
-						counts={EachItem.rating.count}
-					/>
-				) : (
-					''
-				);
-				break;
-			case 5:
-				return EachItem ? (
-					<Rating
-						value={5}
-						counts={EachItem.rating.count}
-					/>
-				) : (
-					''
-				);
-				break;
-
-			default:
-				break;
+		if (EachItem) {
+			return (
+				<Rating
+					value={count}
+					counts={EachItem.rating.count}
+				/>
+			);
+		} else {
+			return null; // Return null if EachItem is falsy
 		}
 	};
+
 	let stars = Math.round(EachItem.rating.rate);
+
 	return EachItem ? (
 		<div className='min-h-[100vh] w-full overflow-x-hidden'>
 			<Navbar />
-			<div className=' w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
-				<div className='left  md:w-[40%] h-full overflow-hidden w-[100%]  rounded-lg'>
+			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
+				<div className='left md:w-[40%] h-full overflow-hidden w-[100%] rounded-lg'>
 					<Image
 						src={EachItem.image}
 						width={310}
 						height={200}
 						alt='hdhd'
-						className='object-fill  w-full rounded-lg'
+						className='object-fill w-full rounded-lg'
 					/>
 				</div>
-				<div className='right md:w-[50%] w-[100%] md:px-0 px-[16px] py-[24px] '>
+				<div className='right md:w-[50%] w-[100%] md:px-0 px-[16px] py-[24px]'>
 					<div className='topInfo mb-4'>
 						<h6 className='category text-sm font-mono capitalize text-[#c4c4c4] text-[20px] font-bold'>
 							{EachItem.category}
 						</h6>
-						<h6 className='title text-2xl font-bold uppercase text-[var(--primary-color)] '>
+						<h6 className='title text-2xl font-bold uppercase text-[var(--primary-color)]'>
 							{EachItem.title}
 						</h6>
-						<h6 className='rate flex gap-3 items-center justify-start'>
-							{EachItem ? ratingFunc(stars, EachItem.rating.count) : ''}
-						</h6>
+						<div className='rate flex gap-3 items-center justify-start'>
+							{ratingFunc(stars)}
+						</div>
 					</div>
 					{/* THE PRODUCT Details */}
 					<p>
@@ -125,9 +83,9 @@ const ProductPreview = ({
 						Shop today and discover why this dress is a favorite among fashion
 						enthusiasts.
 					</p>
-					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2  rounded-lg mt-8 items-center '>
+					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2 rounded-lg mt-8 items-center'>
 						<div className='left flex flex-col items-center font-semibold'>
-							<p className='capitalize '>
+							<p className='capitalize'>
 								Save up to{' '}
 								{Math.floor(
 									((EachItem.oldprice - EachItem.price) / EachItem.oldprice) *
@@ -156,9 +114,7 @@ const ProductPreview = ({
 				</div>
 			</div>
 		</div>
-	) : (
-		''
-	);
+	) : null; // Return null if EachItem is falsy
 };
 
 export default ProductPreview;
