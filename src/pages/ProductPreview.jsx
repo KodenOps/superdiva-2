@@ -81,7 +81,9 @@ const ProductPreview = ({
 							{EachItem.title}
 						</h6>
 						<h6 className='rate flex gap-3 items-center justify-start'>
-							{ratingFunc(stars, EachItem.rating.count)}
+							{Eachitem
+								? ratingFunc(stars, EachItem.rating.count)
+								: console.log('Item Not found')}
 						</h6>
 					</div>
 					{/* THE PRODUCT Details */}
