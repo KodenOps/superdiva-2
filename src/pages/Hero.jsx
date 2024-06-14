@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import HeroImg from '../assets/heroimg.png';
 const Hero = ({ cartItem, setcartItem, favItem, setfavItem }) => {
-	return (
+	return favItem && cartItem ? (
 		<section
 			className='h-screen w-full'
 			id='home'>
@@ -46,6 +46,8 @@ const Hero = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				</div>
 			</div>
 		</section>
+	) : (
+		''
 	);
 };
 
