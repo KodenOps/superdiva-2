@@ -32,7 +32,7 @@ const Promo = [
 			'The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.',
 		category: 'Bikini',
 		image:
-			'https://cdn.shopify.com/s/files/1/0624/2526/8462/products/all-over-print-recycled-high-waisted-bikini-white-left-back-636ab1253a26d_1024x1024.jpg?v=1667936580',
+			'https://media2.newlookassets.com/i/newlook/892897813.jpg?strip=true&qlt=50',
 		rating: { rate: 2.1, count: 430 },
 	},
 	{
@@ -163,8 +163,7 @@ const Promo = [
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
 		category: 'gown',
-		image:
-			'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/417458/2.jpg?3510',
+		image: 'https://m.media-amazon.com/images/I/517vOoyQCqL._AC_UL1500_.jpg',
 		rating: { rate: 3.6, count: 40 },
 	},
 	{
@@ -211,7 +210,7 @@ const Promo = [
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
 		category: 'hat',
 		image:
-			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfY5Jawqysgb4NOPk0-dQh6EgqDVtp21UtQ&usqp=CAU',
+			'https://images.asos-media.com/groups/asos-design-oversized-textured-beach-co-ord-in-black/139729-group-1/?$n_480w$&wid=476&fit=constrain',
 		rating: { rate: 2.4, count: 280 },
 	},
 ];

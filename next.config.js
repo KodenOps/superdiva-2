@@ -74,6 +74,14 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'images.unsplash.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'images.asos-media.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'media2.newlookassets.com',
+			},
 		],
 	},
 };
