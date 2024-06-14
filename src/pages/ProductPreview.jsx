@@ -101,9 +101,9 @@ const ProductPreview = ({
 								${EachItem.price}
 							</p>
 						</div>
-						<div className='ctabtn flex items-center justify-around gap-2 h-full w-full'>
+						<div className='ctabtn flex items-center justify-end gap-2 h-full w-full'>
 							<button
-								className='py-[14px] px-[16px] border-2 border-[var(--primary-color)] md:w-[50px] h-full rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
+								className='p-[14px] border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
 								onClick={(e) => console.log('Added to cart')}>
 								<FaHeart size={20} />
 							</button>
