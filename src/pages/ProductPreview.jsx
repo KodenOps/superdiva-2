@@ -3,13 +3,62 @@ import Navbar from '@/components/Navbar';
 import React from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
-
+import Rating from '@/components/Ratings';
+import { FaCartPlus } from 'react-icons/fa';
 const ProductPreview = ({
 	previewItems,
 	setpreviewItems,
 	EachItem,
 	setEachItem,
 }) => {
+	const ratingFunc = (count) => {
+		switch (count) {
+			case 1:
+				return (
+					<Rating
+						value={1}
+						counts={EachItem.rating.count}
+					/>
+				);
+				break;
+			case 2:
+				return (
+					<Rating
+						value={2}
+						counts={EachItem.rating.count}
+					/>
+				);
+				break;
+			case 3:
+				return (
+					<Rating
+						value={3}
+						counts={EachItem.rating.count}
+					/>
+				);
+				break;
+			case 4:
+				return (
+					<Rating
+						value={4}
+						counts={EachItem.rating.count}
+					/>
+				);
+				break;
+			case 5:
+				return (
+					<Rating
+						value={5}
+						counts={EachItem.rating.count}
+					/>
+				);
+				break;
+
+			default:
+				break;
+		}
+	};
+	let stars = Math.round(EachItem.rating.rate);
 	return EachItem ? (
 		<div className='min-h-[100vh] w-full overflow-x-hidden'>
 			<Navbar />
@@ -31,9 +80,8 @@ const ProductPreview = ({
 						<h6 className='title text-2xl font-bold uppercase text-[var(--primary-color)] '>
 							{EachItem.title}
 						</h6>
-						<h6 className='rate flex gap-3'>
-							{EachItem.rating.rate}
-							<span>{EachItem.rating.count}</span>
+						<h6 className='rate flex gap-3 items-center justify-start'>
+							{ratingFunc(stars, EachItem.rating.count)}
 						</h6>
 					</div>
 					{/* THE PRODUCT Details */}
@@ -84,9 +132,9 @@ const ProductPreview = ({
 							</p>
 						</div>
 						<button
-							className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white mt-4'
+							className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
 							onClick={(e) => console.log('Added to cart')}>
-							Add To Cart
+							<FaCartPlus size={20} /> Add To Cart
 						</button>
 					</div>
 					<button

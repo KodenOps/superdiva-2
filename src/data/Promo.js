@@ -21,7 +21,7 @@ const Promo = [
 		category: 'Shoes',
 		image:
 			'https://images.dsw.com/is/image/DSWShoes/514130_801_ss_01?impolicy=colpg&imwidth=400&imdensity=1',
-		rating: { rate: 4.7, count: 500 },
+		rating: { rate: 4.7, count: 124 },
 	},
 	{
 		id: 3,
@@ -45,7 +45,7 @@ const Promo = [
 		category: 'Shirts',
 		image:
 			'https://img.freepik.com/premium-photo/elegant-young-woman-white-shirt-black-trousers-with-dark-hair-holding-black-glasses-white-background-studio_567313-9194.jpg',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 5.0, count: 292 },
 	},
 	{
 		id: 5,
@@ -57,7 +57,7 @@ const Promo = [
 		category: 'Jacket',
 		image:
 			'https://cdn.shopify.com/s/files/1/0009/5895/5638/products/1_a82b3ca5-ce6f-4cd8-8297-84f14d77a3b9_800x.jpg?v=1596030687',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 4.6, count: 111 },
 	},
 	{
 		id: 6,
@@ -69,7 +69,7 @@ const Promo = [
 		category: 'jewelery',
 		image:
 			'https://image.made-in-china.com/44f3j00COIPBUMqCiRL/Fresh-Water-Pearl-925-Silver-Rhodium-Plated-Trendy-2023-Women-Jewellery-6A-CZ-Diamond-Factory-Wholesale-Fine-Jewelry-Earrings.webp',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.4, count: 2001 },
 	},
 	{
 		id: 7,
@@ -81,7 +81,7 @@ const Promo = [
 		category: 'shoe',
 		image:
 			'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw12c7c5b8/images/l_08/A05253C_L_08X1.jpg',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.4, count: 23 },
 	},
 	{
 		id: 8,
@@ -93,7 +93,7 @@ const Promo = [
 		category: 'Jacket',
 		image:
 			'https://i5.walmartimages.com/asr/97fa8995-12c8-4130-9935-984b425ca824.18298fc4964eb616a28ed4f52f0eb917.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.5, count: 11 },
 	},
 	{
 		id: 9,
@@ -105,7 +105,7 @@ const Promo = [
 		category: 'hoodie',
 		image:
 			'https://media.boohoo.com/i/boohoo/dzz55964_teal_xl_1/female-teal-hooded-padded-jacket',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 2.6, count: 3 },
 	},
 	{
 		id: 10,
@@ -117,7 +117,7 @@ const Promo = [
 		category: 'bag',
 		image:
 			'https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/94/216606/1.jpg?0615',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 4.6, count: 214 },
 	},
 	{
 		id: 11,
@@ -129,7 +129,7 @@ const Promo = [
 		category: 'bag',
 		image:
 			'https://down-my.img.susercontent.com/file/7bde5ff7bd69a287d23a6b1554826d60',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.6, count: 30 },
 	},
 	{
 		id: 12,
@@ -141,7 +141,7 @@ const Promo = [
 		category: 'jewelery',
 		image:
 			'https://akm-img-a-in.tosshub.com/aajtak/styles/medium_crop_simple/public/images/story/202105/pink_color_top.jpg',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.6, count: 21 },
 	},
 	{
 		id: 13,
@@ -153,7 +153,7 @@ const Promo = [
 		category: 'jewelery',
 		image:
 			'https://static.pullandbear.net/2/photos//2023/I/0/1/p/8470/383/250/8470383250_6_1_8.jpg?t=1686829268699&imwidth=1920',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 1.6, count: 901 },
 	},
 	{
 		id: 14,
@@ -165,7 +165,7 @@ const Promo = [
 		category: 'gown',
 		image:
 			'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/26/417458/2.jpg?3510',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.6, count: 40 },
 	},
 	{
 		id: 15,
@@ -177,7 +177,7 @@ const Promo = [
 		category: 'gown',
 		image:
 			'https://media3.jennah-boutique.com/20547/abaya-dubai-zayna-3-pieces-grey.jpg',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.0, count: 4 },
 	},
 	{
 		id: 16,
@@ -188,7 +188,7 @@ const Promo = [
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
 		category: 'hat',
 		image: 'https://m.media-amazon.com/images/I/61ADS-6LMvL.jpg',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 5.0, count: 84 },
 	},
 	{
 		id: 17,
@@ -200,7 +200,7 @@ const Promo = [
 		category: 'hat',
 		image:
 			'https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 3.4, count: 201 },
 	},
 	{
 		id: 18,
@@ -212,7 +212,7 @@ const Promo = [
 		category: 'hat',
 		image:
 			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRfY5Jawqysgb4NOPk0-dQh6EgqDVtp21UtQ&usqp=CAU',
-		rating: { rate: 4.6, count: 400 },
+		rating: { rate: 2.4, count: 280 },
 	},
 ];
 
