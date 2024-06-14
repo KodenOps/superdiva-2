@@ -28,6 +28,10 @@ const nextConfig = {
 			},
 			{
 				protocol: 'https',
+				hostname: 'www.converse.com',
+			},
+			{
+				protocol: 'https',
 				hostname: 'i5.walmartimages.com',
 			},
 			{
@@ -65,6 +69,10 @@ const nextConfig = {
 			{
 				protocol: 'https',
 				hostname: 'encrypted-tbn0.gstatic.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'images.unsplash.com',
 			},
 		],
 	},
