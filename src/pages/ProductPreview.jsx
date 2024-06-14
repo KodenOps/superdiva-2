@@ -24,7 +24,7 @@ const ProductPreview = ({
 				);
 				break;
 			case 2:
-				return EachItem ? (
+				return EachItem && EachItem.rating ? (
 					<Rating
 						value={2}
 						counts={EachItem.rating.count}
