@@ -93,19 +93,6 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 								Explore <MdArrowForwardIos size={20} />
 							</li>
 						</ul>
-						<div className='bottomIcons flex items-center justify-between gap-[32px] border-t-2 py-[20px] h-[30%] px-[20px]'>
-							<div className='flex items-center justify-center'>
-								<AiOutlineShoppingCart size={30} />
-								<span>{cartItem.length}</span>
-							</div>
-							<div className='flex items-center justify-center'>
-								<AiOutlineHeart size={30} />
-								<span>{favItem.length}</span>
-							</div>
-							<div className='flex items-center justify-center'>
-								<AiOutlineUser size={30} />
-							</div>
-						</div>
 					</nav>
 				</div>
 			) : (
