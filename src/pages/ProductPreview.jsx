@@ -13,14 +13,14 @@ const ProductPreview = ({
 	return EachItem ? (
 		<div className='min-h-[100vh] w-full overflow-x-hidden'>
 			<Navbar />
-			<div className='md:h-[100vh] w-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px]'>
-				<div className='left  md:w-[40%] w-[100%]  md:h-[80%] rounded-lg'>
+			<div className=' w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
+				<div className='left  md:w-[40%] h-full overflow-hidden w-[100%]  rounded-lg'>
 					<Image
 						src={EachItem.image}
-						width={510}
-						height={400}
+						width={310}
+						height={200}
 						alt='hdhd'
-						className='object-fill h-full w-full rounded-lg'
+						className='object-fill  w-full rounded-lg'
 					/>
 				</div>
 				<div className='right md:w-[50%] w-[100%] md:px-0 px-[16px] py-[24px] '>
@@ -38,31 +38,33 @@ const ProductPreview = ({
 					</div>
 					{/* THE PRODUCT Details */}
 					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut placeat
-						nobis labore deleniti quis qui impedit earum debitis neque maxime,
-						explicabo, blanditiis tempora veritatis reiciendis quas! Assumenda
-						accusantium quasi eaque. Quibusdam minima laudantium, modi autem
-						quis beatae consequatur fuga voluptatibus optio, iste eos
-						consectetur officiis doloremque repellat ipsam itaque inventore qui
-						dolore ad. Deleniti ullam repellendus adipisci voluptatibus porro
-						dolore veniam architecto, quaerat officia eaque cupiditate molestiae
-						cum aspernatur explicabo qui consequuntur quo suscipit quae
-						eligendi. Velit eligendi laborum ex? Voluptate, quod distinctio quo
-						provident, corporis a perferendis aut reprehenderit porro minima
-						ullam exercitationem architecto omnis sunt deleniti alias nesciunt
-						ducimus blanditiis magni, non modi laboriosam incidunt sit? Enim
-						facilis eum quod, ratione expedita ea in, natus explicabo
-						voluptatibus temporibus at quibusdam impedit amet ipsam debitis rem,
-						praesentium earum vitae mollitia. Sint sit nobis beatae quaerat
-						magni quam temporibus soluta hic non. Ratione sed voluptate
-						consequatur officia distinctio! Neque aliquid aut voluptas
-						consectetur animi distinctio natus quisquam nulla rem illo odio eius
-						quis recusandae cumque, mollitia, nesciunt suscipit iste, unde
-						repudiandae explicabo magnam veritatis sit expedita. Commodi
-						repudiandae ipsa consectetur tenetur incidunt officiis,
-						necessitatibus, doloribus consequuntur ea nesciunt quibusdam aliquid
-						impedit ab voluptates omnis similique. Fugiat maiores inventore
-						nobis sunt.
+						Elevate your style with our Effortlessly Chic Maxi Dress. This
+						stunning piece blends sophistication and comfort, making it a
+						must-have for any fashion-forward wardrobe. The dress features a
+						flowy silhouette that flatters all body types, and its delicate
+						detailing adds a touch of elegance to your look. Crafted with
+						premium materials, this dress ensures durability and comfort,
+						perfect for any occasion. Whether you're attending a summer wedding,
+						enjoying a day out with friends, or simply looking to add a
+						versatile piece to your collection, this maxi dress is your go-to
+						choice. Featuring an elegant design, the dress enhances your natural
+						beauty with a flattering silhouette. Its premium quality fabric
+						guarantees long-lasting wear and comfort. The versatile style makes
+						it ideal for weddings, casual outings, or any special event.
+						Delicate detailing adds a touch of sophistication and charm, making
+						it a timeless addition to your wardrobe. Turn heads and feel
+						confident in the Effortlessly Chic Maxi Dress. Available in multiple
+						sizes and colors to suit your personal style. Shop now and embrace
+						timeless elegance. The Effortlessly Chic Maxi Dress is designed to
+						be a staple in your wardrobe, offering a balance of style and
+						comfort that is unmatched. This dress is perfect for any season,
+						easily transitioning from a summer day out to a cozy autumn evening.
+						Its effortless design and high-quality fabric make it easy to dress
+						up or down, ensuring you always look your best. Don't miss out on
+						the opportunity to add this beautiful dress to your collection. With
+						its timeless design and superior craftsmanship, the Effortlessly
+						Chic Maxi Dress is an investment in style and elegance. Shop today
+						and discover why this dress is a favorite among fashion enthusiasts.
 					</p>
 					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2  rounded-lg mt-8 items-center '>
 						<div className='left flex flex-col items-center font-semibold'>
@@ -88,7 +90,7 @@ const ProductPreview = ({
 						</button>
 					</div>
 					<button
-						className='py-[14px] px-[16px] text-[var(--primary-color)] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
+						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
 						onClick={(e) => setpreviewItems(!previewItems)}>
 						Continue Shopping
 					</button>
