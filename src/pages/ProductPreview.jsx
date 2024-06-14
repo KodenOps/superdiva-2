@@ -85,8 +85,8 @@ const ProductPreview = ({
 						enthusiasts.
 					</p>
 					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2 rounded-lg mt-8 items-center'>
-						<div className='left flex flex-col items-center font-semibold'>
-							<p className='capitalize'>
+						<div className='left flex flex-col items-start  font-semibold '>
+							<p className='capitalize md:text-[16px] text-sm w-full'>
 								Save up to{' '}
 								{Math.floor(
 									((EachItem.oldprice - EachItem.price) / EachItem.oldprice) *

@@ -17,7 +17,7 @@ html {
 	-ms-user-select: none;
 }
 body {
-	font-family: "Poppins";
+	font-family: 'Poppins';
 	user-select: none;
 }
 .homenav li:hover {
@@ -38,4 +38,9 @@ li.active:hover {
 }
 img {
 	pointer-events: none;
+	color: #fbfbfb;
+}
+
+.LinkStyle {
+	@apply flex justify-between w-full  px-[16px] bg-[#fafafa] py-[24px] border-y-2 border-slate-300;
 }

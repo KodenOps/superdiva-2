@@ -6,8 +6,9 @@ import {
 	AiOutlineUser,
 	AiOutlineMenu,
 } from 'react-icons/ai';
+import { MdArrowForwardIos } from 'react-icons/md';
 import Link from 'next/link';
-const Navbar = () => {
+const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 	const [sideBarIsOn, setsideBarIsOn] = useState(false);
 	return (
 		<div className='mainNav relative overflow-hidden h-[10vh] '>
@@ -37,12 +38,12 @@ const Navbar = () => {
 					{/* cart icon */}
 					<div className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
-						<span>0</span>
+						<span>{cartItem.length}</span>
 					</div>
 					{/* favorite icon */}
 					<div className='flex items-center justify-center'>
 						<AiOutlineHeart size={30} />
-						<span>0</span>
+						<span>{favItem.length}</span>
 					</div>
 					{/* user icon */}
 					<div className='flex items-center justify-center'>
@@ -50,6 +51,15 @@ const Navbar = () => {
 					</div>
 				</div>
 				{/* mobile view hamburger*/}
+
+				<div className='flex items-center justify-center gap-[5px] '>
+					<AiOutlineShoppingCart size={20} />
+					<span>{cartItem.length}</span>
+				</div>
+				<div className='flex items-center justify-center gap-[5px] '>
+					<AiOutlineHeart size={20} />
+					<span>{favItem.length}</span>
+				</div>
 				<div
 					className='flex items-center justify-center lg:hidden'
 					onClick={() => setsideBarIsOn(!sideBarIsOn)}>
@@ -66,25 +76,39 @@ const Navbar = () => {
 					<nav className='sidenav_main absolute top-[10vh] right-[0px] z-50  h-[90vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
 						<ul className='list-none flex flex-col items-center justify-center gap-[25px] mb-[40px] h-[70%]'>
 							<li
-								className=''
+								className='LinkStyle'
 								onClick={() => setsideBarIsOn(!sideBarIsOn)}>
 								<Link href='/#home'>Home</Link>
+								<MdArrowForwardIos size={20} />
 							</li>
-							<li>Collections</li>
-							<li onClick={() => setsideBarIsOn(!sideBarIsOn)}>
-								<Link href='/#topProd'>Top Products</Link>
+							<li className='LinkStyle'>
+								Collections <MdArrowForwardIos size={20} />
 							</li>
-							<li>Categories</li>
-							<li>Explore</li>
+							<li
+								className='w-full'
+								onClick={() => setsideBarIsOn(!sideBarIsOn)}>
+								<Link
+									className='LinkStyle'
+									href='/#topProd'>
+									Top Products
+									<MdArrowForwardIos size={20} />
+								</Link>
+							</li>
+							<li className='LinkStyle'>
+								Categories <MdArrowForwardIos size={20} />
+							</li>
+							<li className='LinkStyle'>
+								Explore <MdArrowForwardIos size={20} />
+							</li>
 						</ul>
 						<div className='bottomIcons flex items-center justify-between gap-[32px] border-t-2 py-[20px] h-[30%] px-[20px]'>
 							<div className='flex items-center justify-center'>
 								<AiOutlineShoppingCart size={30} />
-								<span>0</span>
+								<span>{cartItem.length}</span>
 							</div>
 							<div className='flex items-center justify-center'>
 								<AiOutlineHeart size={30} />
-								<span>0</span>
+								<span>{favItem.length}</span>
 							</div>
 							<div className='flex items-center justify-center'>
 								<AiOutlineUser size={30} />
