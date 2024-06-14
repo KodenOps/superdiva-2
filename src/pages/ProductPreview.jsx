@@ -11,6 +11,10 @@ const ProductPreview = ({
 	setpreviewItems,
 	EachItem,
 	setEachItem,
+	cartItem,
+	setcartItem,
+	favItem,
+	setfavItem,
 }) => {
 	if (!EachItem || !EachItem.rating) {
 		// If EachItem is undefined or EachItem.rating is undefined/null, return null or handle the case accordingly
@@ -29,8 +33,13 @@ const ProductPreview = ({
 	let stars = Math.round(EachItem.rating.rate);
 
 	return (
-		<div className='min-h-[100vh] w-full overflow-x-hidden'>
-			<Navbar />
+		<div className='min-h-[100vh] w-full overflow-x-hidden -z-0'>
+			<Navbar
+				cartItem={cartItem}
+				setcartItem={setcartItem}
+				favItem={favItem}
+				setfavItem={setfavItem}
+			/>
 			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
 				<div className='left md:w-[40%] h-full overflow-hidden w-[100%] rounded-lg'>
 					<Image
