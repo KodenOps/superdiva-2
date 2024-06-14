@@ -28,7 +28,9 @@ const Rating = ({ value, counts }) => {
 				<defs />
 				{stars}
 			</svg>
-			<span className='text-sm font-semibold text-slate-400'>({counts} Buyers)</span>
+			<span className='text-sm font-semibold text-slate-400'>
+				({counts} Buyers)
+			</span>
 		</div>
 	);
 };
