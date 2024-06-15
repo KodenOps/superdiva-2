@@ -20,8 +20,8 @@ export default function Home() {
 	}, [EachItem]);
 
 	useEffect(() => {
-		const storedCartItems = JSON.parse(localStorage.getItem('cartItem'));
-		const storedFavItems = JSON.parse(localStorage.getItem('favItem'));
+		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
 		setcartItem(storedCartItems);
 		setfavItem(storedFavItems);
 
