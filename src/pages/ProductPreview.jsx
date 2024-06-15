@@ -16,9 +16,19 @@ const ProductPreview = ({
 	setcartItem,
 	favItem,
 	setfavItem,
+	isAddedToCart,
+	setisAddedToCart,
+	isAddedToFav,
+	setisAddedToFav,
 }) => {
-	const [isAddedToCart, setisAddedToCart] = useState(false);
-	const [isAddedToFav, setisAddedToFav] = useState(false);
+	
+	useEffect(() => {
+		localStorage.setItem('cartItem', JSON.stringify(cartItem));
+	}, [cartItem]);
+
+	useEffect(() => {
+		localStorage.setItem('favItem', JSON.stringify(favItem));
+	}, [favItem]);
 
 	useEffect(() => {
 		// Check if the item is already in the cart when the component mounts

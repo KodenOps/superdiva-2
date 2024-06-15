@@ -12,10 +12,30 @@ export default function Home() {
 	const [EachItem, setEachItem] = useState([]);
 	const [cartItem, setcartItem] = useState([]);
 	const [favItem, setfavItem] = useState([]);
+	const [isAddedToCart, setisAddedToCart] = useState(false);
+	const [isAddedToFav, setisAddedToFav] = useState(false);
 	// make the page scroll up upon loading the preview page
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [EachItem]);
+
+	useEffect(() => {
+		const storedCartItems = JSON.parse(localStorage.getItem('cartItem'));
+		const storedFavItems = JSON.parse(localStorage.getItem('favItem'));
+		setcartItem(storedCartItems);
+		setfavItem(storedFavItems);
+
+		const checkIfPresentInCart = storedCartItems.some(
+			(item) => item.id === EachItem.id
+		);
+		setisAddedToCart(checkIfPresentInCart);
+
+		const checkIfPresentInFav = storedFavItems.some(
+			(item) => item.id === EachItem.id
+		);
+		setisAddedToFav(checkIfPresentInFav);
+	}, [EachItem]);
+
 	return (
 		<main className=''>
 			{!previewItem ? (
@@ -45,6 +65,10 @@ export default function Home() {
 					setcartItem={setcartItem}
 					favItem={favItem}
 					setfavItem={setfavItem}
+					isAddedToCart={isAddedToCart}
+					setisAddedToCart={setisAddedToCart}
+					isAddedToFav={isAddedToFav}
+					setisAddedToFav={setisAddedToFav}
 				/>
 			)}
 			<Footer />
