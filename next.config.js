@@ -82,6 +82,50 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'media2.newlookassets.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.yoursclothing.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'tristanstyle.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'i.ebayimg.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'avasilk.co.uk',
+			},
+			{
+				protocol: 'https',
+				hostname: 'aamthelabel.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'shopamericanthreads.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'pds01.b-cdn.net',
+			},
+			{
+				protocol: 'https',
+				hostname: 'kosha.co',
+			},
+			{
+				protocol: 'https',
+				hostname: 'pinimg.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'imageio.forbes.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'lulus.com',
+			},
 		],
 	},
 };
