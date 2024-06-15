@@ -31,6 +31,7 @@ const Promosection = ({
 									src={hotDB.image}
 									alt='image of products'
 									className='md:w-[200px] md:h-[200px] w-[160px] h-[160px] object-cover '
+									loading='lazy'
 								/>
 								<div className='text-[10px] mt-[10px] md:text-left text-center'>
 									<h4 className=' font-bold'>{hotDB.title}</h4>
