@@ -126,6 +126,54 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'lulus.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.yoursclothing.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.tristanstyle.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'i.ebayimg.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.avasilk.co.uk',
+			},
+			{
+				protocol: 'https',
+				hostname: 'aamthelabel.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.shopamericanthreads.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'pds01.b-cdn.net',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.kosha.co',
+			},
+			{
+				protocol: 'https',
+				hostname: 'i.pinimg.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'imageio.forbes.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.lulus.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.shopify.com',
+			},
 		],
 	},
 };

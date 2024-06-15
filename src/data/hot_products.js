@@ -1,6 +1,6 @@
 const hotProductsDB = [
 	{
-		id: 1,
+		id: 'qoEa1r3z',
 		title: 'Vintage Floral Dress',
 		price: 70.0,
 		oldprice: 100.0,
@@ -12,7 +12,7 @@ const hotProductsDB = [
 		rating: { rate: 4.7, count: 320 },
 	},
 	{
-		id: 2,
+		id: 'sFb4Wt7y',
 		title: 'Casual Denim Jacket',
 		price: 90.0,
 		oldprice: 120.0,
@@ -24,7 +24,7 @@ const hotProductsDB = [
 		rating: { rate: 4.8, count: 280 },
 	},
 	{
-		id: 3,
+		id: 'pLm9Cq2x',
 		title: 'Comfortable Knit Sweater',
 		price: 60.0,
 		oldprice: 80.0,
@@ -35,7 +35,7 @@ const hotProductsDB = [
 		rating: { rate: 4.6, count: 240 },
 	},
 	{
-		id: 4,
+		id: 'rTk5Qw8u',
 		title: 'Elegant Silk Blouse',
 		price: 85.0,
 		oldprice: 110.0,
@@ -46,7 +46,7 @@ const hotProductsDB = [
 		rating: { rate: 4.9, count: 150 },
 	},
 	{
-		id: 5,
+		id: 'uIo3Pz9v',
 		title: 'Chic Wide-Leg Pants',
 		price: 65.0,
 		oldprice: 90.0,
@@ -58,7 +58,7 @@ const hotProductsDB = [
 		rating: { rate: 4.5, count: 200 },
 	},
 	{
-		id: 6,
+		id: 'wNj8Ht4s',
 		title: 'Trendy Off-Shoulder Top',
 		price: 50.0,
 		oldprice: 70.0,
@@ -70,7 +70,7 @@ const hotProductsDB = [
 		rating: { rate: 4.4, count: 260 },
 	},
 	{
-		id: 7,
+		id: 'zMk7Lu1x',
 		title: 'Sophisticated Pencil Skirt',
 		price: 55.0,
 		oldprice: 75.0,
@@ -82,7 +82,7 @@ const hotProductsDB = [
 		rating: { rate: 4.7, count: 220 },
 	},
 	{
-		id: 8,
+		id: 'cAo9Rt3w',
 		title: 'Stylish Trench Coat',
 		price: 120.0,
 		oldprice: 160.0,
@@ -94,7 +94,7 @@ const hotProductsDB = [
 		rating: { rate: 4.8, count: 180 },
 	},
 	{
-		id: 9,
+		id: 'vXb6Ap2k',
 		title: 'Casual Graphic Tee',
 		price: 25.0,
 		oldprice: 35.0,
@@ -106,7 +106,7 @@ const hotProductsDB = [
 		rating: { rate: 4.5, count: 300 },
 	},
 	{
-		id: 10,
+		id: 'xKc3Wo5l',
 		title: 'Luxury Cashmere Scarf',
 		price: 95.0,
 		oldprice: 130.0,
@@ -118,7 +118,7 @@ const hotProductsDB = [
 		rating: { rate: 4.9, count: 140 },
 	},
 	{
-		id: 11,
+		id: 'aJs5Rp9m',
 		title: 'Elegant Maxi Dress',
 		price: 110.0,
 		oldprice: 150.0,
@@ -130,7 +130,7 @@ const hotProductsDB = [
 		rating: { rate: 4.8, count: 210 },
 	},
 	{
-		id: 12,
+		id: 'zLm8Oq1n',
 		title: 'Classic Button-Up Shirt',
 		price: 45.0,
 		oldprice: 60.0,

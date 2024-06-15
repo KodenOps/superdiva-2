@@ -80,7 +80,12 @@ export default function Home() {
 						setfavItem={setfavItem}
 					/>
 					<Categories />
-					<TopProduct />
+					<TopProduct
+						setpreviewItem={setpreviewItem}
+						previewItem={previewItem}
+						EachItem={EachItem}
+						setEachItem={setEachItem}
+					/>
 					<Promosection
 						setpreviewItem={setpreviewItem}
 						previewItem={previewItem}

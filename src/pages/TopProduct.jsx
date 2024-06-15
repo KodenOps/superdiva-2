@@ -1,7 +1,7 @@
 import React from 'react';
 import hotProductsDB from '../data/hot_products';
 import Titles from '@/components/Titles';
-const TopProduct = () => {
+const TopProduct = ({ previewItem, setpreviewItem, EachItem, setEachItem }) => {
 	return (
 		<div
 			className=' md:px-[50px] px-[10px] my-[100px] mb-[40px]'
@@ -12,27 +12,31 @@ const TopProduct = () => {
 			/>
 			{/* the entire product box */}
 			<div className='product_Container flex flex-wrap mt-[40px] justify-around items-center'>
-				{hotProductsDB.map((hotDB) => {
+				{hotProductsDB.map((TopPro) => {
 					return (
 						<div
-							key={hotDB.id}
-							className='md:w-[200px] w-[150px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'>
+							key={TopPro.id}
+							className='md:w-[200px] w-[150px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
+							onClick={() => {
+								setpreviewItem(!previewItem);
+								setEachItem(TopPro);
+							}}>
 							<img
-								src={hotDB.image}
+								src={TopPro.image}
 								alt=''
 								className='md:w-[200px] md:h-[200px] w-[160px] h-[160px] object-cover aspect-'
 								loading='lazy'
 							/>
 							<div className='text-[10px] mt-[10px] md:text-left text-center'>
-								<h4 className=' font-bold'>{hotDB.title}</h4>
-								<p className='text-[gray]'>{hotDB.category}</p>
+								<h4 className=' font-bold'>{TopPro.title}</h4>
+								<p className='text-[gray]'>{TopPro.category}</p>
 								<div className='prices   md:justify-left justify-center'>
 									<span className='newprice text-[var(--primary-color)] font-semibold'>
-										${hotDB.price}
+										${TopPro.price}
 									</span>
 									<span className='mx-[10px]'>|</span>
 									<span className='oldprice text-[gray] line-through'>
-										${hotDB.oldprice}
+										${TopPro.oldprice}
 									</span>
 								</div>
 							</div>
