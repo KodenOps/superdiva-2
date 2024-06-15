@@ -1,6 +1,6 @@
 'use client';
 import TopProduct from '@/pages/TopProduct';
-import Hero from '../pages/Hero';
+import Hero from '@/pages/Hero';
 import React, { useEffect, useState } from 'react';
 import Promosection from '@/pages/Promosection';
 import Categories from '@/pages/Categories';
@@ -9,39 +9,42 @@ import ProductPreview from '@/pages/ProductPreview';
 
 export default function Home() {
 	const [previewItem, setpreviewItem] = useState(false);
-	const [EachItem, setEachItem] = useState([]);
+	const [EachItem, setEachItem] = useState({});
 	const [cartItem, setcartItem] = useState([]);
 	const [favItem, setfavItem] = useState([]);
 	const [isAddedToCart, setisAddedToCart] = useState(false);
 	const [isAddedToFav, setisAddedToFav] = useState(false);
 	const [loading, setLoading] = useState(true);
-	// make the page scroll up upon loading the preview page
+
+	// Scroll to top on initial load
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, []);
-	useEffect(() => {
-		localStorage.setItem('previewItem', JSON.stringify(previewItem));
-	}, [previewItem]);
-	// get the value of the store vontent of localstorage
+	}, [EachItem, previewItem]);
+
+	// Load data from localStorage on initial load
 	useEffect(() => {
 		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
-		const storedEachItems = JSON.parse(localStorage.getItem('EachItem')) || [];
-		const storedPreviewItems =
+		const storedEachItem = JSON.parse(localStorage.getItem('EachItem')) || {};
+		const storedPreviewItem =
 			JSON.parse(localStorage.getItem('previewItem')) || false;
+
 		setcartItem(storedCartItems);
 		setfavItem(storedFavItems);
-		setpreviewItem(storedPreviewItems);
-		setEachItem(storedEachItems);
+		setEachItem(storedEachItem);
+		setpreviewItem(storedPreviewItem);
+
 		const checkIfPresentInCart = storedCartItems.some(
-			(item) => item.id === EachItem.id
+			(item) => item.id === storedEachItem.id
 		);
 		setisAddedToCart(checkIfPresentInCart);
 
 		const checkIfPresentInFav = storedFavItems.some(
-			(item) => item.id === EachItem.id
+			(item) => item.id === storedEachItem.id
 		);
 		setisAddedToFav(checkIfPresentInFav);
+
+		// Simulate loading with setTimeout
 		setTimeout(() => {
 			setLoading(false);
 		}, 2000);
@@ -62,11 +65,11 @@ export default function Home() {
 					loop
 					autoplay></dotlottie-player>
 			</div>
-		); // Replace with a loader component or message
+		);
 	}
 
 	return (
-		<main className=''>
+		<main>
 			{!previewItem ? (
 				<div>
 					<Hero
