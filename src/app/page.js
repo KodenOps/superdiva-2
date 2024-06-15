@@ -55,7 +55,8 @@ export default function Home() {
 			<div className='flex items-center justify-center h-screen w-full'>
 				<script
 					src='https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs'
-					type='module'></script>
+					type='module'
+					defer></script>
 
 				<dotlottie-player
 					src='https://lottie.host/2f99218f-62ed-4337-a64e-b5b69764602e/3tRWqnngbp.json'
