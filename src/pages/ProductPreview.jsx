@@ -4,7 +4,8 @@ import React, { useState, useEffect } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
-import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
+import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
+import { FaCartPlus, FaHeart } from 'react-icons/fa';
 
 const ProductPreview = ({
 	previewItems,
@@ -17,15 +18,22 @@ const ProductPreview = ({
 	setfavItem,
 }) => {
 	const [isAddedToCart, setisAddedToCart] = useState(false);
+	const [isAddedToFav, setisAddedToFav] = useState(false);
 
 	useEffect(() => {
 		// Check if the item is already in the cart when the component mounts
-		const checkIfPresent = cartItem.some((item) => item.id === EachItem.id);
-		setisAddedToCart(checkIfPresent);
-	}, [EachItem, cartItem]);
+		const checkIfPresentInCart = cartItem.some(
+			(item) => item.id === EachItem.id
+		);
+		setisAddedToCart(checkIfPresentInCart);
+
+		// Check if the item is already in the favorites when the component mounts
+		const checkIfPresentInFav = favItem.some((item) => item.id === EachItem.id);
+		setisAddedToFav(checkIfPresentInFav);
+	}, [EachItem, cartItem, favItem]);
 
 	if (!EachItem || !EachItem.rating) {
-		return null;
+		return null; // or return an error message or fallback UI
 	}
 
 	const ratingFunc = (count) => {
@@ -88,11 +96,29 @@ const ProductPreview = ({
 							</p>
 						</div>
 						<div className='ctabtn flex items-center justify-end gap-2 h-full w-full'>
-							<button
-								className='p-[14px] border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
-								onClick={() => console.log('Added to favorites')}>
-								<FaHeart size={20} />
-							</button>
+							{isAddedToFav ? (
+								<button
+									className='p-[14px] border-2 border-red-400 md:w-[50px] rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
+									onClick={() => {
+										setfavItem(
+											favItem.filter((item) => item.id !== EachItem.id)
+										);
+										setisAddedToFav(false);
+									}}>
+									<IoIosHeart size={20} />
+								</button>
+							) : (
+								<button
+									className='p-[14px] border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-[var(--primary-color)] md:mt-0 mt-4 flex items-center justify-center gap-4'
+									onClick={() => {
+										if (!favItem.some((item) => item.id === EachItem.id)) {
+											setfavItem([...favItem, EachItem]);
+											setisAddedToFav(true);
+										}
+									}}>
+									<IoIosHeartEmpty size={20} />
+								</button>
+							)}
 							{isAddedToCart ? (
 								<button
 									className='py-[14px] px-[16px] bg-red-400 md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
@@ -101,8 +127,9 @@ const ProductPreview = ({
 											cartItem.filter((item) => item.id !== EachItem.id)
 										);
 										setisAddedToCart(false);
+										console.log(cartItem);
 									}}>
-									<FaTrash size={20} />
+									<FaCartPlus size={20} />
 									Remove From Cart
 								</button>
 							) : (
@@ -112,7 +139,6 @@ const ProductPreview = ({
 										if (!cartItem.some((item) => item.id === EachItem.id)) {
 											setcartItem([...cartItem, EachItem]);
 											setisAddedToCart(true);
-											// console.table(cartItem);
 										}
 									}}>
 									<FaCartPlus size={20} />
