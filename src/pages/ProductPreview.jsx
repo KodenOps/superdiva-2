@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
-import { FaCartPlus, FaHeart } from 'react-icons/fa';
+import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 
 const ProductPreview = ({
 	previewItems,
@@ -102,7 +102,7 @@ const ProductPreview = ({
 										);
 										setisAddedToCart(false);
 									}}>
-									<FaCartPlus size={20} />
+									<FaTrash size={20} />
 									Remove From Cart
 								</button>
 							) : (
