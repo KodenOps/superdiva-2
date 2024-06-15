@@ -14,6 +14,7 @@ export default function Home() {
 	const [favItem, setfavItem] = useState([]);
 	const [isAddedToCart, setisAddedToCart] = useState(false);
 	const [isAddedToFav, setisAddedToFav] = useState(false);
+	const [loading, setLoading] = useState(true);
 	// make the page scroll up upon loading the preview page
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -41,7 +42,28 @@ export default function Home() {
 			(item) => item.id === EachItem.id
 		);
 		setisAddedToFav(checkIfPresentInFav);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
 	}, []);
+
+	if (loading) {
+		return (
+			<div className='flex items-center justify-center h-screen w-full'>
+				<script
+					src='https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs'
+					type='module'></script>
+
+				<dotlottie-player
+					src='https://lottie.host/2f99218f-62ed-4337-a64e-b5b69764602e/3tRWqnngbp.json'
+					background='transparent'
+					speed='1'
+					className="'w-[300px] h-[300px]"
+					loop
+					autoplay></dotlottie-player>
+			</div>
+		); // Replace with a loader component or message
+	}
 
 	return (
 		<main className=''>
