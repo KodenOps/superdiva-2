@@ -1,6 +1,6 @@
 'use client';
 import Navbar from '@/components/Navbar';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
@@ -16,9 +16,16 @@ const ProductPreview = ({
 	favItem,
 	setfavItem,
 }) => {
+	const [isAddedToCart, setisAddedToCart] = useState(false);
+
+	useEffect(() => {
+		// Check if the item is already in the cart when the component mounts
+		const checkIfPresent = cartItem.some((item) => item.id === EachItem.id);
+		setisAddedToCart(checkIfPresent);
+	}, [EachItem, cartItem]);
+
 	if (!EachItem || !EachItem.rating) {
-		// If EachItem is undefined or EachItem.rating is undefined/null, return null or handle the case accordingly
-		return null; // or return an error message or fallback UI
+		return null;
 	}
 
 	const ratingFunc = (count) => {
@@ -41,10 +48,10 @@ const ProductPreview = ({
 				setfavItem={setfavItem}
 			/>
 			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
-				<div className='left h-full md:w-[40%]  overflow-hidden w-[100%] rounded-lg'>
+				<div className='left h-full md:w-[40%] overflow-hidden w-[100%] rounded-lg'>
 					<Image
 						src={EachItem.image}
-						width={500}
+						width={800}
 						height={300}
 						alt='hdhd'
 						className='object-cover rounded-lg'
@@ -62,39 +69,9 @@ const ProductPreview = ({
 							{ratingFunc(stars)}
 						</div>
 					</div>
-					{/* THE PRODUCT Details */}
-					<p>
-						{EachItem.description}
-						{/* Elevate your style with our Effortlessly Chic Maxi Dress. This
-						stunning piece blends sophistication and comfort, making it a
-						must-have for any fashion-forward wardrobe. The dress features a
-						flowy silhouette that flatters all body types, and its delicate
-						detailing adds a touch of elegance to your look. Crafted with
-						premium materials, this dress ensures durability and comfort,
-						perfect for any occasion. Whether you're attending a summer wedding,
-						enjoying a day out with friends, or simply looking to add a
-						versatile piece to your collection, this maxi dress is your go-to
-						choice. Featuring an elegant design, the dress enhances your natural
-						beauty with a flattering silhouette. Its premium quality fabric
-						guarantees long-lasting wear and comfort. The versatile style makes
-						it ideal for weddings, casual outings, or any special event.
-						Delicate detailing adds a touch of sophistication and charm, making
-						it a timeless addition to your wardrobe. Turn heads and feel
-						confident in the Effortlessly Chic Maxi Dress. Available in multiple
-						sizes and colors to suit your personal style. Shop now and embrace
-						timeless elegance. The Effortlessly Chic Maxi Dress is designed to
-						be a staple in your wardrobe, offering a balance of style and
-						comfort that is unmatched. This dress is perfect for any season,
-						easily transitioning from a summer day out to a cozy autumn evening.
-						Its effortless design and high-quality fabric make it easy to dress
-						up or down, ensuring you always look your best. Don't miss out on
-						the opportunity to add this beautiful dress to your collection. With
-						its timeless design and superior craftsmanship, the Effortlessly
-						Chic Maxi Dress is an investment in style and elegance. Shop today
-						and discover why this dress is a favorite among fashion enthusiasts. */}
-					</p>
+					<p>{EachItem.description}</p>
 					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2 rounded-lg mt-8 items-center'>
-						<div className='left flex flex-col items-start  font-semibold '>
+						<div className='left flex flex-col items-start font-semibold'>
 							<p className='capitalize md:text-[16px] text-sm w-full'>
 								Save up to{' '}
 								{Math.floor(
@@ -113,20 +90,40 @@ const ProductPreview = ({
 						<div className='ctabtn flex items-center justify-end gap-2 h-full w-full'>
 							<button
 								className='p-[14px] border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
-								onClick={(e) => console.log('Added to cart')}>
+								onClick={() => console.log('Added to favorites')}>
 								<FaHeart size={20} />
 							</button>
-							<button
-								className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
-								onClick={(e) => console.log('Added to cart')}>
-								<FaCartPlus size={20} />
-								Add To Cart
-							</button>
+							{isAddedToCart ? (
+								<button
+									className='py-[14px] px-[16px] bg-red-400 md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
+									onClick={() => {
+										setcartItem(
+											cartItem.filter((item) => item.id !== EachItem.id)
+										);
+										setisAddedToCart(false);
+									}}>
+									<FaCartPlus size={20} />
+									Remove From Cart
+								</button>
+							) : (
+								<button
+									className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
+									onClick={() => {
+										if (!cartItem.some((item) => item.id === EachItem.id)) {
+											setcartItem([...cartItem, EachItem]);
+											setisAddedToCart(true);
+											// console.table(cartItem);
+										}
+									}}>
+									<FaCartPlus size={20} />
+									Add To Cart
+								</button>
+							)}
 						</div>
 					</div>
 					<button
 						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
-						onClick={(e) => setpreviewItems(!previewItems)}>
+						onClick={() => setpreviewItems(!previewItems)}>
 						Continue Shopping
 					</button>
 				</div>

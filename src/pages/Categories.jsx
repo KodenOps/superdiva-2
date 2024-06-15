@@ -9,7 +9,7 @@ import trousers from '../assets/categories/trousers.svg';
 import Image from 'next/image';
 const Categories = () => {
 	return (
-		<section className='pt-[100px]  '>
+		<section className='md:pt-[100px]  '>
 			<Titles
 				title='Shop by categories'
 				subtext='Tailor your exploration by selecting what you want to see rather than being overwhelmed by all the awesomeness we have here'

@@ -6,7 +6,7 @@ import HeroImg from '../assets/heroimg.png';
 const Hero = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 	return favItem && cartItem ? (
 		<section
-			className='h-screen w-full'
+			className='h-auto w-full'
 			id='home'>
 			<Navbar
 				cartItem={cartItem}
@@ -14,7 +14,7 @@ const Hero = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				favItem={favItem}
 				setfavItem={setfavItem}
 			/>
-			<div className='main_content h-[90vh] lg:h-[85vh] flex items-center justify-around gap-[50px] lg:flex-row flex-col  mt-[30px]'>
+			<div className='main_content min-h-[90vh] lg:h-[85vh] flex items-center justify-around gap-[50px] lg:flex-row flex-col  mt-[30px]'>
 				<div className='left lg:w-[50%] w-full md:px-[50px] px-4 lg:h-[80%] lg:py-[5%]'>
 					<h2 className='font-bold  md:text-4xl lg:text-5xl sm:text-4xl text-[26px] w-[90%] mx-[5%] lg:mx-0 capitalize text-[var(--black)] lg:w-[90%]    leading-8 text-center lg:text-left'>
 						Get the <span className='text-[var(--primary-color)]'>best</span>{' '}
