@@ -83,7 +83,7 @@ const hotProductsDB = [
 	},
 	{
 		id: 8,
-		title: '	',
+		title: 'Stylish Trench Coat',
 		price: 120.0,
 		oldprice: 160.0,
 		description:
