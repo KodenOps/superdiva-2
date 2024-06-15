@@ -8,8 +8,8 @@ import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 import { FaCartPlus, FaHeart } from 'react-icons/fa';
 
 const ProductPreview = ({
-	previewItems,
-	setpreviewItems,
+	previewItem,
+	setpreviewItem,
 	EachItem,
 	setEachItem,
 	cartItem,
@@ -21,7 +21,11 @@ const ProductPreview = ({
 	isAddedToFav,
 	setisAddedToFav,
 }) => {
-	
+	// set variable to the localstorage
+	useEffect(() => {
+		localStorage.setItem('previewItem', JSON.stringify(previewItem));
+	}, [previewItem]);
+
 	useEffect(() => {
 		localStorage.setItem('cartItem', JSON.stringify(cartItem));
 	}, [cartItem]);
@@ -29,6 +33,9 @@ const ProductPreview = ({
 	useEffect(() => {
 		localStorage.setItem('favItem', JSON.stringify(favItem));
 	}, [favItem]);
+	useEffect(() => {
+		localStorage.setItem('EachItem', JSON.stringify(EachItem));
+	}, [EachItem]);
 
 	useEffect(() => {
 		// Check if the item is already in the cart when the component mounts
@@ -159,7 +166,7 @@ const ProductPreview = ({
 					</div>
 					<button
 						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
-						onClick={() => setpreviewItems(!previewItems)}>
+						onClick={() => setpreviewItem(!previewItem)}>
 						Continue Shopping
 					</button>
 				</div>

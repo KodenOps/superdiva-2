@@ -1,15 +1,16 @@
 import Titles from '@/components/Titles';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Promo from '@/data/Promo';
 import Link from 'next/link';
 import ProductPreview from './ProductPreview';
 
 const Promosection = ({
-	previewItems,
-	setpreviewItems,
+	previewItem,
+	setpreviewItem,
 	EachItem,
 	setEachItem,
 }) => {
+
 	return (
 		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles
@@ -24,7 +25,7 @@ const Promosection = ({
 							<div
 								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 								onClick={() => {
-									setpreviewItems(!previewItems);
+									setpreviewItem(!previewItem);
 									setEachItem(hotDB);
 								}}>
 								<img

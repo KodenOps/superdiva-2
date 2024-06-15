@@ -17,14 +17,18 @@ export default function Home() {
 	// make the page scroll up upon loading the preview page
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [EachItem]);
+	}, [EachItem, previewItem]);
 
+	// get the value of the store vontent of localstorage
 	useEffect(() => {
 		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
+		const storedEachItems = JSON.parse(localStorage.getItem('EachItem')) || [];
+		const storedPreviewItems = JSON.parse(localStorage.getItem('previewItem'));
 		setcartItem(storedCartItems);
 		setfavItem(storedFavItems);
-
+		setpreviewItem(storedPreviewItems);
+		setEachItem(storedEachItems);
 		const checkIfPresentInCart = storedCartItems.some(
 			(item) => item.id === EachItem.id
 		);
@@ -34,7 +38,7 @@ export default function Home() {
 			(item) => item.id === EachItem.id
 		);
 		setisAddedToFav(checkIfPresentInFav);
-	}, [EachItem]);
+	}, []);
 
 	return (
 		<main className=''>
@@ -49,8 +53,8 @@ export default function Home() {
 					<Categories />
 					<TopProduct />
 					<Promosection
-						setpreviewItems={setpreviewItem}
-						previewItems={previewItem}
+						setpreviewItem={setpreviewItem}
+						previewItem={previewItem}
 						EachItem={EachItem}
 						setEachItem={setEachItem}
 					/>
@@ -59,8 +63,8 @@ export default function Home() {
 				<ProductPreview
 					EachItem={EachItem}
 					setEachItem={setEachItem}
-					setpreviewItems={setpreviewItem}
-					previewItems={previewItem}
+					setpreviewItem={setpreviewItem}
+					previewItem={previewItem}
 					cartItem={cartItem}
 					setcartItem={setcartItem}
 					favItem={favItem}
