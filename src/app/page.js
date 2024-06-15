@@ -18,7 +18,7 @@ export default function Home() {
 	// make the page scroll up upon loading the preview page
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [EachItem, previewItem]);
+	}, [EachItem.id, previewItem]);
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
 	}, [previewItem]);
