@@ -41,13 +41,13 @@ const ProductPreview = ({
 				setfavItem={setfavItem}
 			/>
 			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
-				<div className='left md:w-[40%] h-full overflow-hidden w-[100%] rounded-lg'>
+				<div className='left h-full md:w-[40%]  overflow-hidden w-[100%] rounded-lg'>
 					<Image
 						src={EachItem.image}
-						width={310}
-						height={200}
+						width={500}
+						height={300}
 						alt='hdhd'
-						className='object-fill w-full rounded-lg'
+						className='object-cover rounded-lg'
 					/>
 				</div>
 				<div className='right md:w-[50%] w-[100%] md:px-0 px-[16px] py-[24px]'>
@@ -64,14 +64,15 @@ const ProductPreview = ({
 					</div>
 					{/* THE PRODUCT Details */}
 					<p>
-						Elevate your style with our Effortlessly Chic Maxi Dress. This
+						{EachItem.description}
+						{/* Elevate your style with our Effortlessly Chic Maxi Dress. This
 						stunning piece blends sophistication and comfort, making it a
 						must-have for any fashion-forward wardrobe. The dress features a
 						flowy silhouette that flatters all body types, and its delicate
 						detailing adds a touch of elegance to your look. Crafted with
 						premium materials, this dress ensures durability and comfort,
-						perfect for any occasion. Whether you&apos;re attending a summer
-						wedding, enjoying a day out with friends, or simply looking to add a
+						perfect for any occasion. Whether you're attending a summer wedding,
+						enjoying a day out with friends, or simply looking to add a
 						versatile piece to your collection, this maxi dress is your go-to
 						choice. Featuring an elegant design, the dress enhances your natural
 						beauty with a flattering silhouette. Its premium quality fabric
@@ -86,12 +87,11 @@ const ProductPreview = ({
 						comfort that is unmatched. This dress is perfect for any season,
 						easily transitioning from a summer day out to a cozy autumn evening.
 						Its effortless design and high-quality fabric make it easy to dress
-						up or down, ensuring you always look your best. Don&apos;t miss out
-						on the opportunity to add this beautiful dress to your collection.
-						With its timeless design and superior craftsmanship, the
-						Effortlessly Chic Maxi Dress is an investment in style and elegance.
-						Shop today and discover why this dress is a favorite among fashion
-						enthusiasts.
+						up or down, ensuring you always look your best. Don't miss out on
+						the opportunity to add this beautiful dress to your collection. With
+						its timeless design and superior craftsmanship, the Effortlessly
+						Chic Maxi Dress is an investment in style and elegance. Shop today
+						and discover why this dress is a favorite among fashion enthusiasts. */}
 					</p>
 					<div className='cta w-full px-[16px] py-[10px] flex md:flex-row flex-col justify-between border-2 rounded-lg mt-8 items-center'>
 						<div className='left flex flex-col items-start  font-semibold '>

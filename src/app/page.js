@@ -10,8 +10,8 @@ import ProductPreview from '@/pages/ProductPreview';
 export default function Home() {
 	const [previewItem, setpreviewItem] = useState(false);
 	const [EachItem, setEachItem] = useState([]);
-	const [cartItem, setcartItem] = useState([{}, {}, {}]);
-	const [favItem, setfavItem] = useState([{}, {}, {}]);
+	const [cartItem, setcartItem] = useState([]);
+	const [favItem, setfavItem] = useState([]);
 	// make the page scroll up upon loading the preview page
 	useEffect(() => {
 		window.scrollTo(0, 0);
