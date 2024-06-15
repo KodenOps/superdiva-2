@@ -18,13 +18,16 @@ export default function Home() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [EachItem, previewItem]);
-
+	useEffect(() => {
+		localStorage.setItem('previewItem', JSON.stringify(previewItem));
+	}, [previewItem]);
 	// get the value of the store vontent of localstorage
 	useEffect(() => {
 		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
 		const storedEachItems = JSON.parse(localStorage.getItem('EachItem')) || [];
-		const storedPreviewItems = JSON.parse(localStorage.getItem('previewItem'));
+		const storedPreviewItems =
+			JSON.parse(localStorage.getItem('previewItem')) || false;
 		setcartItem(storedCartItems);
 		setfavItem(storedFavItems);
 		setpreviewItem(storedPreviewItems);
