@@ -19,12 +19,14 @@ const Navbar = ({ cartItem, favItem }) => {
 		<div className='mainNav relative overflow-hidden h-[10vh] z-1000'>
 			<nav className='lg:p-[40px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
 				<div className='logo'>
-					<h3 className='text-[var(--primary-color)]  md:text-[24px] text-lg font-extrabold tracking-widest'>
+					<Link
+						href={'/'}
+						className='text-[var(--primary-color)]  md:text-[24px] text-lg font-extrabold tracking-widest'>
 						SUPER
 						<span className='text-[var(--secondary-color)] font-extrabold'>
 							DIVA
 						</span>
-					</h3>
+					</Link>
 				</div>
 				{/* text links */}
 				<ul className='homenav lg:flex hidden lg:gap-[24px] md:gap-[18px] gap-1 justify-center items-center list-none '>

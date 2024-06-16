@@ -108,6 +108,7 @@ const Cart = () => {
 													max={10}
 													min={1}
 													className='w-[30px]  text-center border-2'
+													onChange={() => ''}
 												/>
 												<button
 													className='text-[24px] flex items-center justify-center w-[30px] h-[30px] '
