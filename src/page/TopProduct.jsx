@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import hotProductsDB from '../data/hot_products';
 import Titles from '@/components/Titles';
-const TopProduct = ({ previewItem, setpreviewItem, EachItem, setEachItem }) => {
+import { cartContext } from '@/Context/CartContext';
+const TopProduct = () => {
+	const { previewItem, setPreviewItem, setEachItem, cartItem, favItem } =
+		useContext(cartContext);
+	useEffect(() => {
+		localStorage.setItem('previewItem', JSON.stringify(previewItem));
+	}, [previewItem]);
+	// useEffect(() => {
+	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
+	// }, [cartItem]);
+
+	// useEffect(() => {
+	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
+	// }, [favItem]);
 	return (
 		<div
 			className=' md:px-[50px] px-[10px] my-[100px] mb-[40px]'
 			id='topProd'>
 			<Titles
 				title='What Others Are buying'
-				subtext='Don’t be left out. Checkout top products other Diva are adding to cart'
+				subtext="Don't be left out. Checkout top products other Diva are adding to cart"
 			/>
 			{/* the entire product box */}
 			<div className='product_Container flex flex-wrap mt-[40px] justify-around items-center'>
@@ -18,7 +31,7 @@ const TopProduct = ({ previewItem, setpreviewItem, EachItem, setEachItem }) => {
 							key={TopPro.id}
 							className='md:w-[200px] w-[150px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 							onClick={() => {
-								setpreviewItem(!previewItem);
+								setPreviewItem(!previewItem);
 								setEachItem(TopPro);
 							}}>
 							<img

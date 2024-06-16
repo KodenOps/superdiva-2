@@ -1,31 +1,28 @@
 'use client';
-import Navbar from '@/components/Navbar';
-import React, { useState, useEffect } from 'react';
+import Navbar from '../components/Navbar';
+import React, { useState, useEffect, useContext } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
 import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
-import { FaCartPlus, FaHeart } from 'react-icons/fa';
+import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
+import { cartContext } from '@/Context/CartContext';
 
-const ProductPreview = ({
-	previewItem,
-	setpreviewItem,
-	EachItem,
-	setEachItem,
-	cartItem,
-	setcartItem,
-	favItem,
-	setfavItem,
-	isAddedToCart,
-	setisAddedToCart,
-	isAddedToFav,
-	setisAddedToFav,
-}) => {
-	// set variable to the localstorage
-	useEffect(() => {
-		localStorage.setItem('previewItem', JSON.stringify(previewItem));
-	}, [previewItem]);
+const ProductPreview = () => {
+	const {
+		EachItem,
 
+		setFavItem,
+		previewItem,
+		setPreviewItem,
+		cartItem,
+		favItem,
+		setCartItem,
+		isAddedToCart,
+		setIsAddedToCart,
+		isAddedToFav,
+		setIsAddedToFav,
+	} = useContext(cartContext);
 	useEffect(() => {
 		localStorage.setItem('cartItem', JSON.stringify(cartItem));
 	}, [cartItem]);
@@ -33,20 +30,31 @@ const ProductPreview = ({
 	useEffect(() => {
 		localStorage.setItem('favItem', JSON.stringify(favItem));
 	}, [favItem]);
+	// set variable to the localstorage
+	useEffect(() => {
+		localStorage.setItem('previewItem', JSON.stringify(previewItem));
+	}, [previewItem]);
+
+	// useEffect(() => {
+	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
+	// }, [cartItem]);
+
+	// useEffect(() => {
+	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
+	// }, [favItem]);
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
-
 	useEffect(() => {
 		// Check if the item is already in the cart when the component mounts
 		const checkIfPresentInCart = cartItem.some(
 			(item) => item.id === EachItem.id
 		);
-		setisAddedToCart(checkIfPresentInCart);
+		setIsAddedToCart(checkIfPresentInCart);
 
 		// Check if the item is already in the favorites when the component mounts
 		const checkIfPresentInFav = favItem.some((item) => item.id === EachItem.id);
-		setisAddedToFav(checkIfPresentInFav);
+		setIsAddedToFav(checkIfPresentInFav);
 	}, [EachItem, cartItem, favItem]);
 
 	if (!EachItem || !EachItem.rating) {
@@ -68,9 +76,9 @@ const ProductPreview = ({
 		<div className='min-h-[100vh] w-full overflow-x-hidden -z-0'>
 			<Navbar
 				cartItem={cartItem}
-				setcartItem={setcartItem}
+				setCartItem={setCartItem}
 				favItem={favItem}
-				setfavItem={setfavItem}
+				setFavItem={setFavItem}
 			/>
 			<div className='w-full h-full flex md:flex-row flex-col items-start gap-8 justify-center rounded-lg py-[24px] overflow-y-hidden'>
 				<div className='left h-full md:w-[40%] overflow-hidden w-[100%] rounded-lg'>
@@ -117,20 +125,20 @@ const ProductPreview = ({
 								<button
 									className='p-[14px] border-2 border-red-400 md:w-[50px] rounded-md text-red-400 md:mt-0 mt-4 flex items-center justify-center gap-4'
 									onClick={() => {
-										setfavItem(
+										setFavItem(
 											favItem.filter((item) => item.id !== EachItem.id)
 										);
-										setisAddedToFav(false);
+										setIsAddedToFav(false);
 									}}>
 									<IoIosHeart size={20} />
 								</button>
 							) : (
 								<button
-									className='p-[14px] border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-[var(--primary-color)] md:mt-0 mt-4 flex items-center justify-center gap-4'
+									className='p-[14px]  border-2 border-[var(--primary-color)] md:w-[50px] rounded-md text-[var(--primary-color)] md:mt-0 mt-4 flex items-center justify-center gap-4'
 									onClick={() => {
 										if (!favItem.some((item) => item.id === EachItem.id)) {
-											setfavItem([...favItem, EachItem]);
-											setisAddedToFav(true);
+											setFavItem([...favItem, EachItem]);
+											setIsAddedToFav(true);
 										}
 									}}>
 									<IoIosHeartEmpty size={20} />
@@ -138,15 +146,15 @@ const ProductPreview = ({
 							)}
 							{isAddedToCart ? (
 								<button
-									className='py-[14px] px-[16px] bg-red-400 md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
+									className='py-[14px] px-[16px] bg-red-400 md:w-auto w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
 									onClick={() => {
-										setcartItem(
+										setCartItem(
 											cartItem.filter((item) => item.id !== EachItem.id)
 										);
-										setisAddedToCart(false);
+										setIsAddedToCart(false);
 										console.log(cartItem);
 									}}>
-									<FaCartPlus size={20} />
+									<FaTrash size={20} />
 									Remove From Cart
 								</button>
 							) : (
@@ -154,8 +162,8 @@ const ProductPreview = ({
 									className='py-[14px] px-[16px] bg-[var(--primary-color)] md:w-[200px] w-full rounded-md text-white md:mt-0 mt-4 flex items-center justify-center gap-4'
 									onClick={() => {
 										if (!cartItem.some((item) => item.id === EachItem.id)) {
-											setcartItem([...cartItem, EachItem]);
-											setisAddedToCart(true);
+											setCartItem([...cartItem, EachItem]);
+											setIsAddedToCart(true);
 										}
 									}}>
 									<FaCartPlus size={20} />
@@ -166,7 +174,7 @@ const ProductPreview = ({
 					</div>
 					<button
 						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
-						onClick={() => setpreviewItem(!previewItem)}>
+						onClick={() => setPreviewItem(!previewItem)}>
 						Continue Shopping
 					</button>
 				</div>

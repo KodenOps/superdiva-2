@@ -1,18 +1,32 @@
 import Titles from '@/components/Titles';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Promo from '@/data/Promo';
-import Link from 'next/link';
-import ProductPreview from './ProductPreview';
+import { cartContext } from '@/Context/CartContext';
 
-const Promosection = ({
-	previewItem,
-	setpreviewItem,
-	EachItem,
-	setEachItem,
-}) => {
+const Promosection = () => {
+	const {
+		previewItem,
+		setPreviewItem,
+		setEachItem,
+		cartItem,
+		favItem,
+		EachItem,
+	} = useContext(cartContext);
+	// set variable to the localstorage
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
 	}, [previewItem]);
+
+	// useEffect(() => {
+	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
+	// }, [cartItem]);
+
+	// useEffect(() => {
+	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
+	// }, [favItem]);
+	useEffect(() => {
+		localStorage.setItem('EachItem', JSON.stringify(EachItem));
+	}, [EachItem]);
 	return (
 		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles
@@ -27,7 +41,7 @@ const Promosection = ({
 							<div
 								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 								onClick={() => {
-									setpreviewItem(!previewItem);
+									setPreviewItem(!previewItem);
 									setEachItem(hotDB);
 								}}>
 								<img

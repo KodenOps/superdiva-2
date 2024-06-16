@@ -1,5 +1,8 @@
+// src/components/Navbar.js
+
 'use client';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
 	AiOutlineShoppingCart,
 	AiOutlineHeart,
@@ -8,9 +11,11 @@ import {
 } from 'react-icons/ai';
 import { MdArrowForwardIos } from 'react-icons/md';
 import Link from 'next/link';
-const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
-	const [sideBarIsOn, setsideBarIsOn] = useState(false);
-	return cartItem && favItem ? (
+
+const Navbar = ({ cartItem, favItem }) => {
+	const [sideBarIsOn, setSideBarIsOn] = useState(false);
+	const router = useRouter();
+	return (
 		<div className='mainNav relative overflow-hidden h-[10vh] z-1000'>
 			<nav className='lg:p-[40px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
 				<div className='logo'>
@@ -36,7 +41,9 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				{/* cart and other iconified links */}
 				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
 					{/* cart icon */}
-					<div className='flex items-center justify-center'>
+					<div
+						onClick={() => router.push('/Cart')}
+						className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>
 					</div>
@@ -51,10 +58,9 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 					</div>
 				</div>
 				{/* mobile view hamburger*/}
-
 				<div
 					className='flex items-center justify-center lg:hidden'
-					onClick={() => setsideBarIsOn(!sideBarIsOn)}>
+					onClick={() => setSideBarIsOn(!sideBarIsOn)}>
 					<AiOutlineMenu size={30} />
 				</div>
 			</nav>
@@ -64,12 +70,12 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				<div className='lg:hidden transition-all fixed top-0 z-10 left-0 translate-x-0 duration-100  '>
 					<div
 						className='sidenav_bg container  w-screen h-screen transition bg-black bg-opacity-[70%]'
-						onClick={() => setsideBarIsOn(!sideBarIsOn)}></div>
+						onClick={() => setSideBarIsOn(!sideBarIsOn)}></div>
 					<nav className='sidenav_main absolute top-[10vh] right-[0px] z-50  h-[90vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
 						<ul className='list-none flex flex-col items-center justify-center gap-[25px] mb-[40px] h-[70%]'>
 							<li
 								className='LinkStyle'
-								onClick={() => setsideBarIsOn(!sideBarIsOn)}>
+								onClick={() => setSideBarIsOn(!sideBarIsOn)}>
 								<Link href='/#home'>Home</Link>
 								<MdArrowForwardIos size={20} />
 							</li>
@@ -78,7 +84,7 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 							</li>
 							<li
 								className='w-full'
-								onClick={() => setsideBarIsOn(!sideBarIsOn)}>
+								onClick={() => setSideBarIsOn(!sideBarIsOn)}>
 								<Link
 									className='LinkStyle'
 									href='/#topProd'>
@@ -100,13 +106,11 @@ const Navbar = ({ cartItem, setcartItem, favItem, setfavItem }) => {
 				<div className=' lg:hidden  fixed  top-0 z-10 left-0 translate-x-[100%] duration-100  '>
 					<div
 						className='sidenav_bg     bg-opacity-0 '
-						onClick={() => setsideBarIsOn(!sideBarIsOn)}></div>
+						onClick={() => setSideBarIsOn(!sideBarIsOn)}></div>
 				</div>
 			)}
 			{/* end of main div */}
 		</div>
-	) : (
-		''
 	);
 };
 

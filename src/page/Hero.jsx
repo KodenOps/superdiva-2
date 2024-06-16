@@ -1,9 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import HeroImg from '../assets/heroimg.png';
-const Hero = ({ cartItem, setcartItem, favItem, setfavItem }) => {
+import { cartContext } from '@/Context/CartContext';
+const Hero = () => {
+	const { cartItem, setcartItem, favItem, setfavItem } =
+		useContext(cartContext);
 	return favItem && cartItem ? (
 		<section
 			className='h-auto w-full'

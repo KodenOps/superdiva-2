@@ -1,20 +1,31 @@
+// app/page.js
 'use client';
-import TopProduct from '@/pages/TopProduct';
-import Hero from '@/pages/Hero';
-import React, { useEffect, useState } from 'react';
-import Promosection from '@/pages/Promosection';
-import Categories from '@/pages/Categories';
+import React, { useContext, useEffect } from 'react';
+import TopProduct from '@/page/TopProduct';
+import Hero from '@/page/Hero';
+import Promosection from '@/page/Promosection';
+import Categories from '@/page/Categories';
 import Footer from '@/components/Footer';
-import ProductPreview from '@/pages/ProductPreview';
+import ProductPreview from '@/page/ProductPreview';
+import { cartContext } from '@/Context/CartContext';
 
 export default function Home() {
-	const [previewItem, setpreviewItem] = useState(false);
-	const [EachItem, setEachItem] = useState({});
-	const [cartItem, setcartItem] = useState([]);
-	const [favItem, setfavItem] = useState([]);
-	const [isAddedToCart, setisAddedToCart] = useState(false);
-	const [isAddedToFav, setisAddedToFav] = useState(false);
-	const [loading, setLoading] = useState(true);
+	const {
+		loading,
+		EachItem,
+		setEachItem,
+		setFavItem,
+		previewItem,
+		setPreviewItem,
+		setLoading,
+		cartItem,
+		favItem,
+		setCartItem,
+		isAddedToCart,
+		setIsAddedToCart,
+		isAddedToFav,
+		setIsAddedToFav,
+	} = useContext(cartContext);
 
 	// Scroll to top on initial load
 	useEffect(() => {
@@ -26,23 +37,24 @@ export default function Home() {
 		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
 		const storedEachItem = JSON.parse(localStorage.getItem('EachItem')) || {};
+
 		const storedPreviewItem =
 			JSON.parse(localStorage.getItem('previewItem')) || false;
 
-		setcartItem(storedCartItems);
-		setfavItem(storedFavItems);
+		setCartItem(storedCartItems);
+		setFavItem(storedFavItems);
 		setEachItem(storedEachItem);
-		setpreviewItem(storedPreviewItem);
+		setPreviewItem(storedPreviewItem);
 
 		const checkIfPresentInCart = storedCartItems.some(
 			(item) => item.id === storedEachItem.id
 		);
-		setisAddedToCart(checkIfPresentInCart);
+		setIsAddedToCart(checkIfPresentInCart);
 
 		const checkIfPresentInFav = storedFavItems.some(
 			(item) => item.id === storedEachItem.id
 		);
-		setisAddedToFav(checkIfPresentInFav);
+		setIsAddedToFav(checkIfPresentInFav);
 
 		// Simulate loading with setTimeout
 		setTimeout(() => {
@@ -75,19 +87,19 @@ export default function Home() {
 				<div>
 					<Hero
 						cartItem={cartItem}
-						setcartItem={setcartItem}
+						setCartItem={setCartItem}
 						favItem={favItem}
-						setfavItem={setfavItem}
+						setFavItem={setFavItem}
 					/>
 					<Categories />
 					<TopProduct
-						setpreviewItem={setpreviewItem}
+						setPreviewItem={setPreviewItem}
 						previewItem={previewItem}
 						EachItem={EachItem}
 						setEachItem={setEachItem}
 					/>
 					<Promosection
-						setpreviewItem={setpreviewItem}
+						setPreviewItem={setPreviewItem}
 						previewItem={previewItem}
 						EachItem={EachItem}
 						setEachItem={setEachItem}
@@ -97,16 +109,16 @@ export default function Home() {
 				<ProductPreview
 					EachItem={EachItem}
 					setEachItem={setEachItem}
-					setpreviewItem={setpreviewItem}
+					setPreviewItem={setPreviewItem}
 					previewItem={previewItem}
 					cartItem={cartItem}
-					setcartItem={setcartItem}
+					setCartItem={setCartItem}
 					favItem={favItem}
-					setfavItem={setfavItem}
+					setFavItem={setFavItem}
 					isAddedToCart={isAddedToCart}
-					setisAddedToCart={setisAddedToCart}
+					setIsAddedToCart={setIsAddedToCart}
 					isAddedToFav={isAddedToFav}
-					setisAddedToFav={setisAddedToFav}
+					setIsAddedToFav={setIsAddedToFav}
 				/>
 			)}
 			<Footer />
