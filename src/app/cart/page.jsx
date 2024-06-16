@@ -55,7 +55,7 @@ const Cart = () => {
 					{/* the cart item */}
 					<table className='w-full '>
 						<thead>
-							<tr className='text-left text-lg'>
+							<tr className='text-left md:text-lg text-[12px]'>
 								<th className='p-4'>Product Details</th>
 								<th className='p-4 text-left'>Quantity</th>
 								<th className='p-4'>Price</th>
