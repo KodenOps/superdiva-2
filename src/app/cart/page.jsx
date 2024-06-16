@@ -66,7 +66,7 @@ const Cart = () => {
 							{cartItem.map((item) => {
 								return (
 									<tr
-										className='px-[24px]'
+										className='px-[24px] border-b-2'
 										key={item.id}>
 										<td className='flex md:flex-row flex-col md:items-center justify-start p-4'>
 											<img
