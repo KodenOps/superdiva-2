@@ -1,14 +1,41 @@
 // src/app/cart.jsx
 
 'use client';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
+import Image from 'next/image';
+import { IoMdTrash } from 'react-icons/io';
 
 const Cart = () => {
-	const { cartItem, favItem } = useContext(cartContext);
+	const { cartItem, favItem, setCartItem } = useContext(cartContext);
 
+	const handleIncrement = (item) => {
+		const index = cartItem.findIndex((cartItem) => cartItem.id === item.id);
+		const updatedCart = [...cartItem];
+		const currentCount = updatedCart[index].count;
+
+		if (currentCount < 10) {
+			updatedCart[index] = {
+				...updatedCart[index],
+				count: currentCount + 1,
+			};
+			setCartItem(updatedCart);
+		}
+	};
+
+	const handleDecrement = (item) => {
+		// Find the index of the item in cartItem
+		const index = cartItem.findIndex((cartItem) => cartItem.id === item.id);
+		const updatedCart = [...cartItem];
+		updatedCart[index] = {
+			...updatedCart[index],
+			count: Math.max(1, updatedCart[index].count - 1),
+		};
+
+		setCartItem(updatedCart);
+	};
 	return (
 		<div className='bg-slate-200'>
 			<Navbar
@@ -25,6 +52,67 @@ const Cart = () => {
 							{cartItem.length} Items
 						</h4>
 					</header>
+					{/* the cart item */}
+					<table className='w-full '>
+						<thead>
+							<tr className='text-left text-lg'>
+								<th className='p-4'>Product Details</th>
+								<th className='p-4 text-left'>Quantity</th>
+								<th className='p-4'>Price</th>
+								<th className='p-4'>Total</th>
+							</tr>
+						</thead>
+						<tbody className='w-full'>
+							{cartItem.map((item) => {
+								return (
+									<tr className='px-[24px]'>
+										<td className='flex md:flex-row flex-col md:items-center justify-start p-4'>
+											<img
+												src={item.image}
+												alt=''
+												className='w-[50px] h-[50px] object-fill rounded-lg'
+											/>
+											<div className='md:px-4'>
+												<p> {item.title}</p>
+												<p className='capitalize text-[#9b9b9b]'>
+													{item.category}
+												</p>
+												<p className='capitalize  flex items-center justify-start gap-1 text-red-400'>
+													<IoMdTrash />
+													Remove
+												</p>
+											</div>
+										</td>
+										<td className=''>
+											<div className='flex md:flex-row flex-col-reverse md:gap-4 gap-4 items-center'>
+												<button
+													className='text-[24px] flex items-center justify-center w-[30px] h-[30px]'
+													onClick={() => handleDecrement(item)}>
+													-
+												</button>
+												<input
+													type='num'
+													name='counter'
+													id='counter'
+													value={item.count}
+													max={10}
+													min={1}
+													className='w-[30px]  text-center border-2'
+												/>
+												<button
+													className='text-[24px] flex items-center justify-center w-[30px] h-[30px] '
+													onClick={() => handleIncrement(item)}>
+													+
+												</button>
+											</div>
+										</td>
+										<td className=''>$ {item.price}</td>
+										<td>$ {item.count * item.price}</td>
+									</tr>
+								);
+							})}
+						</tbody>
+					</table>
 				</div>
 				<div className='CostingSection bg-red-500 md:w-[35%] w-full h-full'>
 					o

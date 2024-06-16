@@ -10,6 +10,7 @@ const hotProductsDB = [
 		image:
 			'https://cdn.yoursclothing.com/Images/ProductImages/b96372c7-c683-49_137786_D.jpg',
 		rating: { rate: 4.7, count: 320 },
+		count: 1,
 	},
 	{
 		id: 'sFb4Wt7y',
@@ -22,6 +23,7 @@ const hotProductsDB = [
 		image:
 			'https://www.tristanstyle.com/cdn/shop/files/FV120C0436Z_BL01_1_800x.jpg?v=1709090415',
 		rating: { rate: 4.8, count: 280 },
+		count: 1,
 	},
 	{
 		id: 'pLm9Cq2x',
@@ -33,6 +35,7 @@ const hotProductsDB = [
 		category: 'sweater',
 		image: 'https://i.ebayimg.com/images/g/Sm8AAOSwXoBkX1Ra/s-l1200.jpg',
 		rating: { rate: 4.6, count: 240 },
+		count: 1,
 	},
 	{
 		id: 'rTk5Qw8u',
@@ -44,6 +47,7 @@ const hotProductsDB = [
 		category: 'blouse',
 		image: 'https://www.avasilk.co.uk/cdn/shop/products/3.jpg?v=1705129641',
 		rating: { rate: 4.9, count: 150 },
+		count: 1,
 	},
 	{
 		id: 'uIo3Pz9v',
@@ -56,6 +60,7 @@ const hotProductsDB = [
 		image:
 			'https://aamthelabel.com/cdn/shop/files/mauvewidelegpantfrontfull.png?v=1694556392',
 		rating: { rate: 4.5, count: 200 },
+		count: 1,
 	},
 	{
 		id: 'wNj8Ht4s',
@@ -68,6 +73,7 @@ const hotProductsDB = [
 		image:
 			'https://www.shopamericanthreads.com/cdn/shop/files/nancy-ivory-cream-foldover-off-shoulder-long-sleeve-cozy-knit-top-trendy-womens-clothing-levis-denim-jeans-vintage-09.jpg?v=1696884604&width=1024',
 		rating: { rate: 4.4, count: 260 },
+		count: 1,
 	},
 	{
 		id: 'zMk7Lu1x',
@@ -80,6 +86,7 @@ const hotProductsDB = [
 		image:
 			'https://pds01.b-cdn.net/wp-content/uploads/2019/11/High-Waist-Office-Ladies-Plants-And-Floral-Print-Elegant-Pencil-Skirt-5.jpg',
 		rating: { rate: 4.7, count: 220 },
+		count: 1,
 	},
 	{
 		id: 'cAo9Rt3w',
@@ -92,6 +99,7 @@ const hotProductsDB = [
 		image:
 			'https://www.kosha.co/image/catalog/trench%20coat%20women%202023/maroon2.jpg',
 		rating: { rate: 4.8, count: 180 },
+		count: 1,
 	},
 	{
 		id: 'vXb6Ap2k',
@@ -104,6 +112,7 @@ const hotProductsDB = [
 		image:
 			'https://i.pinimg.com/736x/12/9e/e5/129ee58c24612d1a47fdd14e82492b3b.jpg',
 		rating: { rate: 4.5, count: 300 },
+		count: 1,
 	},
 	{
 		id: 'xKc3Wo5l',
@@ -116,6 +125,7 @@ const hotProductsDB = [
 		image:
 			'https://imageio.forbes.com/specials-images/imageserve/5fd9413849f2c768c7c62e3a/The-Lafayette-148-New-York-KindCashmere-Braided-Cable-Scarf-is-an-elevated-take-on-a/960x0.jpg?height=902&width=711&fit=bounds',
 		rating: { rate: 4.9, count: 140 },
+		count: 1,
 	},
 	{
 		id: 'aJs5Rp9m',
@@ -128,6 +138,7 @@ const hotProductsDB = [
 		image:
 			'https://www.lulus.com/images/product/xlarge/8377281_1703696.jpg?w=375&hdpi=1',
 		rating: { rate: 4.8, count: 210 },
+		count: 1,
 	},
 	{
 		id: 'zLm8Oq1n',
@@ -140,6 +151,7 @@ const hotProductsDB = [
 		image:
 			'https://cdn.shopify.com/s/files/1/0204/7208/files/TW1139-IVORY_08-04-23_VC1084-ECRU_08-04-23_17474_fb2fd430-02aa-46d9-b68c-bcf94a86d3ba.jpg?v=1695775471',
 		rating: { rate: 4.6, count: 250 },
+		count: 1,
 	},
 ];
 
