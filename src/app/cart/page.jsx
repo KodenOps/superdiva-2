@@ -48,17 +48,17 @@ const Cart = () => {
 						<h3 className='md:text-2xl text-md font-bold text-[var(--primary-color)]  '>
 							Your Cart
 						</h3>
-						<h4 className='md:text-xl text-sm font-semibold text-[var(--primary-color)]'>
+						<h4 className='md:text-xl text-sm font-semibold  text-[var(--primary-color)]'>
 							{cartItem.length} Items
 						</h4>
 					</header>
 					{/* the cart item */}
 					<table className='w-full '>
 						<thead>
-							<tr className='text-left md:text-lg text-[12px]'>
+							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] md:font-semibold font-medium'>
 								<th className='p-4'>Product Details</th>
 								<th className='p-4 text-left'>Quantity</th>
-								<th className='p-4'>Price</th>
+								<th className='p-4 bg-red-200'>Price</th>
 								<th className='p-4'>Total</th>
 							</tr>
 						</thead>
@@ -75,7 +75,7 @@ const Cart = () => {
 												className='w-[50px] h-[50px] object-fill rounded-lg'
 											/>
 											<div className='md:px-4'>
-												<p> {item.title}</p>
+												<p className='md:text-lg text-[14px]'> {item.title}</p>
 												<p className='capitalize text-[#9b9b9b]'>
 													{item.category}
 												</p>
@@ -108,8 +108,8 @@ const Cart = () => {
 												</button>
 											</div>
 										</td>
-										<td className=''>$ {item.price}</td>
-										<td>$ {item.count * item.price}</td>
+										<td className='bg-red-400 text-center'>$ {item.price}</td>
+										<td className='text-center'>$ {item.count * item.price}</td>
 									</tr>
 								);
 							})}
