@@ -58,8 +58,8 @@ const Cart = () => {
 							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] md:font-semibold font-medium'>
 								<th className='p-4'>Product Details</th>
 								<th className='p-4 text-left'>Quantity</th>
-								<th className='p-4 bg-red-200'>Price</th>
-								<th className='p-4'>Total</th>
+								<th className='p-4 text-center'>Price</th>
+								<th className='p-4 text-center'>Total</th>
 							</tr>
 						</thead>
 						<tbody className='w-full'>
@@ -108,7 +108,7 @@ const Cart = () => {
 												</button>
 											</div>
 										</td>
-										<td className='bg-red-400 text-center'>$ {item.price}</td>
+										<td className=' text-center'>$ {item.price}</td>
 										<td className='text-center'>$ {item.count * item.price}</td>
 									</tr>
 								);
