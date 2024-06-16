@@ -1,7 +1,7 @@
 'use client';
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
+import Navbar from './Navbar';
 import HeroImg from '../assets/heroimg.png';
 import { cartContext } from '@/Context/CartContext';
 const Hero = () => {

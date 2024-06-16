@@ -42,7 +42,7 @@ const Navbar = ({ cartItem, favItem }) => {
 				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
 					{/* cart icon */}
 					<div
-						onClick={() => router.push('/Cart')}
+						onClick={() => router.push('/cart')}
 						className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>

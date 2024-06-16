@@ -1,8 +1,7 @@
-// src/pages/cart.js (or src/pages/cart.jsx)
+// src/app/cart.jsx
 
 'use client';
 import React, { useContext } from 'react';
-import '../app/globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
@@ -11,12 +10,12 @@ const Cart = () => {
 	const { cartItem, favItem } = useContext(cartContext);
 
 	return (
-		<div className=''>
+		<div>
 			<Navbar
 				cartItem={cartItem}
 				favItem={favItem}
 			/>
-			<h3>Cart Item</h3>
+			<h3>Cart Items</h3>
 			<ul>
 				{cartItem.map((item, index) => (
 					<li key={index}>{item.title}</li>

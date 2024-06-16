@@ -1,12 +1,12 @@
 // app/page.js
 'use client';
 import React, { useContext, useEffect } from 'react';
-import TopProduct from '@/page/TopProduct';
-import Hero from '@/page/Hero';
-import Promosection from '@/page/Promosection';
-import Categories from '@/page/Categories';
+import TopProduct from '@/components/TopProduct';
+import Hero from '@/components/Hero';
+import Promosection from '@/components/Promosection';
+import Categories from '@/components/Categories';
 import Footer from '@/components/Footer';
-import ProductPreview from '@/page/ProductPreview';
+import ProductPreview from '@/components/ProductPreview';
 import { cartContext } from '@/Context/CartContext';
 
 export default function Home() {
