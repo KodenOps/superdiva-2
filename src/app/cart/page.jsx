@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
 import Image from 'next/image';
 import { IoMdTrash } from 'react-icons/io';
+import { MdArrowBack } from 'react-icons/md';
+import Link from 'next/link';
 
 const Cart = () => {
 	const { cartItem, favItem, setCartItem } = useContext(cartContext);
@@ -109,7 +111,9 @@ const Cart = () => {
 											</div>
 										</td>
 										<td className=' text-center'>$ {item.price}</td>
-										<td className='text-center'>$ {item.count * item.price}</td>
+										<td className='text-center'>
+											$ {(item.count * item.price).toFixed(1)}
+										</td>
 									</tr>
 								);
 							})}
@@ -119,20 +123,13 @@ const Cart = () => {
 				<div className='CostingSection bg-red-500 md:w-[35%] w-full h-full'>
 					o
 				</div>
-				{/* <h3>Cart Items</h3>
-				<ul>
-					{cartItem.map((item, index) => (
-						<li key={index}>{item.title}</li>
-					))}
-				</ul> */}
+				<Link
+					href={'/'}
+					className='flex items-center py-[16px] font-semibold text-[var(--primary-color)] gap-2 px-[16px] w-full justify-start'>
+					<MdArrowBack size={20} /> Continue Shopping
+				</Link>
 			</div>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nam
-				nihil illum rem, repellendus sunt voluptate consequatur error debitis
-				architecto natus cum molestiae reiciendis deleniti ipsa esse saepe modi
-				officia beatae voluptatum accusantium corrupti voluptatem excepturi
-				perferendis. Aspernatur, eaque reiciendis.
-			</p>
+			
 			<Footer />
 		</div>
 	);
