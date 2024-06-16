@@ -65,7 +65,9 @@ const Cart = () => {
 						<tbody className='w-full'>
 							{cartItem.map((item) => {
 								return (
-									<tr className='px-[24px]'>
+									<tr
+										className='px-[24px]'
+										key={item.id}>
 										<td className='flex md:flex-row flex-col md:items-center justify-start p-4'>
 											<img
 												src={item.image}
