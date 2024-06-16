@@ -56,17 +56,17 @@ const Cart = () => {
 					<table className='w-full '>
 						<thead>
 							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] md:font-semibold font-medium border-b-2'>
-								<th className='p-4'>Product Details</th>
-								<th className='p-4 text-left'>Quantity</th>
-								<th className='p-4 text-center'>Price</th>
-								<th className='p-4 text-center'>Total</th>
+								<th className='md:p-8 p-4'>Product Details</th>
+								<th className='md:p-8 p-4 text-left'>Quantity</th>
+								<th className='md:p-8 p-4 text-center'>Price</th>
+								<th className='md:p-8 p-4 text-center'>Total</th>
 							</tr>
 						</thead>
 						<tbody className='w-full'>
 							{cartItem.map((item) => {
 								return (
 									<tr
-										className='px-[24px] border-b-2'
+										className=' border-b-2'
 										key={item.id}>
 										<td className='flex md:flex-row flex-col md:items-center justify-start p-4'>
 											<img
