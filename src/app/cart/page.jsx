@@ -58,9 +58,15 @@ const Cart = () => {
 					<table className='w-full '>
 						<thead>
 							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] md:font-semibold font-medium border-b-2'>
-								<th className='md:p-8 p-4'>Product Details</th>
-								<th className='md:p-8 p-4 text-left'>Quantity</th>
-								<th className='md:p-8 p-4 text-center'>Price</th>
+								<th className='md:p-8 p-4 ,d:w-[35%] w-[20%]'>
+									Product Details
+								</th>
+								<th className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
+									Quantity
+								</th>
+								<th className='md:p-8 p-4 md:w-auto w-[10%] text-center'>
+									Price
+								</th>
 								<th className='md:p-8 p-4 text-center'>Total</th>
 							</tr>
 						</thead>
@@ -70,7 +76,7 @@ const Cart = () => {
 									<tr
 										className=' border-b-2'
 										key={item.id}>
-										<td className='flex md:flex-row flex-col md:items-center justify-start p-4'>
+										<td className='flex md:flex-row flex-col md:items-center justify-start p-4 '>
 											<img
 												src={item.image}
 												alt=''
@@ -88,7 +94,7 @@ const Cart = () => {
 											</div>
 										</td>
 										<td className=''>
-											<div className='flex md:flex-row flex-col-reverse md:gap-4 gap-4 items-center'>
+											<div className='flex md:flex-row flex-col-reverse md:gap-4 gap-4 justify-center items-center w-full'>
 												<button
 													className='text-[24px] flex items-center justify-center w-[30px] h-[30px]'
 													onClick={() => handleDecrement(item)}>
@@ -120,16 +126,14 @@ const Cart = () => {
 						</tbody>
 					</table>
 				</div>
-				<div className='CostingSection bg-red-500 md:w-[35%] w-full h-full'>
-					o
-				</div>
+				<div className='CostingSection  md:w-[35%] w-full h-full'></div>
 				<Link
 					href={'/'}
 					className='flex items-center py-[16px] font-semibold text-[var(--primary-color)] gap-2 px-[16px] w-full justify-start'>
 					<MdArrowBack size={20} /> Continue Shopping
 				</Link>
 			</div>
-			
+
 			<Footer />
 		</div>
 	);
