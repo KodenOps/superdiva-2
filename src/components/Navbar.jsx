@@ -50,10 +50,12 @@ const Navbar = ({ cartItem, favItem }) => {
 						<span>{cartItem.length}</span>
 					</Link>
 					{/* favorite icon */}
-					<div className='flex items-center justify-center'>
+					<Link
+						href='favorites'
+						className='flex items-center justify-center'>
 						<AiOutlineHeart size={30} />
 						<span>{favItem.length}</span>
-					</div>
+					</Link>
 					{/* user icon */}
 					<div className='md:flex items-center justify-center hidden'>
 						<AiOutlineUser size={30} />
