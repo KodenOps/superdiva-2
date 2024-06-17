@@ -10,6 +10,9 @@ import { MdArrowBack } from 'react-icons/md';
 import Link from 'next/link';
 
 const Cart = () => {
+	let total = 0;
+	let vat = 0;
+	let FinalPrice = 0;
 	const { cartItem, favItem, setCartItem } = useContext(cartContext);
 
 	const handleIncrement = (item) => {
@@ -71,6 +74,9 @@ const Cart = () => {
 						</thead>
 						<tbody className='w-full'>
 							{cartItem.map((item) => {
+								total = total + item.price * item.count;
+								vat = (10 / 100) * total;
+								FinalPrice = total + vat;
 								return (
 									<tr
 										className=' border-b-2'
@@ -118,12 +124,30 @@ const Cart = () => {
 										</td>
 										<td className=' text-center'>$ {item.price}</td>
 										<td className='text-center'>
-											$ {(item.count * item.price).toFixed(1)}
+											$ {(item.count * item.price).toFixed(2)}
 										</td>
 									</tr>
 								);
 							})}
 						</tbody>
+						<tfoot className='w-full '>
+							<tr className='text-left md:text-lg text-[12px]  w-full text-[#A0A0A0] font-mono   border-b-2'>
+								<td className='md:p-8 p-4 ,d:w-[35%] w-[20%]'></td>
+
+								<td className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
+									<h4 className='md:text-xl'>VAT</h4>
+									<span>${vat.toFixed(2)}</span>
+								</td>
+								<td className='md:p-8 p-4 text-center flex flex-col'>
+									<h4 className='md:text-xl'>Total</h4>{' '}
+									<span>${total.toFixed(2)}</span>
+								</td>
+								<td className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
+									<h4 className='md:text-xl'>Total Amount to Pay</h4>
+									<span>${FinalPrice.toFixed(2)}</span>
+								</td>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 
