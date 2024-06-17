@@ -12,9 +12,15 @@ const CartCollection = () => {
 		setPreviewItem,
 		setLoading,
 		setCartItem,
+		previewItem,
 		setIsAddedToCart,
 		setIsAddedToFav,
 	} = useContext(cartContext);
+	// Scroll to top on initial load
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [previewItem]);
+
 	useEffect(() => {
 		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
 		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
