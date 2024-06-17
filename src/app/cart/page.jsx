@@ -62,10 +62,6 @@ const Cart = () => {
 						should be able to see them here.
 					</p>
 					<div className='w-full flex justify-center items-start pt-[20px] '>
-						<script
-							src='https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs'
-							type='module'></script>
-
 						<dotlottie-player
 							src='https://lottie.host/08fd840f-0c5e-447f-b8db-3c34751c3ba7/reu970Ijxr.json'
 							background='transparent'
