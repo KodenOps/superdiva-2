@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
 import { IoMdTrash } from 'react-icons/io';
-import { MdArrowBack } from 'react-icons/md';
+import { MdArrowBack, MdPayments } from 'react-icons/md';
 import Link from 'next/link';
 
 const Cart = () => {
@@ -157,11 +157,22 @@ const Cart = () => {
 						<p>${(190 + FinalPrice).toFixed(2)}</p>
 					</div>
 				</div>
-				<Link
-					href={'/'}
-					className='flex items-center py-[16px] font-semibold text-[var(--primary-color)] gap-2 px-[16px] w-full justify-start'>
-					<MdArrowBack size={20} /> Continue Shopping
-				</Link>
+				<div className='cta flex w-full flex-wrap md:flex-row flex-col-reverse justify-between items-center p-[16px]'>
+					<div className='w-auto'>
+						<Link
+							href={'/'}
+							className='flex items-center  py-[16px] font-semibold text-[var(--primary-color)] gap-2   justify-center'>
+							<MdArrowBack size={20} /> Continue Shopping
+						</Link>
+					</div>
+					<div className='w-auto'>
+						<Link
+							href={'/'}
+							className='flex items-center py-[12px] rounded-sm text-white px-[16px] font-normal bg-[var(--primary-color)] gap-2   justify-center'>
+							<MdPayments size={25} /> Proceed To Checkout
+						</Link>
+					</div>
+				</div>
 			</div>
 
 			<Footer />
