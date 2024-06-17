@@ -23,13 +23,13 @@ const Bags = () => {
 		setIsAddedToFav,
 	} = useContext(cartContext);
 	// set variable to the localstorage
-	useEffect(() => {
-		localStorage.setItem('previewItem', JSON.stringify(previewItem));
-	}, [previewItem]);
+	 useEffect(() => {
+			localStorage.setItem('previewItem', JSON.stringify(previewItem));
+		}, [previewItem]);
 
-	useEffect(() => {
-		localStorage.setItem('EachItem', JSON.stringify(EachItem));
-	}, [EachItem]);
+		useEffect(() => {
+			localStorage.setItem('EachItem', JSON.stringify(EachItem));
+		}, [EachItem]);
 	return !previewItem ? (
 		<div>
 			<Navbar
