@@ -23,13 +23,13 @@ const Bags = () => {
 		setIsAddedToFav,
 	} = useContext(cartContext);
 	// set variable to the localstorage
-	 useEffect(() => {
-			localStorage.setItem('previewItem', JSON.stringify(previewItem));
-		}, [previewItem]);
+	useEffect(() => {
+		localStorage.setItem('previewItem', JSON.stringify(previewItem));
+	}, [previewItem]);
 
-		useEffect(() => {
-			localStorage.setItem('EachItem', JSON.stringify(EachItem));
-		}, [EachItem]);
+	useEffect(() => {
+		localStorage.setItem('EachItem', JSON.stringify(EachItem));
+	}, [EachItem]);
 	return !previewItem ? (
 		<div>
 			<Navbar
@@ -39,7 +39,7 @@ const Bags = () => {
 			<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 				<Titles
 					title='Our Exclusive Bags'
-					subtext='Explore our catalog of clearance sales. The products are carefully selected to meet your fashion need while also removing 50% off the initial price'
+					subtext="Discover our stunning collection of women's bags on clearance! Handpicked for style and quality, these bags are your perfect fashion companions. Shop now and elevate your look with unbeatable deals!"
 				/>
 				{/* the entire product box */}
 				<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
