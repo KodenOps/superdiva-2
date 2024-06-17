@@ -43,8 +43,8 @@ const Cart = () => {
 				cartItem={cartItem}
 				favItem={favItem}
 			/>
-			<div className='mainBody min-h-[40rem] md:mt-[1%] md:w-[96%] w-full border-1 bg-white md:mx-[2%] rounded-lg flex flex-wrap items-start justify-center '>
-				<div className='cartItemList  md:w-[65%] w-[100%] border-r-2 border-slate-300'>
+			<div className='mainBody min-h-[40rem] md:mt-[1%] md:w-[99%] w-full border-1 bg-white md:mx-[0.5%] rounded-lg flex flex-wrap items-start justify-center '>
+				<div className='cartItemList  w-full border-r-2 border-slate-300'>
 					<header className='flex items-center justify-between w-full md:pr-[24px] border-b-2 md:p-[24px] p-[16px]'>
 						<h3 className='md:text-2xl text-md font-bold text-[var(--primary-color)]  '>
 							Your Cart
@@ -56,7 +56,7 @@ const Cart = () => {
 					{/* the cart item */}
 					<table className='w-full '>
 						<thead>
-							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] md:font-semibold font-medium border-b-2'>
+							<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] font-mono sticky top-[8vh] z-[100]  bg-white border-b-2'>
 								<th className='md:p-8 p-4 ,d:w-[35%] w-[20%]'>
 									Product Details
 								</th>
@@ -126,7 +126,7 @@ const Cart = () => {
 						</tbody>
 					</table>
 				</div>
-				<div className='CostingSection  md:w-[35%] w-full h-full'></div>
+
 				<Link
 					href={'/'}
 					className='flex items-center py-[16px] font-semibold text-[var(--primary-color)] gap-2 px-[16px] w-full justify-start'>
