@@ -20,7 +20,7 @@ const Navbar = ({ cartItem, favItem }) => {
 			<nav className='lg:p-[40px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
 				<div className='logo'>
 					<Link
-						href={'/'}
+						href='/'
 						className='text-[var(--primary-color)]  md:text-[24px] text-lg font-extrabold tracking-widest'>
 						SUPER
 						<span className='text-[var(--secondary-color)] font-extrabold'>
@@ -43,12 +43,12 @@ const Navbar = ({ cartItem, favItem }) => {
 				{/* cart and other iconified links */}
 				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
 					{/* cart icon */}
-					<div
-						onClick={() => router.push('/cart')}
+					<Link
+						href='/cart'
 						className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>
-					</div>
+					</Link>
 					{/* favorite icon */}
 					<div className='flex items-center justify-center'>
 						<AiOutlineHeart size={30} />

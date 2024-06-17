@@ -1,11 +1,10 @@
 // src/app/cart.jsx
 
 'use client';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
-import Image from 'next/image';
 import { IoMdTrash } from 'react-icons/io';
 import { MdArrowBack } from 'react-icons/md';
 import Link from 'next/link';

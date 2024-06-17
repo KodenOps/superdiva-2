@@ -7,6 +7,7 @@ import shirt from '../assets/categories/shirt.svg';
 import shoe from '../assets/categories/shoe.svg';
 import trousers from '../assets/categories/trousers.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 const Categories = () => {
 	return (
 		<section className='md:pt-[100px]  '>
@@ -15,13 +16,15 @@ const Categories = () => {
 				subtext='Tailor your exploration by selecting what you want to see rather than being overwhelmed by all the awesomeness we have here'
 			/>
 			<div className='categorybox flex items-center justify-center flex-wrap gap-[20px] my-[30px] md:px-[100px] px-[16px]'>
-				<div className='cursor-pointer hover:translate-y-[-16px] transition-all ease duration-1000 '>
+				<Link
+					href='/bagscollection'
+					className='cursor-pointer hover:translate-y-[-16px] transition-all ease duration-1000 '>
 					<Image
 						src={bag}
 						alt=''
 						width={300}
 					/>
-				</div>
+				</Link>
 				<div className='cursor-pointer hover:translate-y-[-8px] transition-all ease duration-1000 '>
 					<Image
 						src={gowns}

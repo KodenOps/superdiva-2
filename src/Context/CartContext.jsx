@@ -22,20 +22,11 @@ export const CartProvider = ({ children }) => {
 		setLoading(false); // Set loading to false after loading from local storage
 	}, []);
 
-	// useEffect(() => {
-	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
-	// }, [cartItem]);
-
-	// useEffect(() => {
-	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
-	// }, [favItem]);
-
 	return (
 		<cartContext.Provider
 			value={{
 				loading,
 				EachItem,
-
 				setEachItem,
 				setFavItem,
 				previewItem,

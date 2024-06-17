@@ -174,6 +174,34 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'cdn.shopify.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'i5.walmartimages.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'img4.dhresource.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'www.simpledeals.com.au',
+			},
+			{
+				protocol: 'https',
+				hostname: 'static.thcdn.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'montipi.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'ae01.alicdn.com',
+			},
+			{
+				protocol: 'https',
+				hostname: 'images-static.nykaa.com',
+			},
 		],
 	},
 };

@@ -4,26 +4,13 @@ import Promo from '@/data/Promo';
 import { cartContext } from '@/Context/CartContext';
 
 const Promosection = () => {
-	const {
-		previewItem,
-		setPreviewItem,
-		setEachItem,
-		cartItem,
-		favItem,
-		EachItem,
-	} = useContext(cartContext);
+	const { previewItem, setPreviewItem, setEachItem, EachItem } =
+		useContext(cartContext);
 	// set variable to the localstorage
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
 	}, [previewItem]);
 
-	// useEffect(() => {
-	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
-	// }, [cartItem]);
-
-	// useEffect(() => {
-	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
-	// }, [favItem]);
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
