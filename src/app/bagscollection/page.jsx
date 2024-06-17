@@ -48,7 +48,15 @@ const CartCollection = () => {
 		setTimeout(() => {
 			setLoading(false);
 		}, 2000);
-	}, []);
+	}, [
+		setCartItem,
+		setEachItem,
+		setFavItem,
+		setIsAddedToCart,
+		setIsAddedToFav,
+		setLoading,
+		setPreviewItem,
+	]);
 
 	if (loading) {
 		return (
