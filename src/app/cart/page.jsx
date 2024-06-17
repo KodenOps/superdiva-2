@@ -130,27 +130,33 @@ const Cart = () => {
 								);
 							})}
 						</tbody>
-						<tfoot className='w-full '>
-							<tr className='text-left md:text-lg text-[12px]  w-full text-[#A0A0A0] font-mono   border-b-2'>
-								<td className='md:p-8 p-4 ,d:w-[35%] w-[20%]'></td>
-
-								<td className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
-									<h4 className='md:text-xl'>VAT</h4>
-									<span>${vat.toFixed(2)}</span>
-								</td>
-								<td className='md:p-8 p-4 text-center flex flex-col'>
-									<h4 className='md:text-xl'>Total</h4>{' '}
-									<span>${total.toFixed(2)}</span>
-								</td>
-								<td className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
-									<h4 className='md:text-xl'>Total Amount to Pay</h4>
-									<span>${FinalPrice.toFixed(2)}</span>
-								</td>
-							</tr>
-						</tfoot>
 					</table>
 				</div>
-
+				<div className='summary w-full md:p-[24px] p-[16px]'>
+					<h3 className='text-[var(--primary-color)] font-semibold mb-2'>
+						Summary
+					</h3>
+					<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
+						<h4 className=''>Total items</h4>
+						<p>{cartItem.length} Items</p>
+					</div>
+					<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
+						<h4 className=''>Items Price</h4>
+						<p>${total.toFixed(2)}</p>
+					</div>
+					<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
+						<h4 className=''>VAT</h4>
+						<p>${vat.toFixed(2)}</p>
+					</div>
+					<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
+						<h4 className=''>Shipping Fee</h4>
+						<p>${190}</p>
+					</div>
+					<div className='total flex w-ful justify-between items-center md:text-md text-sm border-y-2 mt-2 py-[10px]'>
+						<h4 className='font-semibold'>Final Price</h4>
+						<p>${(190 + FinalPrice).toFixed(2)}</p>
+					</div>
+				</div>
 				<Link
 					href={'/'}
 					className='flex items-center py-[16px] font-semibold text-[var(--primary-color)] gap-2 px-[16px] w-full justify-start'>
