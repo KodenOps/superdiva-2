@@ -53,13 +53,6 @@ const Favorite = () => {
 							style={{ width: '300px', height: '300px' }}
 							loop
 							autoplay></dotlottie-player>
-						<div className='w-auto md:mb-[40px] mb-[20px]'>
-							<Link
-								href={'/'}
-								className='flex items-center  py-[16px] font-semibold text-[var(--primary-color)] gap-2   justify-center'>
-								<MdArrowBack size={20} /> Continue Shopping
-							</Link>
-						</div>
 					</div>
 				) : (
 					<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-center items-center'>
