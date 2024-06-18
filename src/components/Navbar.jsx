@@ -17,7 +17,7 @@ const Navbar = ({ cartItem, favItem }) => {
 	const router = useRouter();
 	return (
 		<div className='mainNav relative overflow-hidden h-[10vh] z-1000'>
-			<nav className='lg:p-[40px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
+			<nav className='md:p-[30px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
 				<div className='logo'>
 					<Link
 						href='/'

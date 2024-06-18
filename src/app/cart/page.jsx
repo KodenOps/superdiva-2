@@ -41,14 +41,14 @@ const Cart = () => {
 		setCartItem(updatedCart);
 	};
 	return (
-		<div className='bg-slate-200'>
+		<div className='bg-slate-200 flex flex-col lg:gap-6 md:gap-2'>
 			<Navbar
 				cartItem={cartItem}
 				favItem={favItem}
 			/>
 
 			{cartItem.length === 0 ? (
-				<div className='w-full mt-[3%] bg-white min-h-[80vh]'>
+				<div className='w-full mt-[2%] bg-white min-h-[80vh]'>
 					<header className='flex items-center justify-between w-full md:pr-[24px] border-b-2 md:p-[24px] p-[16px]'>
 						<h3 className='md:text-2xl text-md font-bold text-[var(--primary-color)]  '>
 							Your Cart
@@ -78,8 +78,8 @@ const Cart = () => {
 					</div>
 				</div>
 			) : (
-				<div className='mainBody min-h-[40rem] md:mt-[1%] md:w-[99%] w-full border-1 bg-white md:mx-[0.5%] rounded-lg flex flex-wrap items-start justify-center '>
-					<div className='cartItemList  w-full border-r-2 border-slate-300'>
+				<div className='mainBody min-h-[40rem]   w-full border-1 bg-white  rounded-lg flex flex-wrap items-start justify-center '>
+					<div className='cartItemList  w-full border-r-2 '>
 						<header className='flex items-center justify-between w-full md:pr-[24px] border-b-2 md:p-[24px] p-[16px]'>
 							<h3 className='md:text-2xl text-md font-bold text-[var(--primary-color)]  '>
 								Your Cart
@@ -168,7 +168,7 @@ const Cart = () => {
 							</tbody>
 						</table>
 					</div>
-					<div className='summary w-full md:p-[24px] p-[16px]'>
+					<div className='summary w-full md:px-[24px] px-[16px]'>
 						<h3 className='text-[var(--primary-color)] font-semibold mb-2'>
 							Summary
 						</h3>
