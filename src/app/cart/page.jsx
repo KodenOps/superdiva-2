@@ -58,7 +58,7 @@ const Cart = () => {
 						</h4>
 					</header>
 					<p className='text-center  md:text-xl text-md font-semibold md:w-[50%] w-[80%] md:mx-[25%] mx-[10%] mt-[40px]'>
-						Your cart is empty! Add some items and they'll appear here.
+						Your cart is empty! Add some items and they&apos;ll appear here.
 					</p>
 					<div className='w-full flex justify-center items-start pt-[20px] '>
 						<dotlottie-player
