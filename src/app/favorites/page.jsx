@@ -3,6 +3,8 @@ import React, { useContext, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
 import Favorite from '@/components/Favorite';
+import Link from 'next/link';
+import { MdArrowBack } from 'react-icons/md';
 
 const CartCollection = () => {
 	const {
@@ -72,6 +74,7 @@ const CartCollection = () => {
 		<div>
 			<div className='min-h-[60vh]'>
 				<Favorite />
+				
 			</div>
 			<Footer />
 		</div>
