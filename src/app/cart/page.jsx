@@ -90,10 +90,11 @@ const Cart = () => {
 							</h4>
 						</header>
 						{/* the cart item */}
-						<table className='w-full '>
+
+						<table className='w-full'>
 							<thead>
 								<tr className='text-left md:text-lg text-[12px] text-[#A0A0A0] font-mono sticky top-[8vh] z-[100]  bg-white border-b-2'>
-									<th className='md:p-8 p-4 ,d:w-[35%] w-[20%]'>
+									<th className='md:p-8 p-4 md:w-[35%] w-[20%]'>
 										Product Details
 									</th>
 									<th className='md:p-8 p-4 md:w-[15%] text-center  w-[2%] '>
@@ -102,7 +103,7 @@ const Cart = () => {
 									<th className='md:p-8 p-4 md:w-auto w-[10%] text-center'>
 										Price
 									</th>
-									<th className='md:p-8 p-4 text-center'>Total</th>
+									<th className='md:p-8 p-4 text-center '>Total</th>
 								</tr>
 							</thead>
 							<tbody className='w-full'>

@@ -9,6 +9,8 @@ import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 import { cartContext } from '@/Context/CartContext';
 import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { MdArrowBack } from 'react-icons/md';
 
 const ProductPreview = () => {
 	const {
@@ -173,11 +175,12 @@ const ProductPreview = () => {
 							)}
 						</div>
 					</div>
-					<button
-						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
-						onClick={() => router.push('/')}>
+					<Link
+						href='/'
+						className='py-[14px] flex items-center justify-start gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full'>
+						<MdArrowBack size={24} />
 						Continue Shopping
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>
