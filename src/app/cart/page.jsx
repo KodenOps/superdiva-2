@@ -63,7 +63,7 @@ const Cart = () => {
 					</p>
 					<div className='w-full flex justify-center items-start pt-[20px] '>
 						<dotlottie-player
-							src='https://lottie.host/08fd840f-0c5e-447f-b8db-3c34751c3ba7/reu970Ijxr.json'
+							src='https://lottie.host/3095858a-c868-43c6-a8fb-278a86188820/Osjevx7uQY.json'
 							background='transparent'
 							speed='1'
 							style={{ width: '300px', height: '300px' }}
