@@ -2,6 +2,7 @@ import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import Promo from '@/data/Promo';
 import { cartContext } from '@/Context/CartContext';
+import { useRouter } from 'next/navigation';
 
 const Promosection = () => {
 	const { previewItem, setPreviewItem, setEachItem, EachItem } =
@@ -14,6 +15,7 @@ const Promosection = () => {
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
+	const router = useRouter();
 	return (
 		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles
@@ -28,8 +30,8 @@ const Promosection = () => {
 							<div
 								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 								onClick={() => {
-									setPreviewItem(!previewItem);
 									setEachItem(hotDB);
+									router.push('./preview');
 								}}>
 								<img
 									src={hotDB.image}

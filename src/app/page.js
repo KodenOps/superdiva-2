@@ -83,44 +83,28 @@ export default function Home() {
 
 	return (
 		<main>
-			{!previewItem ? (
-				<div>
-					<Hero
-						cartItem={cartItem}
-						setCartItem={setCartItem}
-						favItem={favItem}
-						setFavItem={setFavItem}
-					/>
-					<Categories />
-					<TopProduct
-						setPreviewItem={setPreviewItem}
-						previewItem={previewItem}
-						EachItem={EachItem}
-						setEachItem={setEachItem}
-					/>
-					<Promosection
-						setPreviewItem={setPreviewItem}
-						previewItem={previewItem}
-						EachItem={EachItem}
-						setEachItem={setEachItem}
-					/>
-				</div>
-			) : (
-				<ProductPreview
-					EachItem={EachItem}
-					setEachItem={setEachItem}
-					setPreviewItem={setPreviewItem}
-					previewItem={previewItem}
+			<div>
+				<Hero
 					cartItem={cartItem}
 					setCartItem={setCartItem}
 					favItem={favItem}
 					setFavItem={setFavItem}
-					isAddedToCart={isAddedToCart}
-					setIsAddedToCart={setIsAddedToCart}
-					isAddedToFav={isAddedToFav}
-					setIsAddedToFav={setIsAddedToFav}
 				/>
-			)}
+				<Categories />
+				<TopProduct
+					setPreviewItem={setPreviewItem}
+					previewItem={previewItem}
+					EachItem={EachItem}
+					setEachItem={setEachItem}
+				/>
+				<Promosection
+					setPreviewItem={setPreviewItem}
+					previewItem={previewItem}
+					EachItem={EachItem}
+					setEachItem={setEachItem}
+				/>
+			</div>
+
 			<Footer />
 		</main>
 	);
