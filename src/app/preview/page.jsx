@@ -8,7 +8,6 @@ import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 import { cartContext } from '@/Context/CartContext';
 import Navbar from '@/components/Navbar';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
 
@@ -74,7 +73,7 @@ const ProductPreview = () => {
 	};
 
 	let stars = Math.round(EachItem.rating.rate);
-	const router = useRouter();
+	
 
 	return (
 		<div className='min-h-[100vh] w-full overflow-x-hidden -z-0'>
