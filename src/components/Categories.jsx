@@ -25,13 +25,15 @@ const Categories = () => {
 						width={300}
 					/>
 				</Link>
-				<div className='cursor-pointer hover:translate-y-[-8px] transition-all ease duration-1000 '>
+				<Link
+					href='/gownscollection'
+					className='cursor-pointer hover:translate-y-[-8px] transition-all ease duration-1000 '>
 					<Image
 						src={gowns}
 						alt=''
 						width={300}
 					/>
-				</div>
+				</Link>
 				<div className='cursor-pointer hover:translate-y-[-8px] transition-all ease duration-1000 '>
 					<Image
 						src={jacket}
