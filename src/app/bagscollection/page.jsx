@@ -2,7 +2,9 @@
 import React, { useContext, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
-import Bags from '@/components/Bags';
+import { bags } from '@/data/bags';
+import UniqueCategory from '@/components/UniqueCategory';
+import Titles from '@/components/Titles';
 
 const CartCollection = () => {
 	const {
@@ -79,7 +81,11 @@ const CartCollection = () => {
 	return (
 		<div>
 			<div className='min-h-[60vh]'>
-				<Bags />
+				<UniqueCategory
+					db={bags}
+					pageTitle='Our Exclusive Bags'
+					pageParagraph="Discover our stunning collection of women's bags on clearance! Handpicked for style and quality, these bags are your perfect fashion companions. Shop now and elevate your look with unbeatable deals!"
+				/>
 			</div>
 			<Footer />
 		</div>

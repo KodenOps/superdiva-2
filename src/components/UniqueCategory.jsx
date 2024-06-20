@@ -4,7 +4,7 @@ import { cartContext } from '@/Context/CartContext';
 import ProductPreview from './ProductPreview';
 import Navbar from './Navbar';
 import { gowns } from '@/data/gowns';
-const Gowns = () => {
+const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
 	const {
 		loading,
 		EachItem,
@@ -37,12 +37,12 @@ const Gowns = () => {
 			/>
 			<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 				<Titles
-					title='Our Chics Gowns'
-					subtext="Discover our stunning collection of women's bags on clearance! Handpicked for style and quality, these bags are your perfect fashion companions. Shop now and elevate your look with unbeatable deals!"
+					title={pageTitle}
+					subtext={pageParagraph}
 				/>
 				{/* the entire product box */}
 				<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
-					{gowns.map((hotDB) => {
+					{db.map((hotDB) => {
 						return (
 							<div key={hotDB.title}>
 								<div
@@ -95,4 +95,4 @@ const Gowns = () => {
 	);
 };
 
-export default Gowns;
+export default UniqueCategory;
