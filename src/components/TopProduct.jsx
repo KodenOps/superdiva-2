@@ -1,67 +1,61 @@
+import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import hotProductsDB from '../data/hot_products';
-import Titles from '@/components/Titles';
 import { cartContext } from '@/Context/CartContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const TopProduct = () => {
-	const {
-		previewItem,
-		setPreviewItem,
-		setEachItem,
-		EachItem,
-		cartItem,
-		favItem,
-	} = useContext(cartContext);
+const Promosection = () => {
+	const { previewItem, setPreviewItem, setEachItem, EachItem } =
+		useContext(cartContext);
+	// set variable to the localstorage
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
 	}, [previewItem]);
+
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
-	const router = useRouter();
-	const handleClick = (e) => {
-		setEachItem(e);
-		router.push(`/${e.title.replace(/ /g, '_')}`);
-	};
+
 	return (
-		<div
-			className=' md:px-[50px] px-[10px] my-[100px] mb-[40px]'
-			id='topProd'>
+		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles
-				title='What Others Are buying'
-				subtext="Don't be left out. Checkout top products other Diva are adding to cart"
+				title='Our 50% Price Slash Promo'
+				subtext='Explore our catalog of clearance sales. The products are carefully selected to meet your fashion need while also removing 50% off the initial price'
 			/>
 			{/* the entire product box */}
-			<div className='product_Container flex flex-wrap mt-[40px] justify-around items-center'>
-				{hotProductsDB.map((TopPro) => {
+			<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
+				{hotProductsDB.map((hotDB) => {
 					return (
-						<div
-							// href={`/${TopPro.title.replace(/ /g, '_')}`}
-							key={TopPro.id}
-							className='md:w-[200px] w-[150px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
-							onClick={() => handleClick(TopPro)}>
-							<img
-								src={TopPro.image}
-								alt=''
-								className='md:w-[200px] md:h-[200px] w-[160px] h-[160px] object-cover aspect-'
-								loading='lazy'
-							/>
-							<div className='text-[10px] mt-[10px] md:text-left text-center'>
-								<h4 className=' font-bold'>{TopPro.title}</h4>
-								<p className='text-[gray]'>{TopPro.category}</p>
-								<div className='prices   md:justify-left justify-center'>
-									<span className='newprice text-[var(--primary-color)] font-semibold'>
-										${TopPro.price}
-									</span>
-									<span className='mx-[10px]'>|</span>
-									<span className='oldprice text-[gray] line-through'>
-										${TopPro.oldprice}
-									</span>
+						<Link
+							href='./preview'
+							key={hotDB.id}>
+							<div
+								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
+								onClick={() => {
+									setEachItem(hotDB);
+								}}>
+								<img
+									src={hotDB.image}
+									alt='image of products'
+									className='md:w-[200px] md:h-[200px] w-[160px] h-[160px] object-cover '
+									loading='lazy'
+								/>
+								<div className='text-[10px] mt-[10px] md:text-left text-center'>
+									<h4 className=' font-bold'>{hotDB.title}</h4>
+									<p className='text-[gray]'>{hotDB.category}</p>
+									<div className='prices   md:justify-left justify-center'>
+										<span className='newprice text-[var(--primary-color)] font-semibold'>
+											${hotDB.price}
+										</span>
+										<span className='mx-[10px]'>|</span>
+										<span className='oldprice text-[gray] line-through'>
+											${hotDB.oldprice}
+										</span>
+									</div>
 								</div>
 							</div>
-						</div>
+						</Link>
 					);
 				})}
 			</div>
@@ -69,4 +63,4 @@ const TopProduct = () => {
 	);
 };
 
-export default TopProduct;
+export default Promosection;

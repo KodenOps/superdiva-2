@@ -2,12 +2,11 @@ import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import { cartContext } from '@/Context/CartContext';
 import Navbar from './Navbar';
-import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 
 const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
-	const { setEachItem, EachItem, setPreviewItem, cartItem, favItem } =
+	const { setEachItem, EachItem, cartItem, favItem } =
 		useContext(cartContext);
 	const router = useRouter();
 	useEffect(() => {
@@ -15,7 +14,7 @@ const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
 	}, [EachItem]);
 	const handleClick = (e) => {
 		setEachItem(e);
-		router.push(`/${e.title.replace(/ /g, '_')}`);
+		router.push('/preview');
 	};
 
 	return (
@@ -34,7 +33,6 @@ const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
 				<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
 					{db.map((item) => (
 						<div
-							// href={`/${item.title.replace(/ /g, '_')}`}
 							key={item.title}
 							onClick={() => handleClick(item)}>
 							<div className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'>

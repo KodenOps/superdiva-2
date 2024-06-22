@@ -16,7 +16,7 @@ const Promosection = () => {
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
-	const router = useRouter();
+	
 	return (
 		<div className='min-h-[50vh] py-[10px] md:px-[50px] px-[10px] mt-[10px]" id="topProd'>
 			<Titles

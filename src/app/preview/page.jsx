@@ -8,7 +8,6 @@ import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 import { cartContext } from '@/Context/CartContext';
 import Navbar from '@/components/Navbar';
-import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
 
 const ProductPreview = () => {
@@ -172,7 +171,7 @@ const ProductPreview = () => {
 					</div>
 					<div
 						className='py-[14px] flex items-center justify-start gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full cursor-pointer'
-						onClick={() => router.back()}>
+						onClick={() => window.history.back()}>
 						<MdArrowBack size={24} />
 						Continue Shopping
 					</div>
