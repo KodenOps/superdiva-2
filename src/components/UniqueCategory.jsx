@@ -6,8 +6,7 @@ import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 
 const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
-	const { setEachItem, EachItem, cartItem, favItem } =
-		useContext(cartContext);
+	const { setEachItem, EachItem, cartItem, favItem } = useContext(cartContext);
 	const router = useRouter();
 	useEffect(() => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
@@ -61,7 +60,7 @@ const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
 				</div>
 				<div
 					className='py-[14px] flex items-center justify-center gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full cursor-pointer'
-					onClick={() => router.back()}>
+					onClick={() => window.history.back()}>
 					<MdArrowBack size={24} />
 					Continue Shopping
 				</div>
