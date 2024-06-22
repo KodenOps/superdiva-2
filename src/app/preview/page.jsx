@@ -10,13 +10,11 @@ import { cartContext } from '@/Context/CartContext';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
-import { useRouter } from 'next/navigation';
 
 const ProductPreview = () => {
 	const {
 		EachItem,
 		setFavItem,
-		setPreviewItem,
 		cartItem,
 		favItem,
 		setCartItem,
@@ -24,8 +22,6 @@ const ProductPreview = () => {
 		setIsAddedToCart,
 		isAddedToFav,
 		setIsAddedToFav,
-		setLoading,
-		storedCartItems,
 		setEachItem,
 	} = useContext(cartContext);
 
@@ -74,12 +70,7 @@ const ProductPreview = () => {
 	};
 
 	let stars = Math.round(EachItem.rating.rate);
-	const router = useRouter();
 
-	const handleClick = () => {
-		const formattedTitle = EachItem.title.replace(/\s+/g, '_');
-		router.push(`/${formattedTitle}`);
-	};
 	return (
 		<div className='min-h-[100vh] w-full overflow-x-hidden -z-0'>
 			<Navbar
