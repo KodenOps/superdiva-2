@@ -17,7 +17,7 @@ const Hero = () => {
 				favItem={favItem}
 				setfavItem={setfavItem}
 			/>
-			<div className='main_content min-h-[90vh] lg:h-[85vh] flex items-center justify-around gap-[50px] lg:flex-row flex-col  mt-[30px]'>
+			<div className='main_content min-h-[90vh] lg:h-[85vh] flex items-center justify-around  gap-[50px] lg:flex-row flex-col  mt-[30px]'>
 				<div className='left lg:w-[50%] w-full md:px-[50px] px-4 lg:h-[80%] lg:py-[5%]'>
 					<h2 className='font-bold  md:text-4xl lg:text-5xl sm:text-4xl text-[26px] w-[90%] mx-[5%] lg:mx-0 capitalize text-[var(--black)] lg:w-[90%]    leading-8 text-center lg:text-left'>
 						Get the <span className='text-[var(--primary-color)]'>best</span>{' '}
@@ -36,9 +36,11 @@ const Hero = () => {
 						destination for discovering the latest trends, and everything in
 						between
 					</p>
-					<button className='px-[32px] py-[16px] bg-[var(--primary-color)] rounded-md md:w-[40%]  w-full mx-0 text-[var(--white)] hover:bg-[var(--black)] duration-1000'>
-						Explore Now
-					</button>
+					<div className='w-full  bg-red-400  '>
+						<button className='px-[32px] py-[16px] bg-[var(--primary-color)] rounded-md lg:w-[40%]  w-full mx-0 text-[var(--white)] hover:bg-[var(--black)] duration-1000 '>
+							Explore Now
+						</button>
+					</div>
 				</div>
 				<div className='right lg:w-[50%] flex justify-center items-center '>
 					<Image
