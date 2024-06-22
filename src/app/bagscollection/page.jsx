@@ -29,12 +29,12 @@ const CartCollection = () => {
 		const storedEachItem = JSON.parse(localStorage.getItem('EachItem')) || {};
 
 		const storedPreviewItem =
-			JSON.parse(localStorage.getItem('previewItem')) || false;
+			// JSON.parse(localStorage.getItem('previewItem')) || false;
 
-		setCartItem(storedCartItems);
+			setCartItem(storedCartItems);
 		setFavItem(storedFavItems);
 		setEachItem(storedEachItem);
-		setPreviewItem(storedPreviewItem);
+		// setPreviewItem(storedPreviewItem);
 
 		const checkIfPresentInCart = storedCartItems.some(
 			(item) => item.id === storedEachItem.id
@@ -57,7 +57,7 @@ const CartCollection = () => {
 		setIsAddedToCart,
 		setIsAddedToFav,
 		setLoading,
-		setPreviewItem,
+		// setPreviewItem,
 	]);
 
 	if (loading) {

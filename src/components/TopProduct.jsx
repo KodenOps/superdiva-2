@@ -3,9 +3,17 @@ import hotProductsDB from '../data/hot_products';
 import Titles from '@/components/Titles';
 import { cartContext } from '@/Context/CartContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
 const TopProduct = () => {
-	const { previewItem, setPreviewItem, setEachItem,EachItem, cartItem, favItem } =
-		useContext(cartContext);
+	const {
+		previewItem,
+		setPreviewItem,
+		setEachItem,
+		EachItem,
+		cartItem,
+		favItem,
+	} = useContext(cartContext);
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
 	}, [previewItem]);
@@ -13,6 +21,10 @@ const TopProduct = () => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
 	const router = useRouter();
+	const handleClick = (e) => {
+		setEachItem(e);
+		router.push(`/${e.title.replace(/ /g, '_')}`);
+	};
 	return (
 		<div
 			className=' md:px-[50px] px-[10px] my-[100px] mb-[40px]'
@@ -26,12 +38,10 @@ const TopProduct = () => {
 				{hotProductsDB.map((TopPro) => {
 					return (
 						<div
+							// href={`/${TopPro.title.replace(/ /g, '_')}`}
 							key={TopPro.id}
 							className='md:w-[200px] w-[150px]  mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
-							onClick={() => {
-								setEachItem(TopPro);
-								router.push('./preview');
-							}}>
+							onClick={() => handleClick(TopPro)}>
 							<img
 								src={TopPro.image}
 								alt=''

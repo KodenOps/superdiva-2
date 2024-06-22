@@ -6,7 +6,7 @@ import Hero from '@/components/Hero';
 import Promosection from '@/components/Promosection';
 import Categories from '@/components/Categories';
 import Footer from '@/components/Footer';
-import ProductPreview from '@/components/ProductPreview';
+// import ProductPreview from '@/components/ProductPreview';
 import { cartContext } from '@/Context/CartContext';
 
 export default function Home() {
@@ -92,13 +92,13 @@ export default function Home() {
 				/>
 				<Categories />
 				<TopProduct
-					setPreviewItem={setPreviewItem}
+					// setPreviewItem={setPreviewItem}
 					previewItem={previewItem}
 					EachItem={EachItem}
 					setEachItem={setEachItem}
 				/>
 				<Promosection
-					setPreviewItem={setPreviewItem}
+					// setPreviewItem={setPreviewItem}
 					previewItem={previewItem}
 					EachItem={EachItem}
 					setEachItem={setEachItem}

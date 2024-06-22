@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import Promo from '@/data/Promo';
 import { cartContext } from '@/Context/CartContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Promosection = () => {
 	const { previewItem, setPreviewItem, setEachItem, EachItem } =
@@ -26,12 +27,13 @@ const Promosection = () => {
 			<div className='product_Container flex flex-wrap gap-[24px] mt-[40px] justify-around items-center'>
 				{Promo.map((hotDB) => {
 					return (
-						<div key={hotDB.id}>
+						<Link
+							href='./preview'
+							key={hotDB.id}>
 							<div
 								className='md:w-[200px] w-[150px] mb-[40px] hover:shadow-md shadow-sm cursor-pointer p-[10px] rounded-md duration-1000'
 								onClick={() => {
 									setEachItem(hotDB);
-									router.push('./preview');
 								}}>
 								<img
 									src={hotDB.image}
@@ -53,7 +55,7 @@ const Promosection = () => {
 									</div>
 								</div>
 							</div>
-						</div>
+						</Link>
 					);
 				})}
 			</div>

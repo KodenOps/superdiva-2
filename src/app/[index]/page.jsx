@@ -1,19 +1,19 @@
 'use client';
-import Navbar from './Navbar';
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Rating from '@/components/Ratings';
 import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 import { cartContext } from '@/Context/CartContext';
+import Navbar from '@/components/Navbar';
+import { MdArrowBack } from 'react-icons/md';
+import { useRouter } from 'next/navigation';
 
 const ProductPreview = () => {
 	const {
 		EachItem,
-
 		setFavItem,
-		previewItem,
 		setPreviewItem,
 		cartItem,
 		favItem,
@@ -22,43 +22,35 @@ const ProductPreview = () => {
 		setIsAddedToCart,
 		isAddedToFav,
 		setIsAddedToFav,
+		setLoading,
+		storedCartItems,
+		setEachItem,
 	} = useContext(cartContext);
-	useEffect(() => {
-		localStorage.setItem('cartItem', JSON.stringify(cartItem));
-	}, [cartItem]);
+
+	const router = useRouter();
 
 	useEffect(() => {
-		localStorage.setItem('favItem', JSON.stringify(favItem));
-	}, [favItem]);
-	// set variable to the localstorage
-	useEffect(() => {
-		localStorage.setItem('previewItem', JSON.stringify(previewItem));
-	}, [previewItem]);
+		const storedEachItem = JSON.parse(localStorage.getItem('EachItem')) || {};
+		const storedCartItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+		const storedFavItems = JSON.parse(localStorage.getItem('favItem')) || [];
 
-	// useEffect(() => {
-	// 	localStorage.setItem('cartItem', JSON.stringify(cartItem));
-	// }, [cartItem]);
+		setEachItem(storedEachItem);
+		setCartItem(storedCartItems);
+		setFavItem(storedFavItems);
 
-	// useEffect(() => {
-	// 	localStorage.setItem('favItem', JSON.stringify(favItem));
-	// }, [favItem]);
-	useEffect(() => {
-		localStorage.setItem('EachItem', JSON.stringify(EachItem));
-	}, [EachItem]);
-	useEffect(() => {
-		// Check if the item is already in the cart when the component mounts
-		const checkIfPresentInCart = cartItem.some(
-			(item) => item.id === EachItem.id
+		const checkIfPresentInCart = storedCartItems.some(
+			(item) => item.id === storedEachItem.id
 		);
 		setIsAddedToCart(checkIfPresentInCart);
 
-		// Check if the item is already in the favorites when the component mounts
-		const checkIfPresentInFav = favItem.some((item) => item.id === EachItem.id);
+		const checkIfPresentInFav = storedFavItems.some(
+			(item) => item.id === storedEachItem.id
+		);
 		setIsAddedToFav(checkIfPresentInFav);
-	}, [EachItem, cartItem, favItem]);
+	}, []);
 
 	if (!EachItem || !EachItem.rating) {
-		return null; // or return an error message or fallback UI
+		return <div>Loading...</div>; // or return an error message or fallback UI
 	}
 
 	const ratingFunc = (count) => {
@@ -152,7 +144,6 @@ const ProductPreview = () => {
 											cartItem.filter((item) => item.id !== EachItem.id)
 										);
 										setIsAddedToCart(false);
-										console.log(cartItem);
 									}}>
 									<FaTrash size={20} />
 									Remove From Cart
@@ -172,11 +163,12 @@ const ProductPreview = () => {
 							)}
 						</div>
 					</div>
-					<button
-						className='py-[14px] px-[16px] text-[var(--primary-color)] my-[24px] md:w-[200px] rounded-md font-semibold md:text-left text-center w-full'
-						onClick={() => setPreviewItem(!previewItem)}>
+					<div
+						className='py-[14px] flex items-center justify-start gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full cursor-pointer'
+						onClick={() => router.back()}>
+						<MdArrowBack size={24} />
 						Continue Shopping
-					</button>
+					</div>
 				</div>
 			</div>
 		</div>

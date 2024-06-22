@@ -10,6 +10,7 @@ import { cartContext } from '@/Context/CartContext';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
+import { useRouter } from 'next/navigation';
 
 const ProductPreview = () => {
 	const {
@@ -73,8 +74,12 @@ const ProductPreview = () => {
 	};
 
 	let stars = Math.round(EachItem.rating.rate);
-	
+	const router = useRouter();
 
+	const handleClick = () => {
+		const formattedTitle = EachItem.title.replace(/\s+/g, '_');
+		router.push(`/${formattedTitle}`);
+	};
 	return (
 		<div className='min-h-[100vh] w-full overflow-x-hidden -z-0'>
 			<Navbar
@@ -174,12 +179,12 @@ const ProductPreview = () => {
 							)}
 						</div>
 					</div>
-					<Link
-						href='/'
-						className='py-[14px] flex items-center justify-start gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full'>
+					<div
+						className='py-[14px] flex items-center justify-start gap-4 px-[16px] text-[var(--primary-color)] my-[24px] rounded-md font-semibold md:text-left text-center w-full cursor-pointer'
+						onClick={() => router.back()}>
 						<MdArrowBack size={24} />
 						Continue Shopping
-					</Link>
+					</div>
 				</div>
 			</div>
 		</div>

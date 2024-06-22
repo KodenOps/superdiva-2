@@ -1,28 +1,15 @@
 import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import { cartContext } from '@/Context/CartContext';
-import ProductPreview from './ProductPreview';
+// import ProductPreview from './ProductPreview';
 import Navbar from './Navbar';
 import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 
 const Favorite = () => {
-	const {
-		loading,
-		EachItem,
-		setEachItem,
-		setFavItem,
-		previewItem,
-		setPreviewItem,
-		cartItem,
-		favItem,
-		setCartItem,
-		isAddedToCart,
-		setIsAddedToCart,
-		isAddedToFav,
-		setIsAddedToFav,
-	} = useContext(cartContext);
+	const { EachItem, setEachItem, previewItem, cartItem, favItem } =
+		useContext(cartContext);
 	// set variable to the localstorage
 	useEffect(() => {
 		localStorage.setItem('previewItem', JSON.stringify(previewItem));
@@ -32,7 +19,7 @@ const Favorite = () => {
 		localStorage.setItem('EachItem', JSON.stringify(EachItem));
 	}, [EachItem]);
 	const router = useRouter();
-	return !previewItem ? (
+	return (
 		<div>
 			<Navbar
 				cartItem={cartItem}
@@ -91,29 +78,14 @@ const Favorite = () => {
 					</div>
 				)}
 				<div className='w-auto md:mb-[40px] mb-[20px]'>
-					<Link
-						href={'/'}
-						className='flex items-center  py-[16px] font-semibold text-[var(--primary-color)] gap-2   justify-center'>
+					<div
+						className='flex items-center  py-[16px] font-semibold text-[var(--primary-color)] gap-2   justify-center cursor-pointer'
+						onClick={() => router.back()}>
 						<MdArrowBack size={20} /> Check Other Items
-					</Link>
+					</div>
 				</div>
 			</div>
 		</div>
-	) : (
-		<ProductPreview
-			EachItem={EachItem}
-			setEachItem={setEachItem}
-			setPreviewItem={setPreviewItem}
-			previewItem={previewItem}
-			cartItem={cartItem}
-			setCartItem={setCartItem}
-			favItem={favItem}
-			setFavItem={setFavItem}
-			isAddedToCart={isAddedToCart}
-			setIsAddedToCart={setIsAddedToCart}
-			isAddedToFav={isAddedToFav}
-			setIsAddedToFav={setIsAddedToFav}
-		/>
 	);
 };
 

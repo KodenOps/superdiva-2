@@ -1,8 +1,7 @@
 // src/components/Navbar.js
 
 'use client';
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useContext, useState } from 'react';
 import {
 	AiOutlineShoppingCart,
 	AiOutlineHeart,
@@ -11,10 +10,13 @@ import {
 } from 'react-icons/ai';
 import { MdArrowForwardIos } from 'react-icons/md';
 import Link from 'next/link';
+import { cartContext } from '@/Context/CartContext';
 
-const Navbar = ({ cartItem, favItem }) => {
+const Navbar = () => {
+	const { cartItem, favItem, previewItem, setPreviewItem } =
+		useContext(cartContext);
 	const [sideBarIsOn, setSideBarIsOn] = useState(false);
-	const router = useRouter();
+
 	return (
 		<div className='mainNav relative overflow-hidden h-[10vh] z-1000'>
 			<nav className='md:p-[30px] py-[20px] overflow-hidden fixed flex justify-between items-center lg:px-[50px] px-[16px]  w-screen  -z-100 bg-[var(--white)] z-[1000]'>
@@ -45,14 +47,16 @@ const Navbar = ({ cartItem, favItem }) => {
 					{/* cart icon */}
 					<Link
 						href='/cart'
-						className='flex items-center justify-center'>
+						className='flex items-center justify-center'
+						>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>
 					</Link>
 					{/* favorite icon */}
 					<Link
 						href='favorites'
-						className='flex items-center justify-center'>
+						className='flex items-center justify-center'
+						>
 						<AiOutlineHeart size={30} />
 						<span>{favItem.length}</span>
 					</Link>
