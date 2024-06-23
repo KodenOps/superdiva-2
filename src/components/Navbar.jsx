@@ -8,7 +8,15 @@ import {
 	AiOutlineUser,
 	AiOutlineMenu,
 } from 'react-icons/ai';
-import { MdArrowForwardIos } from 'react-icons/md';
+import { MdArrowForwardIos, MdShower } from 'react-icons/md';
+import {
+	GiConverseShoe,
+	GiAmpleDress,
+	GiSleevelessJacket,
+	GiTrousers,
+} from 'react-icons/gi';
+import { IoBag } from 'react-icons/io5';
+import { FaRegUserCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import { cartContext } from '@/Context/CartContext';
 
@@ -47,16 +55,14 @@ const Navbar = () => {
 					{/* cart icon */}
 					<Link
 						href='/cart'
-						className='flex items-center justify-center'
-						>
+						className='flex items-center justify-center'>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>
 					</Link>
 					{/* favorite icon */}
 					<Link
 						href='favorites'
-						className='flex items-center justify-center'
-						>
+						className='flex items-center justify-center'>
 						<AiOutlineHeart size={30} />
 						<span>{favItem.length}</span>
 					</Link>
@@ -67,7 +73,7 @@ const Navbar = () => {
 				</div>
 				{/* mobile view hamburger*/}
 				<div
-					className='flex items-center justify-center lg:hidden'
+					className='flex items-center justify-center md:hidden'
 					onClick={() => setSideBarIsOn(!sideBarIsOn)}>
 					<AiOutlineMenu size={30} />
 				</div>
@@ -75,38 +81,118 @@ const Navbar = () => {
 			{/* side navigation */}
 			{sideBarIsOn ? (
 				// modal open
-				<div className='lg:hidden transition-all fixed top-0 z-10 left-0 translate-x-0 duration-100  '>
+				<div className='md:hidden transition-all fixed w-full top-0 z-10 left-0 translate-x-0 duration-100  '>
 					<div
 						className='sidenav_bg container  w-screen h-screen transition bg-black bg-opacity-[70%]'
 						onClick={() => setSideBarIsOn(!sideBarIsOn)}></div>
-					<nav className='sidenav_main absolute top-[10vh] right-[0px] z-50  h-[90vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
-						<ul className='list-none flex flex-col items-center justify-center gap-[25px] mb-[40px] h-[70%]'>
-							<li
-								className='LinkStyle'
-								onClick={() => setSideBarIsOn(!sideBarIsOn)}>
-								<Link href='/#home'>Home</Link>
-								<MdArrowForwardIos size={20} />
-							</li>
-							<li className='LinkStyle'>
-								Collections <MdArrowForwardIos size={20} />
-							</li>
-							<li
-								className='w-full'
-								onClick={() => setSideBarIsOn(!sideBarIsOn)}>
-								<Link
-									className='LinkStyle'
-									href='/#topProd'>
-									Top Products
-									<MdArrowForwardIos size={20} />
-								</Link>
-							</li>
-							<li className='LinkStyle'>
-								Categories <MdArrowForwardIos size={20} />
-							</li>
-							<li className='LinkStyle'>
-								Explore <MdArrowForwardIos size={20} />
-							</li>
-						</ul>
+					<nav className='sidenav_main absolute top-0 right-0 z-[1000]  h-[100vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
+						<div className='list-none flex flex-col items-start px-[16px] py-[24px] justify-start gap-[25px] mb-[40px] h-[70%]'>
+							<h3 className='text-md  font-semibold text-[#6a6a6a]'>
+								SHOP FOR:
+							</h3>
+							<Link
+								href='/shoesnboots'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<GiConverseShoe
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Shoes
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='/bagscollection'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<IoBag
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Bags
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='/gownscollection'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<GiAmpleDress
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Gowns
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='/shirts'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<GiAmpleDress
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Shirts
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='/jackets'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<GiSleevelessJacket
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Jackets
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='/jackets'
+								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<GiTrousers
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Trousers
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+						</div>
+						<div className='w-full h-[80px] rounded-md absolute flex items-center justify-between  bg-slate-100 bottom-6 border-2 p-6'>
+							<div className='user flex items-center justify-start gap-3 '>
+								<FaRegUserCircle size={40} />
+								<div>
+									<div className='text-md'>User Name</div>
+									<div className='text-[12px]'>email@gmail.com</div>
+								</div>
+							</div>
+							<button className='bg-red-400 w-[140px] py-[6px] rounded-sm text-white'>
+								Logouts
+							</button>
+						</div>
 					</nav>
 				</div>
 			) : (
