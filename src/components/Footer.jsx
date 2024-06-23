@@ -74,7 +74,7 @@ const Footer = () => {
 					</ul>
 				</div>
 				{/* End of second column */}
-				<div className='md:w-[35%] w-full lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
+				<div className='lg:w-[35%] w-full lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
 					<p className='font-normal md:text-xl text-md text-[var(--secondary-color)] '>
 						Be An Affiliate
 					</p>
