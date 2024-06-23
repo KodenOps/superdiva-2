@@ -217,7 +217,7 @@ const Navbar = () => {
 								/>
 							</Link>
 						</div>
-						<div className='w-full h-[80px] rounded-md absolute flex items-center justify-between  bg-slate-100 bottom-6 border-2 p-6'>
+						<div className='w-full h-[80px] rounded-md absolute flex items-center justify-between  bg-slate-100 bottom-0 border-2 p-6'>
 							<div className='user flex items-center justify-start gap-3 '>
 								<FaRegUserCircle size={40} />
 								<div>
