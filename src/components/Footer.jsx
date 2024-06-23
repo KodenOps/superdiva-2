@@ -65,8 +65,8 @@ const Footer = () => {
 					<p className='font-normal md:text-xl w-full text-md   text-[var(--secondary-color)]'>
 						Quick Links
 					</p>
-					<ul className='flex flex-col w-full items-center text-[14px] font-light justify-center text-center gap-[10px]'>
-						<Link href='/'>home</Link>
+					<ul className='flex flex-col capitalize w-full items-center text-[14px] font-light justify-center text-center gap-[10px]'>
+						<Link href='/'>Home</Link>
 						<Link href='/'>About</Link>
 						<Link href='/'>Categories</Link>
 						<Link href='/'>Explore</Link>
