@@ -2,10 +2,10 @@
 import React, { useContext, useEffect } from 'react';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
-import { shoesAndBoots } from '@/data/shoesnboots';
+import { womensTrousers } from '@/data/trousers';
 import UniqueCategory from '@/components/UniqueCategory';
 
-const Shoenboots = () => {
+const ShirtCollection = () => {
 	const {
 		loading,
 		setEachItem,
@@ -81,9 +81,9 @@ const Shoenboots = () => {
 		<div>
 			<div className='min-h-[60vh]'>
 				<UniqueCategory
-					db={shoesAndBoots}
-					pageTitle='Our Exclusive Shoes And Boots'
-					pageParagraph="Discover our curated collection of stylish women's shoes! Handpicked for their quality and design, these shoes are the epitome of fashion-forward choices. Explore now and elevate your wardrobe with exceptional styles and savings!"
+					db={womensTrousers}
+					pageTitle='Our Exclusive Trousers'
+					pageParagraph="Discover our curated collection of stylish women's trousers! Handpicked for their quality and design, these trousers are the epitome of fashion-forward choices. Explore now and elevate your wardrobe with exceptional styles and savings!"
 				/>
 			</div>
 			<Footer />
@@ -91,4 +91,4 @@ const Shoenboots = () => {
 	);
 };
 
-export default Shoenboots;
+export default ShirtCollection;

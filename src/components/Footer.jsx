@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import {
 	FaEnvelope,
@@ -47,29 +48,29 @@ const Footer = () => {
 					</div>
 				</div>
 				{/* end of the first column */}
-				<div className='md:w-[15%] lg:mt-0 mt-[50px]  w-full flex flex-col gap-[20px] justify-start items-center'>
-					<p className='font-normal md:text-xl text-md  text-[var(--secondary-color)]'>
+				<div className='lg:w-[15%] lg:mt-0 mt-[50px] md:w-full flex flex-col gap-[20px] justify-start items-center'>
+					<p className='font-normal md:text-xl text-md w-full text-center  text-[var(--secondary-color)]'>
 						Shop Diva
 					</p>
 					<ul className='flex flex-col items-center text-[14px] font-light justify-center text-center gap-[10px]'>
-						<li>Shoes</li>
-						<li>Jackets</li>
-						<li>Caps</li>
-						<li>Trousers</li>
-						<li>Bikini</li>
+						<Link href='/shoesnboots'>Shoes</Link>
+						<Link href='/jackets'>Jackets</Link>
+						<Link href='/gownscollection'>Gowns</Link>
+						<Link href='/trousers'>Trousers</Link>
+						<Link href='/shirts'>Shirts</Link>
 					</ul>
 				</div>
 				{/* End of second column */}
-				<div className='md:w-[15%] w-full lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
-					<p className='font-normal md:text-xl text-md  text-[var(--secondary-color)]'>
+				<div className='lg:w-[15%] text-center w-[100%] lg:mt-0 mt-[30px]  flex flex-col gap-[20px] justify-start items-center'>
+					<p className='font-normal md:text-xl w-full text-md   text-[var(--secondary-color)]'>
 						Quick Links
 					</p>
-					<ul className='flex flex-col items-center text-[14px] font-light justify-center text-center gap-[10px]'>
-						<li>Home</li>
-						<li>About</li>
-						<li>Categories</li>
-						<li>Explore</li>
-						<li>Cart</li>
+					<ul className='flex flex-col w-full items-center text-[14px] font-light justify-center text-center gap-[10px]'>
+						<Link href='/'>home</Link>
+						<Link href='/'>About</Link>
+						<Link href='/'>Categories</Link>
+						<Link href='/'>Explore</Link>
+						<Link href='/'>Cart</Link>
 					</ul>
 				</div>
 				{/* End of second column */}
