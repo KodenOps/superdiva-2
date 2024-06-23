@@ -9,6 +9,8 @@ import {
 	AiOutlineMenu,
 } from 'react-icons/ai';
 import { MdArrowForwardIos, MdShower } from 'react-icons/md';
+import { RiLuggageCartFill } from 'react-icons/ri';
+import { BiSupport } from 'react-icons/bi';
 import {
 	GiConverseShoe,
 	GiAmpleDress,
@@ -166,7 +168,7 @@ const Navbar = () => {
 								/>
 							</Link>
 							<Link
-								href='/jackets'
+								href='/trousers'
 								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
 								<div className='item flex justify-start items-center gap-2'>
 									<GiTrousers
@@ -174,6 +176,40 @@ const Navbar = () => {
 										color='#3c1642'
 									/>{' '}
 									Trousers
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<h3 className='text-md  font-semibold text-[#6a6a6a]'>
+								QUICK LINKS:
+							</h3>
+
+							<Link
+								href='#'
+								className='list pl-4 flex items-center justify-between w-full pb-[10px] border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<RiLuggageCartFill
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									My Orders
+								</div>
+								<MdArrowForwardIos
+									size={20}
+									color='#c4c4c4'
+								/>
+							</Link>
+							<Link
+								href='#'
+								className='list pl-4 flex items-center justify-between w-full pb-[10px] border-b-2 pr-4'>
+								<div className='item flex justify-start items-center gap-2'>
+									<BiSupport
+										size={24}
+										color='#3c1642'
+									/>{' '}
+									Contact Us
 								</div>
 								<MdArrowForwardIos
 									size={20}
