@@ -225,7 +225,7 @@ const Navbar = () => {
 									<div className='text-[12px]'>email@gmail.com</div>
 								</div>
 							</div>
-							<button className='bg-red-400 w-[140px] py-[6px] rounded-sm text-white'>
+							<button className='bg-red-400 w-[80px] text-[12px] py-[6px] rounded-sm text-white'>
 								Logouts
 							</button>
 						</div>
