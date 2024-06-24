@@ -36,7 +36,7 @@ const Hero = () => {
 						destination for discovering the latest trends, and everything in
 						between
 					</p>
-					<div className='w-full  bg-red-400  '>
+					<div className='w-full   '>
 						<button className='px-[32px] py-[16px] bg-[var(--primary-color)] rounded-md lg:w-[40%]  w-full mx-0 text-[var(--white)] hover:bg-[var(--black)] duration-1000 '>
 							Explore Now
 						</button>
