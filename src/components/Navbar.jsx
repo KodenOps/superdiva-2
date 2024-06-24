@@ -45,12 +45,14 @@ const Navbar = () => {
 					<li className='active'>
 						<Link href='/#home'>Home</Link>
 					</li>
-					<li>Collections</li>
 					<li>
 						<Link href='/#topProd'>Top Products</Link>
 					</li>
-					<li>Categories</li>
-					<li>Explore</li>
+					<li>Shoes</li>
+					<li>Bags</li>
+					<li>Trousers</li>
+					<li>Jackets</li>
+					<li>Gowns</li>
 				</ul>
 				{/* cart and other iconified links */}
 				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
