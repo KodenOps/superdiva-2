@@ -48,11 +48,21 @@ const Navbar = () => {
 					<li>
 						<Link href='/#topProd'>Top Products</Link>
 					</li>
-					<li>Shoes</li>
-					<li>Bags</li>
-					<li>Trousers</li>
-					<li>Jackets</li>
-					<li>Gowns</li>
+					<li>
+						<Link href='/shoenboots'>Shoes</Link>
+					</li>
+					<li>
+						<Link href='/bagscollection'>Bags</Link>
+					</li>
+					<li>
+						<Link href='/trousers'>Trousers</Link>
+					</li>
+					<li>
+						<Link href='/jackets'>Jackets</Link>
+					</li>
+					<li>
+						<Link href='/gownscollection'>Gowns</Link>
+					</li>
 				</ul>
 				{/* cart and other iconified links */}
 				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
