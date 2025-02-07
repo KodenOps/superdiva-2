@@ -6,6 +6,8 @@ import Hero from '@/components/Hero';
 import Promosection from '@/components/Promosection';
 import Categories from '@/components/Categories';
 import Footer from '@/components/Footer';
+import '../apm'
+
 // import ProductPreview from '@/components/ProductPreview';
 import { cartContext } from '@/Context/CartContext';
 
