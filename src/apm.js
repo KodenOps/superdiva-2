@@ -1,6 +1,6 @@
 import { init as initApm } from '@elastic/apm-rum'
 var apm = initApm({
-  serviceName: 'superdiva-2',
+  serviceName: 'superdiva-two',
 
   serverUrl: 'http://localhost:8200',
 

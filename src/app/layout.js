@@ -1,9 +1,11 @@
 // src/app/layout.js
+import "../otel";
 import '../app/globals.css';
 import { Poppins } from 'next/font/google';
 import Head from 'next/head';
 import { CartProvider } from '@/Context/CartContext';
 import '../apm'
+
 
 const font = Poppins({
 	subsets: ['latin'],
