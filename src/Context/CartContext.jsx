@@ -13,6 +13,7 @@ export const CartProvider = ({ children }) => {
 	const [cartItem, setCartItem] = useState([]);
 	const [isAddedToCart, setIsAddedToCart] = useState(false);
 	const [isAddedToFav, setIsAddedToFav] = useState(false);
+	const [hydrated, setHydrated] = useState(false);
 
 	useEffect(() => {
 		const savedCartItem = JSON.parse(localStorage.getItem('cartItem')) || [];
@@ -20,7 +21,15 @@ export const CartProvider = ({ children }) => {
 		setCartItem(savedCartItem);
 		setFavItem(savedFavItem);
 		setLoading(false); // Set loading to false after loading from local storage
+		setHydrated(true);
 	}, []);
+
+	// keep the cart on the device so checkout still works after a reload
+	useEffect(() => {
+		if (hydrated) {
+			localStorage.setItem('cartItem', JSON.stringify(cartItem));
+		}
+	}, [cartItem, hydrated]);
 
 	return (
 		<cartContext.Provider

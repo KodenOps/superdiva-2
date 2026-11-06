@@ -5,6 +5,7 @@ import TopProduct from '@/components/TopProduct';
 import Hero from '@/components/Hero';
 import Promosection from '@/components/Promosection';
 import Categories from '@/components/Categories';
+import TrustBadges from '@/components/TrustBadges';
 import Footer from '@/components/Footer';
 import '../apm'
 
@@ -92,6 +93,7 @@ export default function Home() {
 					favItem={favItem}
 					setFavItem={setFavItem}
 				/>
+				<TrustBadges />
 				<Categories />
 				<TopProduct
 					// setPreviewItem={setPreviewItem}

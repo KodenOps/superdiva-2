@@ -203,7 +203,7 @@ const Cart = () => {
 						</div>
 						<div className='w-auto'>
 							<Link
-								href={'/'}
+								href={'/checkout'}
 								className='flex items-center py-[12px] rounded-sm text-white px-[16px] font-normal bg-[var(--primary-color)] gap-2   justify-center'>
 								<MdPayments size={25} /> Proceed To Checkout
 							</Link>

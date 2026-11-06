@@ -1,14 +1,14 @@
 // src/components/Navbar.js
 
 'use client';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
 	AiOutlineShoppingCart,
 	AiOutlineHeart,
-	AiOutlineUser,
 	AiOutlineMenu,
+	AiOutlineClose,
 } from 'react-icons/ai';
-import { MdArrowForwardIos, MdShower } from 'react-icons/md';
+import { MdArrowForwardIos } from 'react-icons/md';
 import { RiLuggageCartFill } from 'react-icons/ri';
 import { BiSupport } from 'react-icons/bi';
 import {
@@ -19,13 +19,37 @@ import {
 } from 'react-icons/gi';
 import { IoBag } from 'react-icons/io5';
 import { FaRegUserCircle } from 'react-icons/fa';
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi';
 import Link from 'next/link';
 import { cartContext } from '@/Context/CartContext';
 
+const categories = [
+	{ href: '/shoesnboots', label: 'Shoes', Icon: GiConverseShoe },
+	{ href: '/bagscollection', label: 'Bags', Icon: IoBag },
+	{ href: '/gownscollection', label: 'Gowns', Icon: GiAmpleDress },
+	{ href: '/shirts', label: 'Shirts', Icon: GiAmpleDress },
+	{ href: '/jackets', label: 'Jackets', Icon: GiSleevelessJacket },
+	{ href: '/trousers', label: 'Trousers', Icon: GiTrousers },
+];
+
 const Navbar = () => {
-	const { cartItem, favItem, previewItem, setPreviewItem } =
-		useContext(cartContext);
+	const { cartItem, favItem } = useContext(cartContext);
 	const [sideBarIsOn, setSideBarIsOn] = useState(false);
+	const [theme, setTheme] = useState('light');
+
+	// restore the saved theme on mount
+	useEffect(() => {
+		const stored = localStorage.getItem('superdiva_theme') || 'light';
+		setTheme(stored);
+		document.documentElement.classList.toggle('dark', stored === 'dark');
+	}, []);
+
+	const toggleTheme = () => {
+		const next = theme === 'dark' ? 'light' : 'dark';
+		setTheme(next);
+		localStorage.setItem('superdiva_theme', next);
+		document.documentElement.classList.toggle('dark', next === 'dark');
+	};
 
 	return (
 		<div className='mainNav relative overflow-hidden h-[10vh] z-1000'>
@@ -49,7 +73,7 @@ const Navbar = () => {
 						<Link href='/#topProd'>Top Products</Link>
 					</li>
 					<li>
-						<Link href='/shoenboots'>Shoes</Link>
+						<Link href='/shoesnboots'>Shoes</Link>
 					</li>
 					<li>
 						<Link href='/bagscollection'>Bags</Link>
@@ -64,193 +88,130 @@ const Navbar = () => {
 						<Link href='/gownscollection'>Gowns</Link>
 					</li>
 				</ul>
-				{/* cart and other iconified links */}
-				<div className='homenav_icons flex items-center justify-center gap-[30px]  '>
-					{/* cart icon */}
+				{/* cart + favorites + mobile hamburger (right aligned) */}
+				<div className='flex items-center justify-end gap-[18px] md:gap-[30px]'>
 					<Link
 						href='/cart'
-						className='flex items-center justify-center'>
+						className='flex items-center justify-center'
+						aria-label='cart'>
 						<AiOutlineShoppingCart size={30} />
 						<span>{cartItem.length}</span>
 					</Link>
-					{/* favorite icon */}
 					<Link
-						href='favorites'
-						className='flex items-center justify-center'>
+						href='/favorites'
+						className='hidden md:flex items-center justify-center'
+						aria-label='favorites'>
 						<AiOutlineHeart size={30} />
 						<span>{favItem.length}</span>
 					</Link>
-					{/* user icon */}
-					<div className='md:flex items-center justify-center hidden'>
-						<AiOutlineUser size={30} />
-					</div>
-				</div>
-				{/* mobile view hamburger*/}
-				<div
-					className='flex items-center justify-center md:hidden'
-					onClick={() => setSideBarIsOn(!sideBarIsOn)}>
-					<AiOutlineMenu size={30} />
+					{/* mobile view hamburger - far right */}
+					<button
+						className='flex items-center justify-center md:hidden'
+						aria-label='menu'
+						onClick={() => setSideBarIsOn(!sideBarIsOn)}>
+						<AiOutlineMenu size={30} />
+					</button>
 				</div>
 			</nav>
 			{/* side navigation */}
 			{sideBarIsOn ? (
-				// modal open
 				<div className='md:hidden transition-all fixed w-full top-0 z-10 left-0 translate-x-0 duration-100  '>
 					<div
 						className='sidenav_bg container  w-screen h-screen transition bg-black bg-opacity-[70%]'
 						onClick={() => setSideBarIsOn(!sideBarIsOn)}></div>
-					<nav className='sidenav_main absolute top-0 right-0 z-[1000]  h-[100vh] w-[100vw] ] shadow-lg border-[2px] bg-[white] rounded-sm py-[60px] translate-x-0'>
-						<div className='list-none flex flex-col items-start px-[16px] py-[24px] justify-start gap-[25px] mb-[40px] h-[70%]'>
-							<h3 className='text-md  font-semibold text-[#6a6a6a]'>
+					<nav className='sidenav_main absolute top-0 right-0 z-[1000]  h-[100vh] w-[85vw] max-w-[320px] shadow-lg border-[2px] bg-[var(--white)] rounded-sm py-[24px] translate-x-0 flex flex-col'>
+						<div className='flex items-center justify-between px-[16px] pb-[16px] border-b-2'>
+							<span className='font-extrabold tracking-widest text-[var(--primary-color)]'>
+								MENU
+							</span>
+							<button
+								aria-label='close menu'
+								onClick={() => setSideBarIsOn(!sideBarIsOn)}>
+								<AiOutlineClose size={22} />
+							</button>
+						</div>
+
+						<div className='list-none flex flex-col items-start px-[16px] py-[16px] justify-start gap-[18px] overflow-y-auto flex-1'>
+							<h3 className='text-md font-semibold text-[#6a6a6a]'>
+								MY ACCOUNT:
+							</h3>
+							<Link
+								href='/favorites'
+								onClick={() => setSideBarIsOn(false)}
+								className='list pl-2 flex items-center justify-between w-full py-2 border-b-2 pr-2'>
+								<div className='item flex justify-start items-center gap-2'>
+									<AiOutlineHeart size={24} color='#3c1642' /> Favorites (
+									{favItem.length})
+								</div>
+								<MdArrowForwardIos size={20} color='#c4c4c4' />
+							</Link>
+							<Link
+								href='/orders'
+								onClick={() => setSideBarIsOn(false)}
+								className='list pl-2 flex items-center justify-between w-full py-2 border-b-2 pr-2'>
+								<div className='item flex justify-start items-center gap-2'>
+									<RiLuggageCartFill size={24} color='#3c1642' /> My Orders
+								</div>
+								<MdArrowForwardIos size={20} color='#c4c4c4' />
+							</Link>
+							<Link
+								href='/'
+								onClick={() => setSideBarIsOn(false)}
+								className='list pl-2 flex items-center justify-between w-full py-2 border-b-2 pr-2'>
+								<div className='item flex justify-start items-center gap-2'>
+									<BiSupport size={24} color='#3c1642' /> Contact Us
+								</div>
+								<MdArrowForwardIos size={20} color='#c4c4c4' />
+							</Link>
+
+							<h3 className='text-md font-semibold text-[#6a6a6a] mt-2'>
 								SHOP FOR:
 							</h3>
-							<Link
-								href='/shoesnboots'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<GiConverseShoe
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Shoes
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='/bagscollection'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<IoBag
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Bags
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='/gownscollection'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<GiAmpleDress
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Gowns
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='/shirts'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<GiAmpleDress
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Shirts
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='/jackets'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<GiSleevelessJacket
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Jackets
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='/trousers'
-								className='list pl-4 flex items-center justify-between w-full py-2 border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<GiTrousers
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Trousers
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<h3 className='text-md  font-semibold text-[#6a6a6a]'>
-								QUICK LINKS:
-							</h3>
+							{categories.map(({ href, label, Icon }) => (
+								<Link
+									key={href}
+									href={href}
+									onClick={() => setSideBarIsOn(false)}
+									className='list pl-2 flex items-center justify-between w-full py-2 border-b-2 pr-2'>
+									<div className='item flex justify-start items-center gap-2'>
+										<Icon size={24} color='#3c1642' /> {label}
+									</div>
+									<MdArrowForwardIos size={20} color='#c4c4c4' />
+								</Link>
+							))}
 
-							<Link
-								href='#'
-								className='list pl-4 flex items-center justify-between w-full pb-[10px] border-b-2 pr-4'>
+							<h3 className='text-md font-semibold text-[#6a6a6a] mt-2'>
+								APPEARANCE:
+							</h3>
+							<button
+								onClick={toggleTheme}
+								className='list pl-2 flex items-center justify-between w-full py-2 border-b-2 pr-2'>
 								<div className='item flex justify-start items-center gap-2'>
-									<RiLuggageCartFill
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									My Orders
+									{theme === 'dark' ? (
+										<HiOutlineSun size={24} color='#f2994a' />
+									) : (
+										<HiOutlineMoon size={24} color='#3c1642' />
+									)}
+									{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
 								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
-							<Link
-								href='#'
-								className='list pl-4 flex items-center justify-between w-full pb-[10px] border-b-2 pr-4'>
-								<div className='item flex justify-start items-center gap-2'>
-									<BiSupport
-										size={24}
-										color='#3c1642'
-									/>{' '}
-									Contact Us
-								</div>
-								<MdArrowForwardIos
-									size={20}
-									color='#c4c4c4'
-								/>
-							</Link>
+								<span className='text-[12px] text-[#6a6a6a] uppercase'>
+									{theme}
+								</span>
+							</button>
 						</div>
-						<div className='w-full h-[80px] rounded-md absolute flex items-center justify-between  bg-slate-100 bottom-0 border-2 p-6'>
+
+						<div className='w-[calc(100%-24px)] mx-[12px] rounded-md flex items-center justify-between bg-slate-100 p-4'>
 							<div className='user flex items-center justify-start gap-3 '>
-								<FaRegUserCircle size={40} />
+								<FaRegUserCircle size={34} />
 								<div>
-									<div className='text-md'>User Name</div>
-									<div className='text-[12px]'>email@gmail.com</div>
+									<div className='text-md'>Guest Shopper</div>
+									<div className='text-[12px]'>Welcome to SuperDiva</div>
 								</div>
 							</div>
-							<button className='bg-red-400 w-[80px] text-[12px] py-[6px] rounded-sm text-white'>
-								Logouts
-							</button>
 						</div>
 					</nav>
 				</div>
-			) : (
-				// if modal close
-				<div className=' lg:hidden  fixed  top-0 z-10 left-0 translate-x-[100%] duration-100  '>
-					<div
-						className='sidenav_bg     bg-opacity-0 '
-						onClick={() => setSideBarIsOn(!sideBarIsOn)}></div>
-				</div>
-			)}
+			) : null}
 			{/* end of main div */}
 		</div>
 	);

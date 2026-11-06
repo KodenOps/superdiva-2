@@ -8,6 +8,18 @@
 	--black: #00072d;
 	--white: #fefefe;
 }
+
+/* dark theme, toggled from the mobile side nav */
+html.dark {
+	--primary-color: #8d4f9e;
+	--secondary-color: #f2994a;
+	--black: #f4f1f6;
+	--white: #17131b;
+}
+html.dark body {
+	background-color: #17131b;
+	color: #f4f1f6;
+}
 html {
 	scroll-behavior: smooth;
 	user-select: none;
