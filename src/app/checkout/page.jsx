@@ -5,6 +5,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
 import { createOrderId, saveOrder, ORDER_STATUS } from '@/lib/orders';
+import {
+	formatNaira,
+	VAT_RATE,
+	SHIPPING_FEE,
+	NIGERIAN_STATES,
+} from '@/lib/currency';
 import { MdArrowBack, MdUploadFile } from 'react-icons/md';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
 
@@ -15,11 +21,14 @@ const PAYMENT_ACCOUNT = {
 	number: '0123456789',
 };
 
+const NIGERIAN_PHONE = /^(?:\+234|0)[789][01]\d{8}$/;
+
 const STEPS = ['Delivery details', 'Payment', 'Upload receipt'];
 
 const Checkout = () => {
 	const { cartItem, favItem, setCartItem } = useContext(cartContext);
 	const [step, setStep] = useState(0);
+	const [orderId, setOrderId] = useState('');
 	const [receipt, setReceipt] = useState(null);
 	const [error, setError] = useState('');
 	const [placedOrder, setPlacedOrder] = useState(null);
@@ -29,33 +38,39 @@ const Checkout = () => {
 		email: '',
 		address: '',
 		city: '',
-		state: '',
+		state: 'Lagos',
 	});
 
 	const itemsTotal = cartItem.reduce(
 		(sum, item) => sum + item.price * item.count,
 		0
 	);
-	const vat = (10 / 100) * itemsTotal;
-	const shipping = cartItem.length > 0 ? 190 : 0;
+	const vat = VAT_RATE * itemsTotal;
+	const shipping = cartItem.length > 0 ? SHIPPING_FEE : 0;
 	const grandTotal = itemsTotal + vat + shipping;
 
 	const updateDetail = (event) => {
 		setDetails({ ...details, [event.target.name]: event.target.value });
 	};
 
-	const detailsAreComplete = () => {
+	const goToPayment = () => {
+		setError('');
 		if (
-			details.name.trim() &&
-			details.phone.trim() &&
-			details.address.trim() &&
-			details.city.trim() &&
-			details.state.trim()
+			!details.name.trim() ||
+			!details.phone.trim() ||
+			!details.address.trim() ||
+			!details.city.trim() ||
+			!details.state.trim()
 		) {
-			return true;
+			setError('Please fill your name, phone number and delivery address.');
+			return;
 		}
-		setError('Please fill your name, phone number and delivery address.');
-		return false;
+		if (!NIGERIAN_PHONE.test(details.phone.replace(/\s/g, ''))) {
+			setError('Enter a valid Nigerian phone number, e.g. 08012345678.');
+			return;
+		}
+		if (!orderId) setOrderId(createOrderId());
+		setStep(1);
 	};
 
 	const handleReceipt = (event) => {
@@ -92,7 +107,7 @@ const Checkout = () => {
 			return;
 		}
 		const order = {
-			id: createOrderId(),
+			id: orderId || createOrderId(),
 			createdAt: Date.now(),
 			status: ORDER_STATUS.CONFIRMING,
 			customer: details,
@@ -103,22 +118,20 @@ const Checkout = () => {
 				count: item.count,
 				image: item.image,
 			})),
-			itemsTotal: Number(itemsTotal.toFixed(2)),
-			vat: Number(vat.toFixed(2)),
+			itemsTotal: Math.round(itemsTotal),
+			vat: Math.round(vat),
 			shipping,
-			total: Number(grandTotal.toFixed(2)),
-			receipt: receipt
-				? {
-						name: receipt.name,
-						type: receipt.type,
-						size: receipt.size,
-						// keep large files out of storage, the file name is still recorded
-						dataUrl:
-							receipt.dataUrl && receipt.dataUrl.length < 1500000
-								? receipt.dataUrl
-								: null,
-				  }
-				: null,
+			total: Math.round(grandTotal),
+			receipt: {
+				name: receipt.name,
+				type: receipt.type,
+				size: receipt.size,
+				// keep large files out of storage, the file name is still recorded
+				dataUrl:
+					receipt.dataUrl && receipt.dataUrl.length < 1500000
+						? receipt.dataUrl
+						: null,
+			},
 		};
 
 		try {
@@ -146,9 +159,8 @@ const Checkout = () => {
 						Order received
 					</h2>
 					<p className='mt-[10px] text-[15px]'>
-						Your order{' '}
-						<span className='font-semibold'>{placedOrder.id}</span> has been
-						submitted together with your payment receipt.
+						Your order <span className='font-semibold'>{placedOrder.id}</span>{' '}
+						has been submitted together with your payment receipt.
 					</p>
 					<div className='mt-[20px] border-2 rounded-md p-[16px] bg-slate-50'>
 						<p className='text-[13px] text-[#6a6a6a]'>Order status</p>
@@ -156,8 +168,9 @@ const Checkout = () => {
 							Confirming Payment
 						</p>
 						<p className='text-[12px] text-[#6a6a6a] mt-[6px]'>
-							We are checking your receipt. You will see the update on your
-							orders page once payment is confirmed.
+							Our team is checking your transfer. Once payment is confirmed you
+							will see the update on your orders page — usually within 30
+							minutes during work hours.
 						</p>
 					</div>
 					<div className='flex flex-col md:flex-row gap-[10px] mt-[24px]'>
@@ -246,7 +259,8 @@ const Checkout = () => {
 								name='phone'
 								value={details.phone}
 								onChange={updateDetail}
-								placeholder='Phone number'
+								placeholder='Phone number (080...)'
+								inputMode='tel'
 								className='border-2 rounded-sm px-[12px] py-[10px] outline-none'
 							/>
 							<input
@@ -260,28 +274,33 @@ const Checkout = () => {
 								name='address'
 								value={details.address}
 								onChange={updateDetail}
-								placeholder='Delivery address'
+								placeholder='Delivery address (street, bus stop, landmark)'
 								className='border-2 rounded-sm px-[12px] py-[10px] outline-none md:col-span-2'
 							/>
 							<input
 								name='city'
 								value={details.city}
 								onChange={updateDetail}
-								placeholder='City'
+								placeholder='City / Area'
 								className='border-2 rounded-sm px-[12px] py-[10px] outline-none'
 							/>
-							<input
+							<select
 								name='state'
 								value={details.state}
 								onChange={updateDetail}
-								placeholder='State'
-								className='border-2 rounded-sm px-[12px] py-[10px] outline-none'
-							/>
+								className='border-2 rounded-sm px-[12px] py-[10px] outline-none bg-white'>
+								{NIGERIAN_STATES.map((state) => (
+									<option key={state} value={state}>
+										{state}
+									</option>
+								))}
+							</select>
+							<p className='md:col-span-2 text-[12px] text-[#6a6a6a]'>
+								Lagos deliveries arrive in 1–3 working days, other states in
+								2–5 working days.
+							</p>
 							<button
-								onClick={() => {
-									setError('');
-									if (detailsAreComplete()) setStep(1);
-								}}
+								onClick={goToPayment}
 								className='md:col-span-2 mt-[8px] py-[12px] rounded-sm text-white bg-[var(--primary-color)]'>
 								Continue to payment
 							</button>
@@ -312,10 +331,18 @@ const Checkout = () => {
 								<div className='flex justify-between text-[14px] py-[4px] border-t-2 mt-[8px] pt-[8px]'>
 									<span className='text-[#6a6a6a]'>Amount</span>
 									<span className='font-bold text-[var(--primary-color)]'>
-										${grandTotal.toFixed(2)}
+										{formatNaira(grandTotal)}
 									</span>
 								</div>
+								<div className='flex justify-between text-[14px] py-[4px]'>
+									<span className='text-[#6a6a6a]'>Transfer narration</span>
+									<span className='font-semibold'>{orderId}</span>
+								</div>
 							</div>
+							<p className='text-[12px] text-[#6a6a6a] mt-[10px]'>
+								Use your order ID as the transfer narration so we can match
+								your payment quickly. Bank transfers reflect in minutes.
+							</p>
 							<div className='flex gap-[10px] mt-[16px]'>
 								<button
 									onClick={() => setStep(0)}
@@ -404,29 +431,30 @@ const Checkout = () => {
 							key={item.id}
 							className='flex items-start justify-between gap-[8px] text-[13px] py-[6px]'>
 							<span>
-								{item.title} <span className='text-[#9b9b9b]'>x{item.count}</span>
+								{item.title}{' '}
+								<span className='text-[#9b9b9b]'>x{item.count}</span>
 							</span>
 							<span className='whitespace-nowrap'>
-								${(item.price * item.count).toFixed(2)}
+								{formatNaira(item.price * item.count)}
 							</span>
 						</div>
 					))}
 					<div className='border-t-2 mt-[10px] pt-[10px] text-[13px]'>
 						<div className='flex justify-between py-[3px]'>
 							<span>Items price</span>
-							<span>${itemsTotal.toFixed(2)}</span>
+							<span>{formatNaira(itemsTotal)}</span>
 						</div>
 						<div className='flex justify-between py-[3px]'>
-							<span>VAT</span>
-							<span>${vat.toFixed(2)}</span>
+							<span>VAT (7.5%)</span>
+							<span>{formatNaira(vat)}</span>
 						</div>
 						<div className='flex justify-between py-[3px]'>
-							<span>Shipping fee</span>
-							<span>${shipping.toFixed(2)}</span>
+							<span>Delivery fee</span>
+							<span>{formatNaira(shipping)}</span>
 						</div>
 						<div className='flex justify-between py-[8px] border-t-2 mt-[6px] font-semibold'>
 							<span>Total</span>
-							<span>${grandTotal.toFixed(2)}</span>
+							<span>{formatNaira(grandTotal)}</span>
 						</div>
 					</div>
 				</div>

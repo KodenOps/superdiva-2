@@ -1,6 +1,7 @@
 import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import { cartContext } from '@/Context/CartContext';
+import { formatNaira } from '@/lib/currency';
 import Navbar from './Navbar';
 import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
@@ -46,11 +47,11 @@ const UniqueCategory = ({ db, pageTitle, pageParagraph }) => {
 									<p className='text-[gray]'>{item.category}</p>
 									<div className='prices   md:justify-left justify-center'>
 										<span className='newprice text-[var(--primary-color)] font-semibold'>
-											${item.price}
+											{formatNaira(item.price)}
 										</span>
 										<span className='mx-[10px]'>|</span>
 										<span className='oldprice text-[gray] line-through'>
-											${item.oldprice}
+											{formatNaira(item.oldprice)}
 										</span>
 									</div>
 								</div>

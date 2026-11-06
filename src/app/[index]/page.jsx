@@ -6,6 +6,7 @@ import Rating from '@/components/Ratings';
 import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 import { FaCartPlus, FaHeart, FaTrash } from 'react-icons/fa';
 import { cartContext } from '@/Context/CartContext';
+import { formatNaira } from '@/lib/currency';
 import Navbar from '@/components/Navbar';
 import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
@@ -107,9 +108,9 @@ const ProductPreview = () => {
 							</p>
 							<p className='text-[var(--primary-color)] flex gap-4 text-[32px]'>
 								<span className='line-through text-[#c4c4c4] font-strikethrough'>
-									${EachItem.oldprice}
+									{formatNaira(EachItem.oldprice)}
 								</span>
-								${EachItem.price}
+								{formatNaira(EachItem.price)}
 							</p>
 						</div>
 						<div className='ctabtn flex items-center justify-end gap-2 h-full w-full'>

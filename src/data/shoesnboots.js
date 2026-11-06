@@ -2,8 +2,8 @@ export const shoesAndBoots = [
 	{
 		id: '1a2b3c4d5e',
 		title: 'Classic Leather Sneakers',
-		price: 75,
-		oldprice: 100,
+		price: 75000,
+		oldprice: 100000,
 		description:
 			'Timeless leather sneakers designed for both style and comfort. Features durable stitching, cushioned insoles, and a non-slip rubber sole. Perfect for everyday wear.',
 		category: 'shoes',
@@ -14,8 +14,8 @@ export const shoesAndBoots = [
 	{
 		id: '2f3g4h5i6j',
 		title: 'Running Shoes',
-		price: 90,
-		oldprice: 130,
+		price: 90000,
+		oldprice: 130000,
 		description:
 			'High-performance running shoes featuring breathable mesh, lightweight construction, and superior cushioning for long-distance comfort. Ideal for athletes and casual runners alike.',
 		category: 'shoes',
@@ -27,8 +27,8 @@ export const shoesAndBoots = [
 	{
 		id: '3k4l5m6n7o',
 		title: 'Stylish Ankle Boots',
-		price: 120,
-		oldprice: 180,
+		price: 120000,
+		oldprice: 180000,
 		description:
 			'Chic ankle boots with a sleek design and a side zipper. Made from premium faux leather with a sturdy heel, these boots are perfect for both casual and dressy occasions.',
 		category: 'boots',
@@ -39,8 +39,8 @@ export const shoesAndBoots = [
 	{
 		id: '4p5q6r7s8t',
 		title: 'Chelsea Boots',
-		price: 110,
-		oldprice: 160,
+		price: 110000,
+		oldprice: 160000,
 		description:
 			'Elegant Chelsea boots crafted from genuine leather. Features elastic side panels, pull-on tabs, and a comfortable fit. Ideal for a polished, urban look.',
 		category: 'boots',
@@ -52,8 +52,8 @@ export const shoesAndBoots = [
 	{
 		id: '5u6v7w8x9y',
 		title: 'Classic office Boots',
-		price: 130,
-		oldprice: 200,
+		price: 130000,
+		oldprice: 200000,
 		description:
 			'Built for office adventures. Waterproof, with a reinforced toe cap, grippy outsole, and cushioned footbed for all-day comfort on the trails.',
 		category: 'boots',
@@ -65,8 +65,8 @@ export const shoesAndBoots = [
 	{
 		id: '6z7a8b9c0d',
 		title: 'Slip-On Loafers',
-		price: 65,
-		oldprice: 90,
+		price: 65000,
+		oldprice: 90000,
 		description:
 			'Comfortable slip-on loafers made from soft suede. Features a cushioned insole and flexible sole, perfect for casual or business casual wear.',
 		category: 'shoes',
@@ -78,8 +78,8 @@ export const shoesAndBoots = [
 	{
 		id: '7e8f9g0h1i',
 		title: 'Winter Snow Boots',
-		price: 140,
-		oldprice: 210,
+		price: 140000,
+		oldprice: 210000,
 		description:
 			'Insulated snow boots designed to keep your feet warm and dry. Waterproof outer layer, fur lining, and a thick, non-slip sole. Perfect for snowy conditions.',
 		category: 'boots',
@@ -91,8 +91,8 @@ export const shoesAndBoots = [
 	{
 		id: '8j9k0l1m2n',
 		title: 'Chic Heels',
-		price: 55,
-		oldprice: 80,
+		price: 55000,
+		oldprice: 80000,
 		description:
 			'Beautifully built heels  with a vulcanized sole and reinforced toe cap. Provides excellent grip and flexibility, ideal for official  and casual wear.',
 		category: 'shoes',
@@ -104,8 +104,8 @@ export const shoesAndBoots = [
 	{
 		id: '9o0p1q2r3s',
 		title: 'Elegant High Heels',
-		price: 95,
-		oldprice: 140,
+		price: 95000,
+		oldprice: 140000,
 		description:
 			'Sophisticated high heels with a stiletto heel and pointed toe. Made from premium materials, perfect for formal events and special occasions.',
 		category: 'shoes',
@@ -117,8 +117,8 @@ export const shoesAndBoots = [
 	{
 		id: '0t1u2v3w4x',
 		title: 'Comfortable Walking Shoes',
-		price: 85,
-		oldprice: 120,
+		price: 85000,
+		oldprice: 120000,
 		description:
 			'Ergonomically designed walking shoes with ample cushioning and support. Lightweight and breathable, ideal for daily walks and long periods of standing.',
 		category: 'shoes',
@@ -130,8 +130,8 @@ export const shoesAndBoots = [
 	{
 		id: '1y2z3a4b5c',
 		title: 'Casual Slip-On Shoes',
-		price: 50,
-		oldprice: 75,
+		price: 50000,
+		oldprice: 75000,
 		description:
 			'Easy-to-wear slip-on shoes made from breathable fabric. Features a cushioned footbed and flexible sole, perfect for everyday casual wear.',
 		category: 'shoes',
@@ -143,8 +143,8 @@ export const shoesAndBoots = [
 	{
 		id: '2d3e4f5g6h',
 		title: 'Fashion Boots',
-		price: 125,
-		oldprice: 180,
+		price: 125000,
+		oldprice: 180000,
 		description:
 			'Trendy fashion boots with a chunky heel and side zipper. Made from high-quality materials, perfect for adding a stylish touch to any outfit.',
 		category: 'boots',
@@ -156,8 +156,8 @@ export const shoesAndBoots = [
 	{
 		id: '3i4j5k6l7m',
 		title: 'Waterproof Rain Boots',
-		price: 70,
-		oldprice: 100,
+		price: 70000,
+		oldprice: 100000,
 		description:
 			'Durable rain boots designed to keep your feet dry. Waterproof construction with a slip-resistant sole, ideal for wet weather conditions.',
 		category: 'boots',
@@ -169,8 +169,8 @@ export const shoesAndBoots = [
 	{
 		id: '4n5o6p7q8r',
 		title: 'Suede Desert Boots',
-		price: 100,
-		oldprice: 150,
+		price: 100000,
+		oldprice: 150000,
 		description:
 			'Classic desert boots made from soft suede. Features a crepe sole and lace-up closure, perfect for casual and semi-formal wear.',
 		category: 'boots',
@@ -182,8 +182,8 @@ export const shoesAndBoots = [
 	{
 		id: '5s6t7u8v9w',
 		title: 'Breathable Sports Shoes',
-		price: 60,
-		oldprice: 90,
+		price: 60000,
+		oldprice: 90000,
 		description:
 			'Lightweight sports shoes with breathable mesh uppers and cushioned insoles. Provides excellent support and comfort for various sports activities.',
 		category: 'shoes',
@@ -194,8 +194,8 @@ export const shoesAndBoots = [
 	{
 		id: '6x7y8z9a0b',
 		title: 'Leather Dress Shoes',
-		price: 110,
-		oldprice: 160,
+		price: 110000,
+		oldprice: 160000,
 		description:
 			'Elegant leather dress shoes with a polished finish. Features a cushioned insole and non-slip sole, perfect for formal events and office wear.',
 		category: 'shoes',
@@ -207,8 +207,8 @@ export const shoesAndBoots = [
 	{
 		id: '7c8d9e0f1g',
 		title: 'Outdoor Adventure Boots',
-		price: 135,
-		oldprice: 190,
+		price: 135000,
+		oldprice: 190000,
 		description:
 			'Sturdy outdoor adventure boots with a waterproof exterior and reinforced toe. Designed for hiking, trekking, and other outdoor activities.',
 		category: 'boots',
@@ -220,8 +220,8 @@ export const shoesAndBoots = [
 	{
 		id: '8h9i0j1k2l',
 		title: 'Ballet Flats',
-		price: 45,
-		oldprice: 70,
+		price: 45000,
+		oldprice: 70000,
 		description:
 			'Comfortable ballet flats with a sleek design and cushioned insole. Perfect for casual wear, providing a touch of elegance to everyday outfits.',
 		category: 'shoes',
@@ -233,8 +233,8 @@ export const shoesAndBoots = [
 	{
 		id: '9m0n1o2p3q',
 		title: 'Chunky Platform Boots',
-		price: 95,
-		oldprice: 130,
+		price: 95000,
+		oldprice: 130000,
 		description:
 			'Bold platform boots with a chunky heel and lace-up design. Made from durable materials, perfect for making a fashion statement.',
 		category: 'boots',
@@ -246,8 +246,8 @@ export const shoesAndBoots = [
 	{
 		id: '0r1s2t3u4v',
 		title: 'Espadrille Sandals',
-		price: 50,
-		oldprice: 80,
+		price: 50000,
+		oldprice: 80000,
 		description:
 			'Stylish espadrille sandals with a woven sole and adjustable ankle strap. Lightweight and comfortable, ideal for summer wear.',
 		category: 'shoes',
@@ -258,8 +258,8 @@ export const shoesAndBoots = [
 	{
 		id: '1w2x3y4z5a',
 		title: 'Trail Running Shoes',
-		price: 100,
-		oldprice: 140,
+		price: 100000,
+		oldprice: 140000,
 		description:
 			'High-performance trail running shoes with a rugged outsole and breathable upper. Designed for stability and comfort on rough terrains.',
 		category: 'shoes',

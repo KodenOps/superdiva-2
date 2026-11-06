@@ -2,8 +2,8 @@ export const gowns = [
 	{
 		id: 'a1b2c3',
 		title: 'Elegant Evening Gown',
-		price: 250,
-		oldprice: 400,
+		price: 250000,
+		oldprice: 400000,
 		description:
 			'A stunning evening gown with intricate beadwork and a flowing silhouette. Perfect for formal events and special occasions.',
 		category: 'gown',
@@ -15,8 +15,8 @@ export const gowns = [
 	{
 		id: 'd4e5f6',
 		title: 'Casual Summer Dress',
-		price: 60,
-		oldprice: 100,
+		price: 60000,
+		oldprice: 100000,
 		description:
 			'A lightweight, casual summer dress with floral patterns. Ideal for beach outings and casual daywear.',
 		category: 'gown',
@@ -28,8 +28,8 @@ export const gowns = [
 	{
 		id: 'g7h8i9',
 		title: 'Chic Cocktail Dress',
-		price: 150,
-		oldprice: 200,
+		price: 150000,
+		oldprice: 200000,
 		description:
 			'A chic cocktail dress with a flattering fit and modern design. Perfect for parties and evening events.',
 		category: 'gown',
@@ -41,8 +41,8 @@ export const gowns = [
 	{
 		id: 'j1k2l3',
 		title: 'Vintage Lace Gown',
-		price: 300,
-		oldprice: 500,
+		price: 300000,
+		oldprice: 500000,
 		description:
 			'A beautiful vintage lace gown with timeless elegance. Ideal for weddings and formal occasions.',
 		category: 'gown',
@@ -54,8 +54,8 @@ export const gowns = [
 	{
 		id: 'm4n5o6',
 		title: 'Bohemian Maxi Dress',
-		price: 80,
-		oldprice: 120,
+		price: 80000,
+		oldprice: 120000,
 		description:
 			'A bohemian-style maxi dress with vibrant patterns and a relaxed fit. Perfect for festivals and casual wear.',
 		category: 'gown',
@@ -66,8 +66,8 @@ export const gowns = [
 	{
 		id: 'p7q8r9',
 		title: 'Classic Little Black Dress',
-		price: 100,
-		oldprice: 150,
+		price: 100000,
+		oldprice: 150000,
 		description:
 			'A classic little black dress that every wardrobe needs. Versatile and timeless, suitable for any occasion.',
 		category: 'gown',
@@ -79,8 +79,8 @@ export const gowns = [
 	{
 		id: 's1t2u3',
 		title: 'Floral Print Midi Dress',
-		price: 70,
-		oldprice: 120,
+		price: 70000,
+		oldprice: 120000,
 		description:
 			'A floral print midi dress with a feminine and elegant design. Ideal for garden parties and daytime events.',
 		category: 'gown',
@@ -92,8 +92,8 @@ export const gowns = [
 	{
 		id: 'v4w5x6',
 		title: 'Modern Halter Neck Dress',
-		price: 180,
-		oldprice: 250,
+		price: 180000,
+		oldprice: 250000,
 		description:
 			'A modern halter neck dress with a sleek and sophisticated look. Perfect for evening events and formal gatherings.',
 		category: 'gown',
@@ -105,8 +105,8 @@ export const gowns = [
 	{
 		id: 'y7z8a9',
 		title: 'Off-Shoulder Prom Dress',
-		price: 220,
-		oldprice: 300,
+		price: 220000,
+		oldprice: 300000,
 		description:
 			'An off-shoulder prom dress with a glamorous design. Ideal for proms and formal dances.',
 		category: 'gown',
@@ -117,8 +117,8 @@ export const gowns = [
 	{
 		id: 'b1c2d3',
 		title: 'Elegant Satin Gown',
-		price: 350,
-		oldprice: 450,
+		price: 350000,
+		oldprice: 450000,
 		description:
 			'An elegant satin gown with a luxurious feel and sophisticated design. Perfect for high-profile events and galas.',
 		category: 'gown',
@@ -130,8 +130,8 @@ export const gowns = [
 	{
 		id: 'e4f5g6',
 		title: 'Casual Denim Dress',
-		price: 90,
-		oldprice: 150,
+		price: 90000,
+		oldprice: 150000,
 		description:
 			'A casual denim dress with a comfortable and stylish design. Suitable for everyday wear and casual outings.',
 		category: 'gown',
@@ -143,8 +143,8 @@ export const gowns = [
 	{
 		id: 'h7i8j9',
 		title: 'Luxurious Velvet Gown',
-		price: 400,
-		oldprice: 550,
+		price: 400000,
+		oldprice: 550000,
 		description:
 			'A luxurious velvet gown with a rich texture and elegant design. Perfect for formal occasions and red carpet events.',
 		category: 'gown',
@@ -156,8 +156,8 @@ export const gowns = [
 	{
 		id: 'k1l2m3',
 		title: 'Sparkling Sequin Dress',
-		price: 200,
-		oldprice: 300,
+		price: 200000,
+		oldprice: 300000,
 		description:
 			'A sparkling sequin dress that catches the light beautifully. Ideal for parties and glamorous evenings out.',
 		category: 'gown',
@@ -168,8 +168,8 @@ export const gowns = [
 	{
 		id: 'n4o5p6',
 		title: 'Elegant Wedding Gown',
-		price: 800,
-		oldprice: 1000,
+		price: 800000,
+		oldprice: 1000000,
 		description:
 			'An elegant wedding gown with exquisite lace detailing and a flowing train. Perfect for making your big day unforgettable.',
 		category: 'gown',
@@ -181,8 +181,8 @@ export const gowns = [
 	{
 		id: 'q7r8s9',
 		title: 'Vintage Tea-Length Dress',
-		price: 120,
-		oldprice: 200,
+		price: 120000,
+		oldprice: 200000,
 		description:
 			'A vintage tea-length dress with a charming design. Ideal for retro-themed events and daytime parties.',
 		category: 'gown',
@@ -194,8 +194,8 @@ export const gowns = [
 	{
 		id: 't1u2v3',
 		title: 'Trendy Asymmetrical Dress',
-		price: 170,
-		oldprice: 220,
+		price: 170000,
+		oldprice: 220000,
 		description:
 			'A trendy asymmetrical dress with a modern and edgy design. Perfect for fashion-forward events and casual wear.',
 		category: 'gown',
@@ -207,8 +207,8 @@ export const gowns = [
 	{
 		id: 'w4x5y6',
 		title: 'Classic A-Line Dress',
-		price: 130,
-		oldprice: 180,
+		price: 130000,
+		oldprice: 180000,
 		description:
 			'A classic A-line dress with a timeless design. Suitable for a variety of occasions, from casual outings to formal events.',
 		category: 'gown',
@@ -220,8 +220,8 @@ export const gowns = [
 	{
 		id: 'z7a8b9',
 		title: 'Glamorous Mermaid Gown',
-		price: 500,
-		oldprice: 700,
+		price: 500000,
+		oldprice: 700000,
 		description:
 			'A glamorous mermaid gown that hugs the body and flares out at the bottom. Perfect for making a statement at formal events.',
 		category: 'gown',
@@ -233,8 +233,8 @@ export const gowns = [
 	{
 		id: 'c1d2e3',
 		title: 'Flowy Chiffon Dress',
-		price: 140,
-		oldprice: 220,
+		price: 140000,
+		oldprice: 220000,
 		description:
 			'A flowy chiffon dress with a light and airy design. Ideal for summer weddings and garden parties.',
 		category: 'gown',
@@ -246,8 +246,8 @@ export const gowns = [
 	{
 		id: 'f4g5h6',
 		title: 'Sophisticated Sheath Dress',
-		price: 180,
-		oldprice: 250,
+		price: 180000,
+		oldprice: 250000,
 		description:
 			'A sophisticated sheath dress with a tailored fit. Perfect for business events and formal dinners.',
 		category: 'gown',

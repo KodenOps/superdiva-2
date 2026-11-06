@@ -5,6 +5,7 @@ import {
 	updateOrderStatus,
 	ORDER_STATUS,
 } from '@/lib/orders';
+import { formatNaira } from '@/lib/currency';
 
 const statusStyle = (status) => {
 	if (status === ORDER_STATUS.CONFIRMED) return 'bg-green-100 text-green-700';
@@ -84,12 +85,12 @@ const Admin = () => {
 											{item.title}{' '}
 											<span className='text-[#9b9b9b]'>x{item.count}</span>
 										</span>
-										<span>${(item.price * item.count).toFixed(2)}</span>
+										<span>{formatNaira(item.price * item.count)}</span>
 									</div>
 								))}
 								<div className='flex justify-between font-semibold border-t-2 mt-[8px] pt-[8px]'>
 									<span>Order total</span>
-									<span>${Number(order.total).toFixed(2)}</span>
+									<span>{formatNaira(order.total)}</span>
 								</div>
 							</div>
 

@@ -2,8 +2,9 @@ import React from 'react';
 import {
 	AiOutlineSafetyCertificate,
 	AiOutlineCheckCircle,
-	AiOutlineTruck,
+	AiOutlineCar,
 	AiOutlineWallet,
+	AiOutlineFlag,
 } from 'react-icons/ai';
 import { FaAward } from 'react-icons/fa';
 
@@ -20,11 +21,11 @@ const badges = [
 	},
 	{
 		Icon: AiOutlineWallet,
-		title: 'Pay On Delivery',
-		sub: 'Inspect am before you pay, no wahala',
+		title: 'Pay In Naira',
+		sub: 'Bank transfer, upload receipt, we confirm',
 	},
 	{
-		Icon: AiOutlineTruck,
+		Icon: AiOutlineCar,
 		title: 'Nationwide Delivery',
 		sub: 'Lagos to Abuja, Port Harcourt and beyond',
 	},
@@ -32,6 +33,11 @@ const badges = [
 		Icon: AiOutlineCheckCircle,
 		title: 'Verified Reviews',
 		sub: 'Naija shoppers, real orders, real ratings',
+	},
+	{
+		Icon: AiOutlineFlag,
+		title: 'Proudly Naija',
+		sub: 'Owned and run here in Nigeria',
 	},
 ];
 

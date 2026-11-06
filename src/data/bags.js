@@ -2,8 +2,8 @@ export const bags = [
 	{
 		id: 'a1b2c3',
 		title: 'Casual Canvas Crossbody Bag',
-		price: 45,
-		oldprice: 120,
+		price: 45000,
+		oldprice: 120000,
 		description:
 			'A versatile canvas crossbody bag suitable for everyday use. It features a spacious main compartment with zip closure, adjustable shoulder strap, and multiple interior pockets for organizing essentials. Perfect for casual outings and travel.',
 		category: 'bag',
@@ -15,8 +15,8 @@ export const bags = [
 	{
 		id: 'd4e5f6',
 		title: 'Chic Leather Clutch',
-		price: 85,
-		oldprice: 110,
+		price: 85000,
+		oldprice: 110000,
 		description:
 			'A sleek leather clutch designed for evening events. It has a magnetic snap closure, an interior slip pocket, and a detachable wrist strap for versatile carrying options. Ideal for adding a touch of elegance to any outfit.',
 		category: 'bag',
@@ -28,8 +28,8 @@ export const bags = [
 	{
 		id: 'g7h8i9',
 		title: 'Stylish Fashion Tote',
-		price: 60,
-		oldprice: 130,
+		price: 60000,
+		oldprice: 130000,
 		description:
 			'A stylish nylon tote bag perfect for daily errands. It features durable nylon material, spacious interior with zippered pocket, and comfortable shoulder straps. Practical and fashionable for any casual occasion.',
 		category: 'bag',
@@ -41,8 +41,8 @@ export const bags = [
 	{
 		id: 'j1k2l3',
 		title: 'Vintage Mini Satchel',
-		price: 30,
-		oldprice: 140,
+		price: 30000,
+		oldprice: 140000,
 		description:
 			'A charming vintage mini satchel crafted from faux leather. It has a flap top with magnetic snap closure, adjustable shoulder strap, and compact size for carrying essentials. Perfect for a retro-inspired look.',
 		category: 'bag',
@@ -54,8 +54,8 @@ export const bags = [
 	{
 		id: 'm4n5o6',
 		title: 'Boho Fringe Crossbody Bag',
-		price: 95,
-		oldprice: 115,
+		price: 95000,
+		oldprice: 115000,
 		description:
 			'A bohemian-inspired crossbody bag with fringe details. It features a flap closure with magnetic snap, adjustable shoulder strap, and interior lining with zip pocket. Ideal for festivals and free-spirited fashion.',
 		category: 'bag',
@@ -67,8 +67,8 @@ export const bags = [
 	{
 		id: 'p7q8r9',
 		title: 'Minimalist Shoulder Bag',
-		price: 75,
-		oldprice: 125,
+		price: 75000,
+		oldprice: 125000,
 		description:
 			'A minimalist shoulder bag crafted from vegan leather. It has a clean design with a top zip closure, adjustable shoulder strap, and sleek silhouette. Perfect for modern, understated style.',
 		category: 'bag',
@@ -80,8 +80,8 @@ export const bags = [
 	{
 		id: 's1t2u3',
 		title: 'Elegant Suede Handbag',
-		price: 110,
-		oldprice: 105,
+		price: 110000,
+		oldprice: 143000,
 		description:
 			'An elegant suede handbag with a magnetic snap closure and a detachable chain strap. It features a compact size ideal for evening events or formal occasions. Classic design with a touch of sophistication.',
 		category: 'bag',
@@ -93,8 +93,8 @@ export const bags = [
 	{
 		id: 'v4w5x6',
 		title: 'Modern Bucket Bag',
-		price: 55,
-		oldprice: 145,
+		price: 55000,
+		oldprice: 145000,
 		description:
 			'A modern bucket bag crafted from faux leather. It features a drawstring closure, adjustable shoulder strap, and spacious interior with fabric lining. Perfect for carrying daily essentials with contemporary style.',
 		category: 'bag',
@@ -106,8 +106,8 @@ export const bags = [
 	{
 		id: 'y7z8a9',
 		title: 'Trendy Belt Bag',
-		price: 40,
-		oldprice: 150,
+		price: 40000,
+		oldprice: 150000,
 		description:
 			'A trendy belt bag designed for hands-free convenience. It features multiple zip compartments, an adjustable belt strap, and a sleek design that complements casual outfits. Perfect for travel or outdoor activities.',
 		category: 'bag',
@@ -119,8 +119,8 @@ export const bags = [
 	{
 		id: 'b1c2d3',
 		title: 'Convertible Backpack',
-		price: 120,
-		oldprice: 100,
+		price: 120000,
+		oldprice: 156000,
 		description:
 			'A versatile convertible backpack crafted from durable canvas. It features adjustable straps that allow it to be worn as a backpack, crossbody bag, or shoulder bag. Ideal for commuting or weekend adventures.',
 		category: 'bag',
@@ -132,8 +132,8 @@ export const bags = [
 	{
 		id: 'e4f5g6',
 		title: 'Retro Round Handbag',
-		price: 70,
-		oldprice: 110,
+		price: 70000,
+		oldprice: 110000,
 		description:
 			'A retro-inspired round handbag made from faux leather. It features a zip closure, top handle, and removable shoulder strap. Perfect for adding a vintage touch to your ensemble.',
 		category: 'bag',
@@ -145,8 +145,8 @@ export const bags = [
 	{
 		id: 'h7i8j9',
 		title: 'Casual Messenger Bag',
-		price: 50,
-		oldprice: 120,
+		price: 50000,
+		oldprice: 120000,
 		description:
 			'A casual messenger bag crafted from sturdy canvas. It features multiple compartments, adjustable shoulder strap, and flap closure with buckle details. Practical and stylish for daily use.',
 		category: 'bag',
@@ -158,8 +158,8 @@ export const bags = [
 	{
 		id: 'k1l2m3',
 		title: 'Chic Quilted Crossbody',
-		price: 80,
-		oldprice: 135,
+		price: 80000,
+		oldprice: 135000,
 		description:
 			'A chic quilted crossbody bag with a chain strap and turn-lock closure. It features a compact size ideal for evenings out or special occasions. Classic design with a modern twist.',
 		category: 'bag',
@@ -171,8 +171,8 @@ export const bags = [
 	{
 		id: 'n4o5p6',
 		title: 'Weekender Duffel Bag',
-		price: 90,
-		oldprice: 130,
+		price: 90000,
+		oldprice: 130000,
 		description:
 			'A spacious weekender duffel bag crafted from durable nylon. It features multiple pockets, sturdy handles, and a removable shoulder strap. Perfect for short getaways or gym sessions.',
 		category: 'bag',
@@ -184,8 +184,8 @@ export const bags = [
 	{
 		id: 'q7r8s9',
 		title: 'Vintage Box Clutch',
-		price: 65,
-		oldprice: 115,
+		price: 65000,
+		oldprice: 115000,
 		description:
 			'A vintage-inspired box clutch made from shimmering satin. It features a push-lock closure and a detachable chain strap. Perfect for formal events or adding retro glamour to any outfit.',
 		category: 'bag',
@@ -197,8 +197,8 @@ export const bags = [
 	{
 		id: 't1u2v3',
 		title: 'Dior Handbag',
-		price: 110,
-		oldprice: 105,
+		price: 110000,
+		oldprice: 143000,
 		description:
 			'An urban-inspired backpack crafted from water-resistant fabric. It features padded shoulder straps, multiple compartments, and a laptop sleeve. Practical and stylish for daily commuting.',
 		category: 'bag',
@@ -210,8 +210,8 @@ export const bags = [
 	{
 		id: 'w4x5y6',
 		title: 'Varsace Handbag',
-		price: 55,
-		oldprice: 145,
+		price: 55000,
+		oldprice: 145000,
 		description:
 			'A leather travel wallet with RFID protection. It features multiple card slots, a zippered coin pocket, and a passport sleeve. Essential for organizing travel documents and currency.',
 		category: 'bag',
@@ -223,8 +223,8 @@ export const bags = [
 	{
 		id: 'z7a8b9',
 		title: 'Fashionable Sling Bag',
-		price: 40,
-		oldprice: 150,
+		price: 40000,
+		oldprice: 150000,
 		description:
 			'A fashionable sling bag with a geometric pattern. It features an adjustable strap and a zip closure. Ideal for adding a trendy touch to casual outfits.',
 		category: 'bag',
@@ -236,8 +236,8 @@ export const bags = [
 	{
 		id: 'c1d2e3',
 		title: 'Convertible Clutch',
-		price: 100,
-		oldprice: 100,
+		price: 100000,
+		oldprice: 130000,
 		description:
 			'A convertible clutch crafted from faux leather. It features a removable shoulder strap and a zip closure. Versatile for day-to-night styling.',
 		category: 'bag',
@@ -249,8 +249,8 @@ export const bags = [
 	{
 		id: 'f4g5h6',
 		title: 'Trendy Belted Mini Bag',
-		price: 75,
-		oldprice: 110,
+		price: 75000,
+		oldprice: 110000,
 		description:
 			'A trendy belted tote bag made from vegan leather. It features a belted top closure and a spacious interior with a fabric lining. Ideal for everyday essentials with a stylish twist.',
 		category: 'bag',

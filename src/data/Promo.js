@@ -2,8 +2,8 @@ const Promo = [
 	{
 		id: 1,
 		title: "Women's Casual Premium Slim Fit gown",
-		price: 22.3,
-		oldprice: 75.29,
+		price: 22500,
+		oldprice: 75500,
 		description:
 			'The slim-fitting style of this garment features contrast raglan long sleeves and a three-button henley placket, crafted from lightweight, soft fabric for breathable and comfortable wearing. Solid stitching along with a round neck design ensures durability, making it a great choice for casual fashion wear and diehard baseball fans alike. The Henley style round neckline includes a three-button placket that adds a touch of classic sophistication to the overall design. This shirt is not just about style; its also about practicality. The lightweight and breathable fabric make it ideal for various activities, providing comfort throughout the day. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.',
 		category: 'dress',
@@ -15,8 +15,8 @@ const Promo = [
 	{
 		id: 2,
 		title: 'Varsace Heels',
-		price: 55.99,
-		oldprice: 95.99,
+		price: 56000,
+		oldprice: 96000,
 		description:
 			'Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.',
 		category: 'Shoes',
@@ -28,8 +28,8 @@ const Promo = [
 	{
 		id: 3,
 		title: 'Victoria Secret Bikini',
-		price: 15.99,
-		oldprice: 45.99,
+		price: 16000,
+		oldprice: 46000,
 		description:
 			'The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.',
 		category: 'Bikini',
@@ -41,8 +41,8 @@ const Promo = [
 	{
 		id: 4,
 		title: "John Hardy Women's shirt",
-		price: 695,
-		oldprice: 1000,
+		price: 695000,
+		oldprice: 1000000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'Shirts',
@@ -54,8 +54,8 @@ const Promo = [
 	{
 		id: 5,
 		title: "Tom ford Women's Jacket",
-		price: 695,
-		oldprice: 1000,
+		price: 695000,
+		oldprice: 1000000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'Jacket',
@@ -67,8 +67,8 @@ const Promo = [
 	{
 		id: 6,
 		title: 'Pure Diamond Earring',
-		price: 295,
-		oldprice: 600,
+		price: 295000,
+		oldprice: 600000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'jewelery',
@@ -80,8 +80,8 @@ const Promo = [
 	{
 		id: 7,
 		title: 'Converse Shoe For Women',
-		price: 120,
-		oldprice: 320,
+		price: 120000,
+		oldprice: 320000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'shoe',
@@ -93,8 +93,8 @@ const Promo = [
 	{
 		id: 8,
 		title: 'Womens Slim Fit Long Sleeve',
-		price: 310,
-		oldprice: 420,
+		price: 310000,
+		oldprice: 420000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'Jacket',
@@ -106,8 +106,8 @@ const Promo = [
 	{
 		id: 9,
 		title: "Women's Chucky oversized Jacket",
-		price: 295,
-		oldprice: 600,
+		price: 295000,
+		oldprice: 600000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'hoodie',
@@ -119,8 +119,8 @@ const Promo = [
 	{
 		id: 10,
 		title: 'Women Bag Crossbody Bag Handbag',
-		price: 90,
-		oldprice: 190,
+		price: 90000,
+		oldprice: 190000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'bag',
@@ -132,8 +132,8 @@ const Promo = [
 	{
 		id: 11,
 		title: "MLQ Korean Handbag Women's Bag",
-		price: 295,
-		oldprice: 600,
+		price: 295000,
+		oldprice: 600000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'bag',
@@ -145,8 +145,8 @@ const Promo = [
 	{
 		id: 12,
 		title: 'German slim-fit Shirt ',
-		price: 100,
-		oldprice: 231,
+		price: 100000,
+		oldprice: 231000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'jewelery',
@@ -158,8 +158,8 @@ const Promo = [
 	{
 		id: 13,
 		title: 'Oversized baddie shirt',
-		price: 90,
-		oldprice: 190,
+		price: 90000,
+		oldprice: 190000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'jewelery',
@@ -171,8 +171,8 @@ const Promo = [
 	{
 		id: 14,
 		title: 'Simuel baddie gown',
-		price: 145,
-		oldprice: 410,
+		price: 145000,
+		oldprice: 410000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'gown',
@@ -183,8 +183,8 @@ const Promo = [
 	{
 		id: 15,
 		title: 'Arabian Abayah for classy chicks',
-		price: 420,
-		oldprice: 1000,
+		price: 420000,
+		oldprice: 1000000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'gown',
@@ -196,8 +196,8 @@ const Promo = [
 	{
 		id: 16,
 		title: 'Classy women Beach Hat',
-		price: 140,
-		oldprice: 300,
+		price: 140000,
+		oldprice: 300000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'hat',
@@ -208,8 +208,8 @@ const Promo = [
 	{
 		id: 17,
 		title: 'Bucket Hat for beautiful angels',
-		price: 20,
-		oldprice: 100,
+		price: 20000,
+		oldprice: 100000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'hat',
@@ -221,8 +221,8 @@ const Promo = [
 	{
 		id: 18,
 		title: 'Bikini For Plus size women',
-		price: 120,
-		oldprice: 310,
+		price: 120000,
+		oldprice: 310000,
 		description:
 			"From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection. Whether youre lounging at home, running errands, or hanging out with friends, this shirt keeps you feeling cool and relaxed. The slim fit flatters the body while allowing freedom of movement, ensuring versatility in styling. Its solid construction and attention to detail reflect high craftsmanship standards, ensuring longevity and a great fit over time. Pair it with your favorite jeans or shorts for a laid-back look, or layer it under a jacket for added warmth on cooler days. This garment seamlessly combines style and functionality, making it a must-have in any wardrobe.",
 		category: 'hat',

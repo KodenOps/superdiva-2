@@ -5,6 +5,11 @@ import React, { useContext } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
+import {
+	formatNaira,
+	VAT_RATE,
+	SHIPPING_FEE,
+} from '@/lib/currency';
 import { IoMdTrash } from 'react-icons/io';
 import { MdArrowBack, MdPayments } from 'react-icons/md';
 import Link from 'next/link';
@@ -108,7 +113,7 @@ const Cart = () => {
 							<tbody className='w-full'>
 								{cartItem.map((item) => {
 									total = total + item.price * item.count;
-									vat = (10 / 100) * total;
+									vat = VAT_RATE * total;
 									FinalPrice = total + vat;
 									return (
 										<tr
@@ -158,9 +163,9 @@ const Cart = () => {
 													</button>
 												</div>
 											</td>
-											<td className=' text-center'>$ {item.price}</td>
+											<td className=' text-center'>{formatNaira(item.price)}</td>
 											<td className='text-center'>
-												$ {(item.count * item.price).toFixed(2)}
+												{formatNaira(item.count * item.price)}
 											</td>
 										</tr>
 									);
@@ -178,19 +183,19 @@ const Cart = () => {
 						</div>
 						<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
 							<h4 className=''>Items Price</h4>
-							<p>${total.toFixed(2)}</p>
+							<p>{formatNaira(total)}</p>
 						</div>
 						<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
-							<h4 className=''>VAT</h4>
-							<p>${vat.toFixed(2)}</p>
+							<h4 className=''>VAT (7.5%)</h4>
+							<p>{formatNaira(vat)}</p>
 						</div>
 						<div className='total flex w-ful justify-between items-center md:text-md text-sm'>
 							<h4 className=''>Shipping Fee</h4>
-							<p>${190}</p>
+							<p>{formatNaira(SHIPPING_FEE)}</p>
 						</div>
 						<div className='total flex w-ful justify-between items-center md:text-md text-sm border-y-2 mt-2 py-[10px]'>
 							<h4 className='font-semibold'>Final Price</h4>
-							<p>${(190 + FinalPrice).toFixed(2)}</p>
+							<p>{formatNaira(SHIPPING_FEE + FinalPrice)}</p>
 						</div>
 					</div>
 					<div className='cta flex w-full flex-wrap md:flex-row flex-col-reverse justify-between items-center p-[16px]'>

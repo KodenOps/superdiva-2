@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { cartContext } from '@/Context/CartContext';
 import { getOrders, ORDER_STATUS } from '@/lib/orders';
+import { formatNaira } from '@/lib/currency';
 import { MdArrowBack } from 'react-icons/md';
 
 const statusStyle = (status) => {
@@ -72,12 +73,12 @@ const Orders = () => {
 											{item.title}{' '}
 											<span className='text-[#9b9b9b]'>x{item.count}</span>
 										</span>
-										<span>${(item.price * item.count).toFixed(2)}</span>
+										<span>{formatNaira(item.price * item.count)}</span>
 									</div>
 								))}
 								<div className='flex justify-between font-semibold border-t-2 mt-[8px] pt-[8px]'>
 									<span>Total paid</span>
-									<span>${Number(order.total).toFixed(2)}</span>
+									<span>{formatNaira(order.total)}</span>
 								</div>
 							</div>
 							<p className='text-[12px] text-[#6a6a6a] mt-[8px]'>

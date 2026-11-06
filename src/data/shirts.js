@@ -2,8 +2,8 @@ export const shirts = [
 	{
 		id: 'adjnrijfksfdnrinfksfndn1b2c3',
 		title: 'Casual Cotton T-Shirt',
-		price: 25,
-		oldprice: 40,
+		price: 25000,
+		oldprice: 40000,
 		description:
 			'This casual cotton t-shirt is an essential addition to any wardrobe. Made from soft and breathable cotton fabric, it offers comfort and style for everyday wear. The classic crew neckline and short sleeves ensure a timeless look that pairs effortlessly with jeans, shorts, or even skirts for a laid-back vibe. Whether youre running errands, meeting friends for coffee, or lounging at home, this versatile t-shirt is a go-to choice.',
 		category: 'shirt',
@@ -15,8 +15,8 @@ export const shirts = [
 	{
 		id: 'ddjnrijfksfdnrinfksfndn4e5f6',
 		title: 'Slim Fit Denim Shirt',
-		price: 35,
-		oldprice: 50,
+		price: 35000,
+		oldprice: 50000,
 		description:
 			'Step up your casual style with this slim fit denim shirt crafted from durable denim fabric. Its tailored slim fit silhouette offers a modern and flattering look, perfect for various occasions. The button-up front and long sleeves with buttoned cuffs add a touch of sophistication, making it suitable for both day and evening wear. Whether you pair it with jeans for a double denim ensemble or layer it over a dress for a chic contrast, this shirt is versatile and stylish.',
 		category: 'shirt',
@@ -27,8 +27,8 @@ export const shirts = [
 	{
 		id: 'gdjnrijfksfdnrinfksfndn7h8i9',
 		title: 'Striped Linen Shirt',
-		price: 30,
-		oldprice: 45,
+		price: 30000,
+		oldprice: 45000,
 		description:
 			'Enjoy the lightweight comfort and breezy style of this striped linen shirt. Ideal for warmer days, it features a pointed collar, button-up front, and short sleeves that offer a relaxed fit. The striped pattern adds a classic touch, making it easy to pair with shorts or chinos for a laid-back yet polished look. Whether youre heading to the beach, brunch, or a casual outing, this shirt ensures you stay cool and stylish all day long.',
 		category: 'shirt',
@@ -40,8 +40,8 @@ export const shirts = [
 	{
 		id: 'jdjnrijfksfdnrinfksfndn1k2l3',
 		title: 'Classic Oxford Shirt',
-		price: 40,
-		oldprice: 60,
+		price: 40000,
+		oldprice: 60000,
 		description:
 			'Elevate your wardrobe with the timeless appeal of this classic Oxford shirt. Crafted from breathable cotton, it features a button-down collar, long sleeves with buttoned cuffs, and a chest pocket. Its versatility allows it to transition seamlessly from work to weekend, pairing effortlessly with tailored pants or jeans. The Oxford weave offers durability and a polished look, ensuring you maintain a smart appearance throughout the day. Whether you dress it up with a blazer or keep it casual with denim, this shirt is a wardrobe staple.',
 		category: 'shirt',
@@ -53,8 +53,8 @@ export const shirts = [
 	{
 		id: 'mdjnrijfksfdnrinfksfndn4n5o6',
 		title: 'V-Neck Sweater',
-		price: 45,
-		oldprice: 55,
+		price: 45000,
+		oldprice: 55000,
 		description:
 			'Wrap yourself in warmth and style with this cozy V-neck sweater. Crafted from soft knit fabric, it features long sleeves and ribbed trim at the neckline, cuffs, and hem. The V-neck design offers a flattering silhouette that can be layered over shirts or worn on its own. Perfect for cooler days, it adds a touch of sophistication to your casual attire whether youre at work or enjoying a weekend getaway. Available in versatile colors, this sweater is a must-have for any fashion-forward wardrobe.',
 		category: 'shirt',
@@ -66,8 +66,8 @@ export const shirts = [
 	{
 		id: 'pdjnrijfksfdnrinfksfndn7q8r9',
 		title: 'Printed Button-Up Shirt',
-		price: 35,
-		oldprice: 50,
+		price: 35000,
+		oldprice: 50000,
 		description:
 			'Make a statement with this printed button-up shirt featuring a modern print pattern. Ideal for adding a bold touch to your wardrobe, it boasts a pointed collar, buttoned front closure, and long sleeves with buttoned cuffs. The vibrant print adds personality, making it suitable for both casual and semi-formal occasions. Pair it with jeans or tailored pants for a polished look that stands out. Whether youre heading to a dinner date or a weekend brunch, this shirt ensures you make a stylish impression.',
 		category: 'shirt',
@@ -78,8 +78,8 @@ export const shirts = [
 	{
 		id: 'sdjnrijfksfdnrinfksfndn1t2u3',
 		title: 'Crew Neck Sweatshirt',
-		price: 30,
-		oldprice: 40,
+		price: 30000,
+		oldprice: 40000,
 		description:
 			'Stay comfortable and casual with this crew neck sweatshirt crafted from soft fleece fabric. It features long sleeves, ribbed cuffs, and a relaxed fit thats perfect for lounging or layering. The crew neck design offers a classic look that pairs well with jeans or joggers, making it versatile for various activities. Whether youre running errands or relaxing at home, this sweatshirt ensures you stay cozy and stylish throughout the day. Available in neutral tones, its easy to mix and match with your existing wardrobe staples.',
 		category: 'shirt',
@@ -91,8 +91,8 @@ export const shirts = [
 	{
 		id: 'vdjnrijfksfdnrinfksfndn4w5x6',
 		title: 'Plaid Flannel Shirt',
-		price: 45,
-		oldprice: 60,
+		price: 45000,
+		oldprice: 60000,
 		description:
 			'Add a touch of rugged charm with this plaid flannel shirt, perfect for casual outings or outdoor adventures. Crafted from durable flannel fabric, it features a button-up front, pointed collar, and long sleeves with buttoned cuffs. The classic plaid pattern offers a timeless appeal that pairs effortlessly with jeans or cargo pants. Whether youre hiking in the mountains or enjoying a bonfire with friends, this shirt keeps you comfortable and stylish in any setting.',
 		category: 'shirt',
@@ -104,8 +104,8 @@ export const shirts = [
 	{
 		id: 'wdjnrijfksfdnrinfksfndn1x2y3',
 		title: 'Casual Polo Shirt',
-		price: 30,
-		oldprice: 45,
+		price: 30000,
+		oldprice: 45000,
 		description:
 			'Stay cool and casual with this classic polo shirt, crafted from breathable cotton fabric. It features a ribbed collar, buttoned placket, and short sleeves for a timeless look. The relaxed fit makes it ideal for everyday wear, whether youre running errands or playing a round of golf. Pair it with chinos or shorts for a laid-back yet polished ensemble that transitions effortlessly from day to night.',
 		category: 'shirt',
@@ -117,8 +117,8 @@ export const shirts = [
 	{
 		id: 'zdjnrijfksfdnrinfksfndn1a2b3',
 		title: 'Button-Down Linen Shirt',
-		price: 35,
-		oldprice: 50,
+		price: 35000,
+		oldprice: 50000,
 		description:
 			'Embrace relaxed sophistication with this button-down linen shirt, perfect for warmer days. Crafted from lightweight and breathable linen fabric, it features a pointed collar, buttoned front, and long sleeves with buttoned cuffs. The relaxed fit offers comfort and ease of movement, making it ideal for casual outings or beach vacations. Pair it with shorts or linen trousers for a laid-back yet refined look that exudes effortless style.',
 		category: 'shirt',
@@ -130,8 +130,8 @@ export const shirts = [
 	{
 		id: 'cdjnrijfksfdnrinfksfndn1d2e3',
 		title: 'Graphic Print T-Shirt',
-		price: 25,
-		oldprice: 35,
+		price: 25000,
+		oldprice: 35000,
 		description:
 			'Make a statement with this graphic print t-shirt featuring a bold design. Crafted from soft cotton fabric, it offers comfort and style for everyday wear. The crew neckline and short sleeves provide a classic fit that pairs well with jeans or shorts. Whether youre hanging out with friends or exploring the city, this t-shirt adds a trendy edge to your casual wardrobe. Available in various prints, it allows you to express your unique personality effortlessly.',
 		category: 'shirt',
@@ -143,8 +143,8 @@ export const shirts = [
 	{
 		id: 'fdjnrijfksfdnrinfksfndn1g2h3',
 		title: 'Floral Print Shirt',
-		price: 40,
-		oldprice: 55,
+		price: 40000,
+		oldprice: 55000,
 		description:
 			'Add a touch of charm with this floral print shirt, perfect for adding a pop of color to your wardrobe. Crafted from lightweight and breathable fabric, it features a pointed collar, button-up front, and long sleeves with buttoned cuffs. The vibrant floral pattern adds a playful yet sophisticated touch, making it ideal for both casual and semi-formal occasions. Pair it with jeans or tailored pants for a stylish look that transitions seamlessly from day to night.',
 		category: 'shirt',
@@ -156,8 +156,8 @@ export const shirts = [
 	{
 		id: 'idjnrijfksfdnrinfksfndn1j2k3',
 		title: 'Mock Neck Shirt',
-		price: 35,
-		oldprice: 45,
+		price: 35000,
+		oldprice: 45000,
 		description:
 			'Stay cozy and stylish with this mock neck sweater crafted from soft knit fabric. It features a mock neck design, long sleeves, and ribbed trim at the neckline, cuffs, and hem. The relaxed fit makes it perfect for layering over shirts or wearing on its own. Ideal for cooler days, this sweater adds a touch of sophistication to your casual or semi-formal attire. Available in versatile colors, its a wardrobe essential for the modern man.',
 		category: 'shirt',
@@ -168,8 +168,8 @@ export const shirts = [
 	{
 		id: 'ldjnrijfksfdnrinfksfndn1m2n3',
 		title: 'Hooded Sweatshirt',
-		price: 30,
-		oldprice: 40,
+		price: 30000,
+		oldprice: 40000,
 		description:
 			'Stay comfortable and relaxed with this hooded sweatshirt crafted from soft fleece fabric. It features a drawstring hood, long sleeves, and a kangaroo pocket for added convenience. The relaxed fit makes it perfect for casual outings or lounging at home. Whether youre running errands or heading to the gym, this sweatshirt keeps you warm and stylish throughout the day. Available in classic colors, its easy to mix and match with your favorite jeans or joggers.',
 		category: 'shirt',
@@ -180,8 +180,8 @@ export const shirts = [
 	{
 		id: 'odjnrijfksfdnrinfksfndn1p2q3',
 		title: 'Checked Cotton Shirt',
-		price: 40,
-		oldprice: 55,
+		price: 40000,
+		oldprice: 55000,
 		description:
 			'Add a touch of sophistication with this checked cotton shirt, perfect for both casual and formal occasions. Crafted from soft and breathable cotton fabric, it features a pointed collar, button-up front, and long sleeves with buttoned cuffs. The classic check pattern adds a timeless appeal, making it versatile for pairing with jeans or tailored pants. Whether youre attending a business meeting or enjoying a weekend brunch, this shirt ensures you look polished and stylish.',
 		category: 'shirt',
@@ -193,8 +193,8 @@ export const shirts = [
 	{
 		id: 'rdjnrijfksfdnrinfksfndn1s2t3',
 		title: 'classic patterned shirt',
-		price: 45,
-		oldprice: 60,
+		price: 45000,
+		oldprice: 60000,
 		description:
 			'Stay warm and elegant with this turtleneck sweater crafted from soft knit fabric. It features a turtleneck design, long sleeves, and ribbed trim at the neckline, cuffs, and hem. The slim fit silhouette offers a sleek look that can be layered under blazers or worn on its own. Perfect for colder days, this sweater adds a touch of sophistication to your casual or business attire. Available in classic hues, its a versatile piece for any wardrobe.',
 		category: 'shirt',
@@ -206,8 +206,8 @@ export const shirts = [
 	{
 		id: 'udjnrijfksfdnrinfksfndn1v2w3',
 		title: 'Chambray Shirt',
-		price: 35,
-		oldprice: 50,
+		price: 35000,
+		oldprice: 50000,
 		description:
 			'Add a classic staple to your wardrobe with this chambray shirt, perfect for both casual and smart-casual occasions. Crafted from lightweight chambray fabric, it features a button-up front, pointed collar, and long sleeves with buttoned cuffs. The versatile design allows you to dress it up with tailored pants or keep it casual with jeans. Whether youre heading to the office or meeting friends for dinner, this shirt offers comfort and style all day long.',
 		category: 'shirt',
@@ -219,8 +219,8 @@ export const shirts = [
 	{
 		id: 'xdjnrijfksfdnrinfksfndn1y2z3',
 		title: 'Rugby Polo Shirt',
-		price: 40,
-		oldprice: 55,
+		price: 40000,
+		oldprice: 55000,
 		description:
 			'Step up your casual look with this rugby polo shirt, featuring a sporty yet refined design. Crafted from durable cotton fabric, it boasts a bold stripe pattern, ribbed cuffs, and a classic polo collar with a buttoned placket. The relaxed fit makes it ideal for weekend outings or casual Fridays. Pair it with chinos or jeans for a laid-back yet polished ensemble that combines comfort with style.',
 		category: 'shirt',
@@ -232,8 +232,8 @@ export const shirts = [
 	{
 		id: 'bdjnrijfksfdnrinfksfndn1c2d3',
 		title: 'Linen Blend Shirt',
-		price: 30,
-		oldprice: 45,
+		price: 30000,
+		oldprice: 45000,
 		description:
 			'Stay cool and stylish with this linen blend shirt, perfect for warm-weather days. Crafted from a lightweight linen-cotton blend, it features a pointed collar, button-up front, and short sleeves for a relaxed fit. The breathable fabric ensures comfort, making it suitable for casual outings or beach vacations. Pair it with shorts or chinos for a laid-back yet refined look that transitions effortlessly from day to night.',
 		category: 'shirt',
@@ -245,8 +245,8 @@ export const shirts = [
 	{
 		id: 'edjnrijfksfdnrinfksfndn1f2g3',
 		title: 'Herringbone Shirt',
-		price: 35,
-		oldprice: 50,
+		price: 35000,
+		oldprice: 50000,
 		description:
 			'Add a touch of texture to your wardrobe with this herringbone shirt, perfect for both casual and semi-formal occasions. Crafted from soft and breathable cotton fabric, it features a pointed collar, button-up front, and long sleeves with buttoned cuffs. The herringbone pattern adds a sophisticated twist, making it easy to pair with jeans or tailored pants. Whether youre heading to the office or meeting friends for brunch, this shirt ensures you look polished and stylish.',
 		category: 'shirt',
@@ -257,8 +257,8 @@ export const shirts = [
 	{
 		id: 'hdjnrijfksfdnrinfksfndn1i2j3',
 		title: 'Crew Neck T-Shirt',
-		price: 25,
-		oldprice: 35,
+		price: 25000,
+		oldprice: 35000,
 		description:
 			'Update your basics with this classic crew neck t-shirt, crafted from soft cotton fabric. It features short sleeves and a regular fit that offers comfort and versatility for everyday wear. The crew neckline adds a timeless touch, making it easy to layer under jackets or wear on its own. Available in a range of colors, this t-shirt is a wardrobe essential that pairs effortlessly with jeans, shorts, or joggers for a casual yet stylish look.',
 		category: 'shirt',

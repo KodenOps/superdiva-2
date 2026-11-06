@@ -2,6 +2,7 @@ import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import Promo from '@/data/Promo';
 import { cartContext } from '@/Context/CartContext';
+import { formatNaira } from '@/lib/currency';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -44,14 +45,13 @@ const Promosection = () => {
 								<div className='text-[10px] mt-[10px] md:text-left text-center'>
 									<h4 className=' font-bold'>{hotDB.title}</h4>
 									<p className='text-[gray]'>{hotDB.category}</p>
-									<div className='prices   md:justify-left justify-center'>
-										<span className='newprice text-[var(--primary-color)] font-semibold'>
-											${hotDB.price}
-										</span>
-										<span className='mx-[10px]'>|</span>
-										<span className='oldprice text-[gray] line-through'>
-											${hotDB.oldprice}
-										</span>
+									<div className='prices   md:justify-left justify-center'>											<span className='newprice text-[var(--primary-color)] font-semibold'>
+												{formatNaira(hotDB.price)}
+											</span>
+											<span className='mx-[10px]'>|</span>
+											<span className='oldprice text-[gray] line-through'>
+												{formatNaira(hotDB.oldprice)}
+											</span>
 									</div>
 								</div>
 							</div>

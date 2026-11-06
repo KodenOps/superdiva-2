@@ -1,6 +1,7 @@
 import Titles from '@/components/Titles';
 import React, { useContext, useEffect } from 'react';
 import { cartContext } from '@/Context/CartContext';
+import { formatNaira } from '@/lib/currency';
 // import ProductPreview from './ProductPreview';
 import Navbar from './Navbar';
 import Link from 'next/link';
@@ -63,11 +64,11 @@ const Favorite = () => {
 												<p className='text-[gray]'>{hotDB.category}</p>
 												<div className='prices   md:justify-left justify-center'>
 													<span className='newprice text-[var(--primary-color)] font-semibold'>
-														${hotDB.price}
+														{formatNaira(hotDB.price)}
 													</span>
 													<span className='mx-[10px]'>|</span>
 													<span className='oldprice text-[gray] line-through'>
-														${hotDB.oldprice}
+														{formatNaira(hotDB.oldprice)}
 													</span>
 												</div>
 											</div>
